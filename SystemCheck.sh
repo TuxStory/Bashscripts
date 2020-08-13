@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Variable
-Ver="0.0.0"
+Ver="0.0.1"
 
 #root acces
 EACCES=13 # Permission denied
@@ -11,6 +11,10 @@ if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
   exit $EACCES
 fi
 
+if [ $1 == "--ver" ] || [ $1 == "--version" ] ; then
+	echo "Version : " $Ver
+	exit $EACCES
+fi
 
 clear
 echo "=================================================================="
@@ -29,9 +33,9 @@ last | head
 #echo "-----------------------------------------------------------------"
 #blast
 
-echo "-------------------------- Login  --------------------------------"
 if [ -e /etc/debian_version ]
 then
+	echo "-------------------------- Login  --------------------------------"
 	tail -n 20 /var/log/auth.log
 else
 	#echo "--------------------- Acces aux fichier ------------------------"
