@@ -9,13 +9,17 @@
 #Variables
 
 DATE=$(date +"%d-%m-%Y")
-MOIS=$(date +"%m")
+MOIS=$(date +"%B")
+ANNEE=$(date +"%Y")
 
 DOSSIER="/home/$USER/vnstat-graph"
 INTERFACE="wlan0"
 
+if [ ! -d $DOSSIER ]; then
 mkdir $DOSSIER
+fi
+
 cd $DOSSIER
 vnstati -vs -i $INTERFACE -o Jour-$DATE.png
-vnstati -m -i $INTERFACE -o Mois-$MOIS.png
-vnstati -d -i $INTERFACE -o MoisJours-$MOIS.png
+vnstati -m -i $INTERFACE -o $MOIS-$ANNEE.png
+vnstati -d -i $INTERFACE -o $MOIS-$ANNEE-DETAIL.png
