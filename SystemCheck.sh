@@ -11,7 +11,7 @@ if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
   exit $EACCES
 fi
 
-if [ $1 = "--ver" ] || [ $1 = "--version" ] ; then
+if [ "$1" = "--ver" ] || [ "$1" = "--version" ] ; then
 	echo "Version : " $Ver
 	exit $EACCES
 fi
