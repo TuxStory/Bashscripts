@@ -18,6 +18,12 @@ JOUR=$(date +"%d")
 MOIS=$(date +"%B")
 ANNEE=$(date +"%Y")
 
+#Vérification de la présence de vnstat et vnstati
+if [ ! -x /usr/bin/vnstat ] || [ ! -x /usr/bin/vnstati ]; then
+echo "Il manque un programme, installez vnstat & vnstati."
+exit 1
+fi
+
 #Vérification du dossier.
 if [ ! -d $DOSSIER ]; then
 mkdir $DOSSIER
