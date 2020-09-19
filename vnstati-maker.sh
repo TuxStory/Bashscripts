@@ -4,13 +4,13 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 17/09/2020       #
+# Modif  : 20/09/2020       #
 #############################
 
 #Configuration
 INTERFACE="wlan0"
 DOSSIER="/home/$USER/vnstat-graph"
-VERSION="0.2"
+VERSION="0.3"
 
 #Variables
 DATE=$(date +"%d-%m-%Y")
@@ -40,3 +40,6 @@ fi
 
 #Décommenter pour les Stats par années
 #vnstati -y -i wlan0 -o Année.png
+
+#Décommenter pour notifier le joural (logs)
+logger "$0 commande effectué à $DATE : PNG [ ok ]"
