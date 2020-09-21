@@ -10,7 +10,7 @@
 #Configuration
 INTERFACE="wlan0"
 DOSSIER="/home/$USER/vnstat-graph"
-VERSION="0.3"
+VERSION="0.4"
 
 #Variables
 DATE=$(date +"%d-%m-%Y")
