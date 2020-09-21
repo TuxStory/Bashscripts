@@ -33,13 +33,16 @@ fi
 cd $DOSSIER
 vnstati -vs -i $INTERFACE -o Jour-$DATE.png
 
+#Stats pour le mois passé
 if [ $JOUR == 1 ]; then
     vnstati -m -i $INTERFACE -o $MOIS-$ANNEE.png
     vnstati -d -i $INTERFACE -o $MOIS-$ANNEE-DETAIL.png
 fi
 
-#Décommenter pour les Stats par années
-#vnstati -y -i wlan0 -o Année.png
+#Stats par année
+if [ $JOUR == 31 ] &&  [ $MOIS == 12 ]; then
+    vnstati -y -i wlan0 -o Année.png
+fi
 
 #Décommenter pour notifier le joural (logs)
 logger "$0 commande effectué à $DATE : PNG [ ok ]"
