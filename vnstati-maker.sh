@@ -4,13 +4,13 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 20/09/2020       #
+# Modif  : 23/09/2020       #
 #############################
 
 #Configuration
 INTERFACE="wlan0"
 DOSSIER="/home/$USER/vnstat-graph"
-VERSION="0.4"
+VERSION="0.5"
 
 #Variables
 DATE=$(date +"%d-%m-%Y")
@@ -34,7 +34,7 @@ cd $DOSSIER
 vnstati -vs -i $INTERFACE -o Jour-$DATE.png
 
 #Stats pour le mois passé
-if [ $JOUR == 1 ]; then
+if [ $JOUR == 28 ] && [ $MOIS == 2 ] || [ $JOUR == 30 ] || [ $JOUR == 31 ]; then
     vnstati -m -i $INTERFACE -o $MOIS-$ANNEE.png
     vnstati -d -i $INTERFACE -o $MOIS-$ANNEE-DETAIL.png
 fi
