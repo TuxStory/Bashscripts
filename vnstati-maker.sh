@@ -9,7 +9,7 @@
 
 #Configuration
 INTERFACE="wlan0"
-DOSSIER="/home/$USER/vnstat-graph"
+DOSSIER="/home/$USER/vnstat-graph/"
 VERSION="0.5"
 
 #Variables
