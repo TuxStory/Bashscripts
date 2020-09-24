@@ -35,8 +35,8 @@ vnstati -vs -i $INTERFACE -o Jour-$DATE.png
 
 #Stats pour le mois passé
 if [ $JOUR == 28 ] && [ $MOIS == 2 ] || [ $JOUR == 30 ] || [ $JOUR == 31 ]; then
-    vnstati -m -i $INTERFACE -o $MOIS-$ANNEE.png
-    vnstati -d -i $INTERFACE -o $MOIS-$ANNEE-DETAIL.png
+    vnstati -m -i $INTERFACE -o $MOIS-$ANNEE-Mois.png
+    vnstati -d -i $INTERFACE -o $MOIS-$ANNEE-jours.png
 fi
 
 #Stats par année
