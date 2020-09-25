@@ -30,18 +30,17 @@ mkdir $DOSSIER
 fi
 
 #Creation PNG du jour
-cd $DOSSIER
-vnstati -vs -i $INTERFACE -o Jour-$DATE.png
+cd $DOSSIER && vnstati -vs -i $INTERFACE -o Jour-$DATE.png
 
 #Stats pour le mois passé
 if [ $JOUR == 28 ] && [ $MOIS == 2 ] || [ $JOUR == 30 ] || [ $JOUR == 31 ]; then
-    vnstati -m -i $INTERFACE -o $MOIS-$ANNEE-Mois.png
-    vnstati -d -i $INTERFACE -o $MOIS-$ANNEE-jours.png
+    cd $DOSSIER && vnstati -m -i $INTERFACE -o $MOIS-$ANNEE-Mois.png
+    cd $DOSSIER && vnstati -d -i $INTERFACE -o $MOIS-$ANNEE-jours.png
 fi
 
 #Stats par année
 if [ $JOUR == 31 ] &&  [ $MOIS == 12 ]; then
-    vnstati -y -i wlan0 -o Année.png
+    cd $DOSSIER && vnstati -y -i wlan0 -o Année.png
 fi
 
 #Décommenter pour notifier le joural (logs)
