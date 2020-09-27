@@ -4,13 +4,13 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 23/09/2020       #
+# Modif  : 27/09/2020       #
 #############################
 
 #Configuration
 INTERFACE="wlan0"
 DOSSIER="/home/$USER/vnstat-graph/"
-VERSION="0.5"
+VERSION="0.6"
 
 #Variables
 DATE=$(date +"%d-%m-%Y")
