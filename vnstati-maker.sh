@@ -45,3 +45,5 @@ fi
 
 #Décommenter pour notifier le joural (logs)
 logger "$0 commande effectué à $DATE : PNG [ ok ]"
+
+#voir pourquoi ça ne fonctionne pas avec cron
