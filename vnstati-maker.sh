@@ -4,13 +4,14 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 28/09/2020       #
+# Modif  : 04/10/2020       #
 #############################
 
 #Configuration
 INTERFACE="wlan0"
+USER="pi" #Besoin de le spécifier pour crontab
 DOSSIER="/home/$USER/vnstat-graph"
-VERSION="0.7"
+VERSION="0.8"
 
 #Variables
 DATE=$(date +"%d-%m-%Y")
@@ -45,5 +46,3 @@ fi
 
 #Décommenter pour notifier le joural (logs)
 logger "$0 commande effectué à $DATE : PNG [ ok ]"
-
-#voir pourquoi ça ne fonctionne pas avec cron
