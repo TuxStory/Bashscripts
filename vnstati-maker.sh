@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bashO
 
 #############################
 # Script : vnstati-maker.sh #
@@ -11,7 +11,7 @@
 INTERFACE="wlan0"
 USER="pi" #Besoin de le spécifier pour crontab
 DOSSIER="/home/$USER/vnstat-graph"
-VERSION="0.8"
+VERSION="1.0"
 
 #Variables
 DATE=$(date +"%d-%m-%Y")
