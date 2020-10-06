@@ -34,18 +34,18 @@ echo -e "\033[0;0m----------------------------"
 echo
 
 #Liste des programmes. #########################################################
-Programmes="dfc audacious gparted inxi neofetch htop hardinfo hexchat vlc vnstat tmux ffmpegthumbnailer
-	youtube-dl deja-dup testdisk system-config-printer lnav nmon bleachbit glances vnstati gnome-disk-utils
+Programmes="dfc audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
+	youtube-dl deja-dup system-config-printer bleachbit gnome-disk-utils
 	pidgin transmission chromium-browser chromium-browser-l10n xterm rsync grsync nethogs"
 
-Programmes_Console="ansiweather irssi fbi mc atop oping w3m w3m-img bmon ncdu slurm "
+Programmes_Console="ansiweather irssi fbi mc atop oping w3m w3m-img bmon ncdu slurm"
 
-Programmes_Internet="filezilla tnftp rtorrent iptraffic" 
+Programmes_Internet="filezilla tnftp rtorrent iptraffic glances"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders
 	frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin=" fail2ban firewalld samba"
+Admin=" fail2ban firewalld samba nmon nload vnstat vnstati testdisk hddtemp lnav tmux lm-sensors"
 
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read reponse
 printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read reponse1
