@@ -2,7 +2,7 @@
 
 ##############################
 # Scrpit Post-Installation   #
-# 01/05/2020 ver 0.4         #
+# 08/10/2020 ver 0.5         #
 # Antoine Even               #
 ##############################
 
@@ -57,7 +57,7 @@ printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m:
 if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	for i in $Programmes; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i) 
+		echo -e "\033[1;32mInstallation de :" $(basename $i)
 		echo -e "\033[0;0m"
 		apt install -y $(basename $i) ; echo
 	done
@@ -67,7 +67,7 @@ fi
 if [[ $reponse1 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	for i in $Programmes_Console; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i) 
+		echo -e "\033[1;32mInstallation de :" $(basename $i)
 		echo -e "\033[0;0m"
 		apt install -y $(basename $i) ; echo
 	done
@@ -77,7 +77,7 @@ fi
 if [[ $reponse2 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	for i in $Programmes_Internet; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i) 
+		echo -e "\033[1;32mInstallation de :" $(basename $i)
 		echo -e "\033[0;0m"
 		apt install -y $(basename $i) ; echo
 	done
@@ -87,7 +87,7 @@ fi
 if [[ $reponse3 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	for i in $Games; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i) 
+		echo -e "\033[1;32mInstallation de :" $(basename $i)
 		echo -e "\033[0;0m"
 		apt install -y $(basename $i) ; echo
 	done
@@ -97,7 +97,7 @@ fi
 if [[ $reponse4 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	for i in $Admin; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i) 
+		echo -e "\033[1;32mInstallation de :" $(basename $i)
 		echo -e "\033[0;0m"
 		yes Y | apt install $(basename $i) ; echo
 	done

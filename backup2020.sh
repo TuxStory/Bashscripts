@@ -1,8 +1,8 @@
-#!/bin/bash 
+#!/bin/bash
 
 ########################
 # scrpit de backup !   #
-# 2007 - 2020 ver 0.7  # 
+# 2007 - 2020 ver 0.7  #
 # Antoine Even         #
 ########################
 
@@ -50,10 +50,10 @@ else
     echo "Les fichiers vont être écrasés !"    ;;
    'n')
     exit   ;;
-   *) 
-    echo "Relancez le script !" 
+   *)
+    echo "Relancez le script !"
     exit    ;;
-    esac  
+    esac
 fi
 
 # Sauvegarde des fichiers
