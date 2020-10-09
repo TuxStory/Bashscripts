@@ -40,12 +40,13 @@ Programmes="dfc audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpeg
 
 Programmes_Console="ansiweather irssi fbi mc atop oping w3m w3m-img bmon ncdu slurm"
 
-Programmes_Internet="filezilla tnftp rtorrent iptraffic glances"
+Programmes_Internet="filezilla tnftp rtorrent iptraffic"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders
 	frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin=" fail2ban firewalld samba nmon nload vnstat vnstati testdisk hddtemp lnav tmux lm-sensors"
+Admin=" fail2ban firewalld samba nmon nload vnstat vnstati testdisk hddtemp lnav tmux lm-sensors glances"
+
 
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read reponse
 printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read reponse1
