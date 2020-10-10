@@ -38,9 +38,9 @@ Programmes="dfc audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpeg
 	youtube-dl deja-dup system-config-printer bleachbit gnome-disk-utils
 	pidgin transmission chromium-browser chromium-browser-l10n xterm rsync grsync nethogs"
 
-Programmes_Console="ansiweather irssi fbi mc atop oping w3m w3m-img bmon ncdu slurm"
+Programmes_Console="ansiweather irssi fbi mc oping w3m w3m-img bmon ncdu slurm"
 
-Programmes_Internet="filezilla tnftp rtorrent iptraffic"
+Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders
 	frozen-bubble gnome-games xboard lbreakout2 burgerspace"
