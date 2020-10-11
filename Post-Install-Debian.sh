@@ -2,7 +2,7 @@
 
 ##############################
 # Scrpit Post-Installation   #
-# 08/10/2020 ver 0.5         #
+# 11/10/2020 ver 0.6         #
 # Antoine Even               #
 ##############################
 
@@ -45,14 +45,16 @@ Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders
 	frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin=" fail2ban firewalld samba nmon nload vnstat vnstati testdisk hddtemp lnav tmux lm-sensors glances"
+Admin="fail2ban firewalld samba nmon nload vnstat vnstati testdisk hddtemp lnav tmux lm-sensors glances"
 
+Programmes_Dev="git geany nano mu-editor python3-numpy"
 
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read reponse
 printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read reponse1
 printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m: (Oui/Non) " ; read reponse2
 printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read reponse3
 printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read reponse4
+printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read reponse5
 
 #Boucle Programmes courants ####################################################
 if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
