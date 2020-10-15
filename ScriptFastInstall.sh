@@ -78,17 +78,17 @@ programmes=" 	abiword
 
 #Génération de la fenêtre Zenity
 for i in $programmes; do
-	PROGS="$PROGS FALSE ${i}" ; 
+	PROGS="$PROGS FALSE ${i}" ;
 done
 PROG=`zenity --window-icon "$ICON" --width "310" --height "500" --title "Script Fast Install" --text="Cochez les programmes à instealler" --list --checklist --column="Choix" --column="Les programmes à installer" ${PROGS}` ;
-	if [ "${PIPESTATUS[0]}" != "0" ]; 
+	if [ "${PIPESTATUS[0]}" != "0" ];
 		then zenity --error --text "L'opération n'as pas été effectuée  "
         	exit
         fi
 PROG=`echo ${PROG} | sed 's/|/ /g'`
 
 #Installation des programmes (Verifier paquet disponible gksudo/gksu ubuntu/mint)
-gksudo aptitude update | zenity --progress --text="Mise à jour des dépôts" --pulsate --auto-close
-gksudo "xterm -e aptitude install $PROG --assume-yes" 
-sudo aptitude clean | zenity --progress --text="Nettoyage des fichiers d'installation" --pulsate --auto-close
+sudo apt update | zenity --progress --text="Mise à jour des dépôts" --pulsate --auto-close
+xterm -e apt install $PROG --assume-yes
+sudo apt clean | zenity --progress --text="Nettoyage des fichiers d'installation" --pulsate --auto-close
 zenity --info --text "Réinstallation éffectuée !  "
