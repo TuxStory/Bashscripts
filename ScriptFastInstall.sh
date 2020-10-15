@@ -62,6 +62,7 @@ programmes=" 	abiword
 		rsync
 		samba
 		sensors-applet
+                smartmontools
 		teeworlds
 		tmux
 		transmission-gtk
