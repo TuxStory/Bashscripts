@@ -5,6 +5,13 @@
 # Auteur : Antoine Even  Date : 15/09/2009   Rev : 11/10/2011    #
 ##################################################################
 
+EACCES=13 # Permission denied
+
+if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
+  echo "Permission denied : you must be root or use sudo!."
+  exit $EACCES
+fi
+
 ICON="/usr/share/pixmaps/synaptic.png"
 #Liste des Programmes
 programmes=" 	abiword
@@ -57,7 +64,7 @@ programmes=" 	abiword
 		sensors-applet
 		teeworlds
 		tmux
-		transmission
+		transmission-gtk
 		tnftp
 		tilda
 		tuxpuck
@@ -88,7 +95,13 @@ PROG=`zenity --window-icon "$ICON" --width "310" --height "500" --title "Script 
 PROG=`echo ${PROG} | sed 's/|/ /g'`
 
 #Installation des programmes (Verifier paquet disponible gksudo/gksu ubuntu/mint)
-sudo apt update | zenity --progress --text="Mise à jour des dépôts" --pulsate --auto-close
+apt update | zenity --progress --text="Mise à jour des dépôts" --pulsate --auto-close
 xterm -e apt install $PROG --assume-yes
-sudo apt clean | zenity --progress --text="Nettoyage des fichiers d'installation" --pulsate --auto-close
+apt clean | zenity --progress --text="Nettoyage des fichiers d'installation" --pulsate --auto-close
 zenity --info --text "Réinstallation éffectuée !  "
+
+
+##Pourrais $etre utile
+#!/bin/bash
+#read -p "Password: " -s szPassword
+#printf "%s\n" "$szPassword" | sudo --stdin mount -t cifs //192.168.1.1/home /media/$USER/home -o username=$USER,password="$szPassword"
