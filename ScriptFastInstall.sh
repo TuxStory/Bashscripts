@@ -101,6 +101,7 @@ apt clean | zenity --progress --text="Nettoyage des fichiers d'installation" --p
 zenity --info --text "Réinstallation éffectuée !  "
 
 
+#gksudo & gksu sont remplacés par "pkexec test"
 ##Pourrais $etre utile
 #!/bin/bash
 #read -p "Password: " -s szPassword
