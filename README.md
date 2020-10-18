@@ -1,4 +1,5 @@
 # Bashscripts
 Scripts Bash personnels
 
-Pesonnal Bash Scripts
+Personal Bash Scripts
+
