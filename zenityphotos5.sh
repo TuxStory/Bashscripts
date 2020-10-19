@@ -1,9 +1,15 @@
 #!/bin/bash
 # Author : Antoine Even 11/06/09
-# Updates : 11/03/2012, 14/05/2013, 15/05/2013
-# Réduction de photo besoin de imagemagik
+# Updates : 11/03/2012, 14/05/2013, 15/05/2013, 19/10/2020
+# Réduction de photo besoin de imagemagick
 
-#sudo aptitude install imagemagick
+EACCES=13 # Permission denied
+
+if [ ! -x /usr/bin/mogrify ]; then
+  echo "Imagemagick n'est pas installé !"
+  exit $EACCES
+fi
+
 ICON="./Icon/gthumb.png"
 # Change le séparateur standard (espace) pour RETURN
 # Pour éviter le probleme des espaces dans les nom de dossiers
@@ -11,14 +17,14 @@ IFS='
 '
 function out( )
 {
-	#gère le bouton annuler des fenêtres zenity
-	if   [[ $? = "1" ]]
-	then exit 0
-	fi
+  #gère le bouton annuler des fenêtres zenity
+  if   [[ $? = "1" ]]
+  then exit 0
+  fi
 }
 
 #Message
-zenity --warning --window-icon "$ICON" --text="ZenityPhotos v0.5\n\nChoisissez le répertoire qui contient les photos à moddifier\nAttention : Les modifications seront irréversibles !"
+zenity --warning --window-icon "$ICON" --text="ZenityPhotos v0.5\n\nChoisissez le répertoire qui contient les photos à moddifier\nAttention : Les modifications seront irréversibles !" --width=400
 #Variables
 REPERTOIRE=`zenity --window-icon "$ICON" --file-selection --directory --title="choisissez un répertoire."` ; out
 REDUCTION=$(zenity --window-icon "$ICON" --scale --text "Taux de réduction \nExemple : 90% réduit de 10% la taille de la photo" --min-value=2 --max-value=100 --value=50 --step 2); out ;
@@ -49,11 +55,11 @@ function progress()
 
 case $? in
 0)
-	progress | zenity --window-icon "$ICON" --progress --percentage=0 --auto-close
+	progress | zenity --window-icon "$ICON" --progress --percentage=0 --auto-close --width=500
 	if [ "${PIPESTATUS[0]}" != "0" ]; then
-		zenity ---window-icon "$ICON" -error --text "  Opération non effecutée  "
+		zenity ---window-icon "$ICON" -error --text "  Opération non effecutée" --width=200
 	else
-		zenity --window-icon "$ICON" --info --text "  Opération éffectuée !  "
+		zenity --window-icon "$ICON" --info --text "  Opération éffectuée !" --width=200
 	fi
 	;;
 1)
