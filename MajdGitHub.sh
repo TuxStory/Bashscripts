@@ -10,7 +10,7 @@
 
 cd ../
 for d in */ ; do
-  echo "$d"
+  echo -e "\033[01;32m>>> \033[00m$d "
   cd $d ; git pull
   cd ../
 done
