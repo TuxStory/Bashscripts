@@ -1,4 +1,4 @@
-#!/bin/bashO
+#!/bin/bash!
 
 #############################
 # Script : vnstati-maker.sh #
