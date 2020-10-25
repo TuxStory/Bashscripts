@@ -4,20 +4,20 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 04/10/2020       #
+# Modif  : 25/10/2020       #
 #############################
-
-#Configuration
-INTERFACE="wlan0"
-USER="pi" #Besoin de le spécifier pour crontab
-DOSSIER="/home/$USER/vnstat-graph"
-VERSION="1.0"
 
 #Variables
 DATE=$(date +"%d-%m-%Y")
 JOUR=$(date +"%d")
 MOIS=$(date +"%B")
 ANNEE=$(date +"%Y")
+
+#Configuration
+INTERFACE="wlan0"
+USER="pi" #Besoin de le spécifier pour crontab
+DOSSIER="/home/$USER/vnstat-graph/$ANNEE-$MOIS"
+VERSION="1.1"
 
 #Vérification de la présence de vnstat et vnstati
 if [ ! -x /usr/bin/vnstat ] || [ ! -x /usr/bin/vnstati ]; then
@@ -27,7 +27,7 @@ fi
 
 #Vérification du dossier.
 if [ ! -d $DOSSIER ]; then
-mkdir $DOSSIER
+mkdir -p $DOSSIER
 fi
 
 #Creation PNG du jour
@@ -46,3 +46,4 @@ fi
 
 #Décommenter pour notifier le joural (logs)
 logger "$0 commande effectué à $DATE : PNG [ ok ]"
+
