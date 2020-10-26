@@ -1,13 +1,11 @@
 #!/bin/bash
 # Author : Antoine Even 11/06/09
-# Updates : 11/03/2012, 14/05/2013, 15/05/2013, 19/10/2020
+# Updates : 11/03/2012, 14/05/2013, 15/05/2013, 19/10/2020, 26/10/2020
 # Réduction de photo besoin de imagemagick
 
-EACCES=13 # Permission denied
-
 if [ ! -x /usr/bin/mogrify ]; then
-  echo "Imagemagick n'est pas installé !"
-  exit $EACCES
+  zenity --info --title="FastPics" --width="350" --text="ImageMagick n'est pas installé !\n\nIl est nécésaire pour que le programme fonctionne.\nNous allons l'installer maintenant."
+  pkexec apt install imagemagick -y | zenity --progress --width=350 --title="FastPics" --text="Installation d'imagemagick en cours..." --pulsate --auto-close
 fi
 
 ICON="./Icon/gthumb.png"

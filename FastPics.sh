@@ -11,8 +11,8 @@
 # Verification Imagemagik
 commande="convert"
 if [  "`which $commande`" == "" ]; then
-	zenity --info --title="FastPics" --text="ImageMagick n'est pas installé !\n\nIl est nécésaire pour que le programme fonctionne.\nNous allons l'installer maintenant."
-	sudo apt install imagemagick | zenity --progress --width=350 --title="FastPics" --text="Installation d'imagemagick en cours..." --pulsate --auto-close
+	zenity --info --title="FastPics" --width="350" --text="ImageMagick n'est pas installé !\n\nIl est nécésaire pour que le programme fonctionne.\nNous allons l'installer maintenant."
+	pkexec apt install imagemagick -y | zenity --progress --width=350 --title="FastPics" --text="Installation d'imagemagick en cours..." --pulsate --auto-close
 fi
 
 # Change le séparateur standard (espace) pour RETURN
