@@ -1,7 +1,7 @@
 #!/bin/bash
 
 Fich=1
-Dossier1="/home/antoine/Bureau/RootMe/"
+Dossier1="/home/antoine/Bureau/Mp3/"
 Dossier2="/home/antoine/Bureau/CopeiTEST/"
 Nombre=$(ls $Dossier1 | wc -l)
 #echo $Nombre
@@ -13,7 +13,7 @@ copie()
 {
   for fichier in $Dossier1/*
   do
-    POURC=$Fich*100/$Nombre
+    let POURC=($Fich*100/$Nombre)
     echo "$POURC"
     echo "# copie de $(basename $fichier)"
     cp -rf $fichier $Dossier2
