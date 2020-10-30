@@ -40,11 +40,4 @@ done
 
 # Tri du fichier & suppression du fichier tmp
 sort -rm fichier_tmp.txt
-rm fichier_tmp.txt 
-
-
-
-
-
-
-
+rm fichier_tmp.txt
