@@ -16,5 +16,4 @@ done
 #Active le curseur
 tput cvvis
 
-echo -e "\r"
-echo "Done"
+echo "Done             "
