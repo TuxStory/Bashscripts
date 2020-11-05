@@ -1,5 +1,8 @@
 #!/bin/bash
 
+#Cache le curseur
+tput civis
+
 for ((i=O; i<=20 ; i++))
 do
   for ((j=0; j<=20 ; j++))
@@ -14,3 +17,6 @@ do
     echo -ne "\r"
 done
 printf "\n"
+
+#Active le curseur
+tput cvvis
