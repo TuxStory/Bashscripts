@@ -3,20 +3,22 @@
 #Cache le curseur
 tput civis
 
-for ((i=O; i<=20 ; i++))
+for ((l=0 ; l<3; l++))
 do
-  for ((j=0; j<=20 ; j++))
-    do
-    if [ $j -eq $i ] ; then
-      echo -n "."
-      sleep 0.1
-    else
-      echo -n " "
-    fi
-    done
-    echo -ne "\r"
+  for i in {0..20} {19..0}
+  do
+    for j in {0..20}
+      do
+      if [ $j -eq $i ] ; then
+        echo -n "."
+        sleep 0.1
+      else
+        echo -n " "
+      fi
+      done
+      echo -ne "\r"
+  done
 done
-printf "\n"
 
 #Active le curseur
 tput cvvis
