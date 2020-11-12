@@ -28,21 +28,38 @@ echo
 #$ echo $name
 #$ echo ${name^} > Test
 #$ echo ${name^^} > TEST
+#$ echo ${name,,} > effet inverse TEST > test
 
 #2 To actually clear the line for the new text, you can add \033[K after the \r:
 
 STR="debian10buster"
 for i in {1..5} ; do
   for L in $(seq 1 ${#STR}); do
-    echo -n $(echo $STR | cut -c$L)
+    Letter=$(echo $STR | cut -c$L)
+    echo -n ${Letter^^}
     sleep 0.2
   done
   echo -ne "\r\033[K"
-  if [[ $STR == [a*-z*] ]]; then
-    STR=${STR^^}
-  else
-    STR="debian10buster"
-  fi
-  echo $STR
 done
 echo
+
+STR="debian10buster"
+#N=$(seq 1 ${#STR})
+for j in {1..5}; do
+  for i in $(seq 1 ${#STR}) ; do
+    for L in $(seq 1 ${#STR}); do
+      Letter=$(echo $STR | cut -c$L)
+      if [ i == L ]; then
+        echo ok
+        echo -n ${Letter^^}
+        sleep 0.2
+      else
+        #echo $i $L
+        echo -n $Letter
+      sleep 0.2
+      fi
+    done
+    echo -ne "\r\033[K"
+  done
+  echo
+done
