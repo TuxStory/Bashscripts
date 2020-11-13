@@ -1,6 +1,6 @@
 #!/bin/bash
 
-apt search linux > /dev/null 2&>1 &
+apt search linux > /dev/null 2>&1 &
 pid=$!
 
 # If this script is killed, kill the `cp'.
