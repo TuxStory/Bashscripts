@@ -52,11 +52,11 @@ for j in {1..5}; do
       if [ i == L ]; then
         echo ok
         echo -n ${Letter^^}
-        sleep 0.2
+        sleep 0.1
       else
-        #echo $i $L
+        echo " " $i $L
         echo -n $Letter
-      sleep 0.2
+        sleep 0.1
       fi
     done
     echo -ne "\r\033[K"
