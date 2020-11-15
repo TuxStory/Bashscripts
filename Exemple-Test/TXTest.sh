@@ -18,7 +18,7 @@ bgWhite=$(tput setab 7) # white
 
 # foreground color using ANSI escape
 
-fgBLack=$(tput setaf 0) # black
+fgBlack=$(tput setaf 0) # black
 fgRed=$(tput setaf 1) # red
 fgGreen=$(tput setaf 2) # green
 fgYellow=$(tput setaf 3) # yellow
@@ -46,11 +46,18 @@ echo "${txReverse}Text"
 tput sgr0
 echo "${fgGreen}Underlined Text"
 tput sgr0
+echo "${fgBlue}Blue Test"
+tput sgr0
+echo "${bgYellow}Yellow Test"
+tput sgr0
+
 printf "Your username is %s\n" $USER
 echo Your username is $USER
 
 x=hello\ world
 for((;n<11;)){
 echo -en "\r${x:0:n}"`tr a-z A-Z<<<"${x:n:1}"`"${x:n+++1}"
-sleep 0.2
+sleep 0.1
 }
+
+echo
