@@ -1,6 +1,6 @@
-############
-# TXT Test #
-############
+#####################
+# TXT & colors Test #
+#####################
 
 txUnderline=$(tput smul)
 echo "${txUnderline}Underlined Text"
