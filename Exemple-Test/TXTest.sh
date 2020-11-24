@@ -96,3 +96,16 @@ printf '\xE2\x98\xA0'
 echo -e '\u2620'     # \u takes four hexadecimal digits
 echo -e '\U0001f602' # \U takes eight hexadecimal digitsecho -e '\U0001f602'
 echo -e '\U0001f600 \U0001f601 \U0001f608 \U0001f60E'
+echo "🐧"
+echo -e '\U0001F427'
+echo -e '\U0001F354'
+echo -e '\U0001F0A0 \U0001F0A1 \U0001F0A2 \U0001F0A3 \U0001F0A3'
+
+for i in {1..5}
+do
+  for s in 🌑 🌒 🌓 🌔 🌕 🌖 🌗 🌘
+  do
+    echo -ne "\r$s"
+    sleep 0.5
+  done
+done
