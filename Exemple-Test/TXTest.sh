@@ -90,3 +90,9 @@ done
 echo
 
 #https://doc.ubuntu-fr.org/tutoriel/formater_le_texte_dans_le_terminal_avec_tput
+
+#UNICODE
+printf '\xE2\x98\xA0'
+echo -e '\u2620'     # \u takes four hexadecimal digits
+echo -e '\U0001f602' # \U takes eight hexadecimal digitsecho -e '\U0001f602'
+echo -e '\U0001f600 \U0001f601 \U0001f608 \U0001f60E'
