@@ -14,6 +14,7 @@ then
         echo OK
     else
         echo FAIL
+        exit 1
     fi
 else
 	# aucun paramètre reçu
