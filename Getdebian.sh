@@ -1,4 +1,4 @@
-#include
+#!/bin/bash
 
 REGEX="https:\/\/[a-z]{7}.*.iso"
 Link=$(wget -qO- www.debian.org | grep -Eo $REGEX)
