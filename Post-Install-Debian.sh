@@ -45,7 +45,7 @@ Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders
 	frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin="fail2ban firewalld samba nmon nload vnstat vnstati testdisk hddtemp lnav tmux lm-sensors glances nethogs smartmontools"
+Admin="fail2ban firewalld samba nmon nload vnstat vnstati testdisk iperf3 hddtemp lnav tmux lm-sensors glances nethogs smartmontools"
 
 Programmes_Dev="git geany nano mu-editor python3-numpy"
 
