@@ -6,6 +6,6 @@ echo $Link
 wget $Link -P ~/
 
 #wget -qO- www.debian.org |
-#grep -Eoi '<a [^>]+>' | 
-#grep -Eo 'href="[^\"]+"' | 
+#grep -Eoi '<a [^>]+>' |
+#grep -Eo 'href="[^\"]+"' |
 #grep -Eo '(http|https)://[^/"]+'
