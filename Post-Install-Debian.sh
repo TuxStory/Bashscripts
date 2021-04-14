@@ -57,7 +57,7 @@ printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: 
 printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read reponse3
 
 #Boucle Programmes courants ####################################################
-if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
+ if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	for i in $Programmes; do
 		echo -e "\033[1;32mInstallation de :" $(basename $i)
