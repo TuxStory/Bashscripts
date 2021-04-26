@@ -42,12 +42,11 @@ Programmes_Console="ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon 
 
 Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
 
-Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders
-	frozen-bubble gnome-games xboard lbreakout2 burgerspace"
+Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
 Admin="fail2ban firewalld samba nmon nload vnstat vnstati testdisk iperf3 hddtemp lnav tmux lm-sensors glances nethogs smartmontools"
 
-Programmes_Dev="git geany nano mu-editor python3-numpy"
+Programmes_Dev="gcc git geany nano mu-editor python3-numpy python3-matplotlib ipython3"
 
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read reponse
 printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read reponse1
