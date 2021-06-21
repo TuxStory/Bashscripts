@@ -4,7 +4,7 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 25/10/2020       #
+# Modif  : 21/06/2021       #
 #############################
 
 #Variables
@@ -17,7 +17,7 @@ ANNEE=$(date +"%Y")
 INTERFACE="wlan0"
 USER="pi" #Besoin de le spécifier pour crontab
 DOSSIER="/home/$USER/vnstat-graph/$ANNEE-$MOIS"
-VERSION="1.1"
+VERSION="1.2"
 
 #Vérification de la présence de vnstat et vnstati
 if [ ! -x /usr/bin/vnstat ] || [ ! -x /usr/bin/vnstati ]; then
@@ -41,7 +41,7 @@ fi
 
 #Stats par année
 if [ $JOUR == 31 ] &&  [ $MOIS == 12 ]; then
-    vnstati -y -i wlan0 -o $DOSSIER/Année.png
+    vnstati -y -i $INTERFACE -o $DOSSIER/Année.png
 fi
 
 #Décommenter pour notifier le joural (logs)
