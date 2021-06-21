@@ -7,7 +7,13 @@
 # Modif  : 21/06/2021       #
 #############################
 
+# Ajouter une ligne similaire à votre crontab [commande : crontab -e]
+#
+#  00 23 * * * /home/pi/vnstati-maker.sh
+#
+
 #Variables
+VERSION="1.2.1"
 DATE=$(date +"%d-%m-%Y")
 JOUR=$(date +"%d")
 MOIS=$(date +"%B")
@@ -17,7 +23,6 @@ ANNEE=$(date +"%Y")
 INTERFACE="wlan0"
 USER="pi" #Besoin de le spécifier pour crontab
 DOSSIER="/home/$USER/vnstat-graph/$ANNEE-$MOIS"
-VERSION="1.2"
 
 #Vérification de la présence de vnstat et vnstati
 if [ ! -x /usr/bin/vnstat ] || [ ! -x /usr/bin/vnstati ]; then
