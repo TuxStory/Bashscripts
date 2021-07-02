@@ -24,3 +24,6 @@ echo $MOT
 # Pour compter le nombre de lignes moi je fais comme ceci
 # wc -l < /usr/share/hunspell/fr.dic
 # 81227
+# ou encore
+# cat /usr/share/hunspell/fr.dic | wc -l
+# 81227
