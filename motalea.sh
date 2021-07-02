@@ -20,3 +20,7 @@ MOT=$(echo $MOT | awk '{print $1}')
 
 # Affichage du mot sur la console
 echo $MOT
+
+# Pour compter le nombre de lignes moi je fais comme ceci
+# wc -l < /usr/share/hunspell/fr.dic
+# 81227
