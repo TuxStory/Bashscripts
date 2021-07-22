@@ -2,11 +2,9 @@
 
 ##############################
 # Scrpit Post-Installation   #
-# 20/07/2020 ver 0.7         #
+# 23/07/2021 ver 0.8         #
 # Antoine Even               #
 ##############################
-
-#### A Faire une fonction pour éviter les boucles répétées ####
 
 #The 'yes' command will echo 'y' (or whatever you ask it to) indefinitely.
 #Use it as:
@@ -33,6 +31,18 @@ echo -e "\033[1;34mInstallation des progammes :"
 echo -e "\033[0;0m----------------------------"
 echo
 
+#Fonction ######################################################################
+
+function Install()
+{
+  arr=("$@")
+  for prog in "${arr[@]}"; do
+  	echo -e "\033[1;32mInstallation de :" $(basename $prog)
+	echo -e "\033[0;0m"
+	apt install -y $(basename $prog) ; echo
+  done
+}
+
 #Liste des programmes. #########################################################
 Programmes="dfc audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
 	youtube-dl deja-dup system-config-printer bleachbit gnome-disk-utils
@@ -48,71 +58,36 @@ Admin="fail2ban firewalld samba nmon wavemon nload vnstat vnstati testdisk iperf
 
 Programmes_Dev="gcc git geany nano mu-editor python3-numpy python3-matplotlib ipython3"
 
+#Questionnaire. ################################################################
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read reponse
-printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read reponse1
-printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m: (Oui/Non) " ; read reponse2
-printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read reponse4
-printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read reponse5
-printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read reponse3
-
-#Boucle Programmes courants ####################################################
- if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
+if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
 then
-	for i in $Programmes; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i)
-		echo -e "\033[0;0m"
-		apt install -y $(basename $i) ; echo
-	done
+	Install ${Programmes[@]}
 fi
-
-#Boucle Programmes Console
+printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read reponse1
 if [[ $reponse1 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
-	for i in $Programmes_Console; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i)
-		echo -e "\033[0;0m"
-		apt install -y $(basename $i) ; echo
-	done
+	Install ${Programmes_Console[@]}
 fi
-
-#Boucle Internet
+printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m: (Oui/Non) " ; read reponse2
 if [[ $reponse2 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
-	for i in $Programmes_Internet; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i)
-		echo -e "\033[0;0m"
-		apt install -y $(basename $i) ; echo
-	done
+	Install ${Programmes_Internet[@]}
 fi
-
-#Boucle des Jeux
+printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read reponse3
 if [[ $reponse3 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
-	for i in $Games; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i)
-		echo -e "\033[0;0m"
-		apt install -y $(basename $i) ; echo
-	done
+	Install ${Admin[@]}
 fi
-
-#Boucle Admin
+printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read reponse4
 if [[ $reponse4 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
-	for i in $Admin; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i)
-		echo -e "\033[0;0m"
-		yes Y | apt install $(basename $i) ; echo
-	done
+	Install ${Programmes_Dev[@]}
 fi
-
-#Boucle Dev
+printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read reponse5
 if [[ $reponse5 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
-	for i in $Programmes_Dev; do
-		echo -e "\033[1;32mInstallation de :" $(basename $i)
-		echo -e "\033[0;0m"
-		yes Y | apt install $(basename $i) ; echo
-	done
+	Install ${Games[@]}
 fi
 
 # Nettoyage ####################################################################
