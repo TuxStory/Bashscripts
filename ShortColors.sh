@@ -1,7 +1,6 @@
 #! /usr/bin/bash
 #Test fof colors shortcuts
 
-null="> /dev/null 2>&1"
 g="\033[1;32m"
 r="\033[1;31m"
 b="\033[1;34m"
