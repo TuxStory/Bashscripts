@@ -4,19 +4,20 @@
 # Script : ytubedlpBash.sh  #
 # Auteur : Antoine Even     #
 # Date   : 17/11/2021       #
-# Modif  : 17/11/2021       #
+# Modif  : 18/11/2021       #
 #############################
 
 #Variables
-VERSION="0.1.0"
+VERSION="0.1.1"
 DOSSIER="/home/$USER/Youtube"
 URL=""
 
 #Vérification de la présence du logiciel.
 if [ ! -x /usr/local/bin/yt-dlp ] ; then
 echo "Le logiciel yt-dlp n'est manquant, veulliez l'installer."
-#sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp
-#sudo chmod a+rx /usr/local/bin/yt-dlp
+echo "Instrucrion :"
+echo "sudo curl -L https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp -o /usr/local/bin/yt-dlp"
+echo "sudo chmod a+rx /usr/local/bin/yt-dlp"
 exit 1
 fi
 
