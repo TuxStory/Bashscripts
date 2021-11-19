@@ -4,13 +4,12 @@
 # Script : ytubedlpBash.sh  #
 # Auteur : Antoine Even     #
 # Date   : 17/11/2021       #
-# Modif  : 18/11/2021       #
+# Modif  : 19/11/2021       #
 #############################
 
 #Variables
-VERSION="0.1.1"
+VERSION="0.1.2"
 DOSSIER="/home/$USER/Youtube"
-URL=""
 
 #Vérification de la présence du logiciel.
 if [ ! -x /usr/local/bin/yt-dlp ] ; then
@@ -32,20 +31,19 @@ echo "1. Vidéo au format webp."
 echo "2. Vidéo au format mp4."
 echo "3. Bande sonore au format mp3."
 echo "4. Mise à jour de yt-dlp."
-echo 
-read -p "Votre choix ? : " choix
 
-if [[ $choix != 4 ]]
-    if [ ! -d "$DOSSIER" ]; then
-        cd ~ ; mkdir Youtube
-        echo "Création du dossier de sauvegarde."
-        cd $DOSSIER
-    else
-        cd $DOSSIER
-        echo "Le dossier de sauvegarde est /home/$USER/Youtube."
-    fi
-then
-    read -p "Lien de la page Youtube : " URL
+read -p $'\n'"Votre choix ? : " choix
+
+if [[ $choix != 4 ]]; then
+	if [ ! -d "$DOSSIER" ]; then
+    		cd ~ ; mkdir Youtube
+        	echo "Création du dossier de sauvegarde."
+        	cd $DOSSIER
+    	else
+        	cd $DOSSIER
+        	echo "Le dossier de sauvegarde est /home/$USER/Youtube."
+    	fi
+    	read -p "Lien de la page Youtube : " URL
 fi
 
 #Traitement
@@ -71,5 +69,5 @@ fi
 
 if [[ $choix = 4 ]]
 then
-    yt-dlp -U	
+    yt-dlp -U
 fi
