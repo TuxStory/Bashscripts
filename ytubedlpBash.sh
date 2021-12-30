@@ -4,11 +4,11 @@
 # Script : ytubedlpBash.sh  #
 # Auteur : Antoine Even     #
 # Date   : 17/11/2021       #
-# Modif  : 19/11/2021       #
+# Modif  : 30/12/2021       #
 #############################
 
 #Variables
-VERSION="0.1.2"
+VERSION="0.1.3"
 DOSSIER="/home/$USER/Youtube"
 
 #Vérification de la présence du logiciel.
@@ -69,5 +69,5 @@ fi
 
 if [[ $choix = 4 ]]
 then
-    yt-dlp -U
+    sudo yt-dlp -U
 fi
