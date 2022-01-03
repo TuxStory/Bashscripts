@@ -4,11 +4,11 @@
 # Script : ytubedlpBash.sh  #
 # Auteur : Antoine Even     #
 # Date   : 17/11/2021       #
-# Modif  : 30/12/2021       #
+# Modif  : 03/01/2022       #
 #############################
 
 #Variables
-VERSION="0.1.3"
+VERSION="0.1.4"
 DOSSIER="/home/$USER/Youtube"
 
 #Vérification de la présence du logiciel.
