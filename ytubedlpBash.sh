@@ -64,7 +64,7 @@ fi
 
 if [[ $choix = 3 ]]
 then
-	yt-dlp yt-dlp -f 'ba' -x --audio-format mp3 $URL
+	yt-dlp -f 'ba' -x --audio-format mp3 $URL
 fi
 
 if [[ $choix = 4 ]]
