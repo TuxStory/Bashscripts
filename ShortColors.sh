@@ -1,5 +1,5 @@
 #! /usr/bin/bash
-#Test fof colors shortcuts
+#Test of colors shortcuts
 
 g="\033[1;32m"
 r="\033[1;31m"
