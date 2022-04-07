@@ -7,8 +7,8 @@ echo "www.fedora-fr.org"
 
 # Traitement des paramètres
 # nom du fichier source
-if [ ! -z $1 ] 
-then 
+if [ ! -z $1 ]
+then
     ping -c 1 $1 > /dev/null
     if [ $? -eq 0 ]; then
         echo OK
