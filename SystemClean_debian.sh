@@ -7,7 +7,7 @@
 # Revision	: 10/06/22      	#
 #################################
 
-VERSION=0.1.4
+VERSION=0.1.5
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -39,7 +39,7 @@ CACHE=$(du -sh /home/$SUDO_USER/.cache/ | awk '{print $1}')
 echo -e "\n${GREEN}>>> [Cache] ${WHITE}La taille du dossier personnel ${BLUE}.cache${WHITE} est de : ${GREEN}$CACHE${WHITE}."
 sudo rm -rf /home/$SUDO_USER/.cache/
 echo "Le cache à été vidé."
-ESPACE=$ESPACE+$CACHE
+
 
 # Poubelle
 POUBELLE=$(du -sh /home/$SUDO_USER/.local/share/Trash/files | awk '{print $1}')
@@ -58,4 +58,5 @@ sudo apt autoremove
 echo -e "\n${GREEN}>>> [Résidus] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
 
-#echo "$ESPACE ont été nettoyé !"
+#chromium ?
+#echo "$ESPACE - $CACHE - $POUBELLE ont été nettoyé !"
