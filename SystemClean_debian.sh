@@ -7,7 +7,7 @@
 # Revision	: 14/06/22      	#
 #################################
 
-VERSION=0.1.6
+VERSION=0.1.7
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -24,7 +24,7 @@ if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
 fi
 
 #Intro
-echo -e "${GREEN}===== ${WHITE}SystemCleaner Ver:${BLUE}$VERSION ${WHITE}for${RED} Debian ${WHITE}base system${GREEN} ====="
+echo -e "\n${GREEN}===== ${WHITE}SystemCleaner Ver:${BLUE}$VERSION ${WHITE}for${RED} Debian ${WHITE}base system${GREEN} ====="
 
 # journalctl
 JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
@@ -39,7 +39,6 @@ CACHE=$(du -sh /home/$SUDO_USER/.cache/ | awk '{print $1}')
 echo -e "\n${GREEN}>>> [Cache] ${WHITE}La taille du dossier personnel ${BLUE}.cache${WHITE} est de : ${GREEN}$CACHE${WHITE}."
 sudo rm -rf /home/$SUDO_USER/.cache/
 echo "Le cache à été vidé."
-
 
 # Poubelle
 POUBELLE=$(du -sh /home/$SUDO_USER/.local/share/Trash/files | awk '{print $1}')
