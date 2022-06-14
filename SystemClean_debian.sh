@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh	#
 # Auteur 	: Antoine Even	    #
 # Date 		: 10/06/22	        #
-# Revision	: 10/06/22      	#
+# Revision	: 14/06/22      	#
 #################################
 
-VERSION=0.1.5
+VERSION=0.1.6
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -50,7 +50,8 @@ echo "La poubelle à été vidée."
 # Apt
 echo -e "\n${GREEN}>>> [Apt Cache] ${WHITE}Nettoyage du dossier ${BLUE}/var/cache/apt${WHITE}."
 sudo du -sh /var/cache/apt
-sudo apt-get clean
+sudo apt clean --dry-run
+sudo apt clean
 
 echo -e "\n${GREEN}>>> [Apt Autoremove] ${WHITE}Nettoyage des porgrammes."
 sudo apt autoremove
