@@ -62,3 +62,4 @@ echo -e "\n${GREEN}>>> [Résidus] ${WHITE}Recherche de résidus ... "
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
 #echo "$ESPACE - $CACHE - $POUBELLE ont été nettoyé !"
 
+#todo Chromium /home/antoine/.config/chromium/Default/Service Worker
