@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh	#
 # Auteur 	: Antoine Even	    #
 # Date 		: 10/06/22	        #
-# Revision	: 15/06/22      	#
+# Revision	: 22/06/22      	#
 #################################
 
-VERSION=0.1.8
+VERSION=0.1.9
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -23,7 +23,7 @@ if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
   exit $EACCES
 fi
 
-#Intro
+# Intro
 echo -e "\n${GREEN}===== ${WHITE}SystemCleaner Ver:${BLUE}$VERSION ${WHITE}for${RED} Debian ${WHITE}base system${GREEN} ====="
 
 # journalctl
@@ -34,7 +34,7 @@ sudo journalctl --vacuum-size 50M
 JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
 echo -e "La taille du journal a été réduite à : ${GREEN}$JOURNAL${WHITE}."
 
-# dossier .cache
+# Dossier .cache
 CACHE=$(du -sh /home/$SUDO_USER/.cache/ | awk '{print $1}')
 echo -e "\n${GREEN}>>> [Cache] ${WHITE}La taille du dossier personnel ${BLUE}.cache${WHITE} est de : ${GREEN}$CACHE${WHITE}."
 sudo rm -rf /home/$SUDO_USER/.cache/
@@ -58,8 +58,8 @@ sudo apt autoremove
 echo -e "\n${GREEN}>>> [Résidus] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
 
-#chromium ?
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
 #echo "$ESPACE - $CACHE - $POUBELLE ont été nettoyé !"
 
+#Chromium ?
 #todo Chromium /home/antoine/.config/chromium/Default/Service Worker
