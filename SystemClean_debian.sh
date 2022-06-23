@@ -7,7 +7,7 @@
 # Revision	: 22/06/22      	#
 #################################
 
-VERSION=0.2.0
+VERSION=0.2.1
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -46,8 +46,6 @@ then
   CHROME=$(du -sh /home/antoine/.config/chromium/Default/Service\ Worker/ | awk '{print $1}')
   echo -e "\n${GREEN}>>> [Chrome] ${WHITE}La taille du dossier de Chrome ${BLUE}.cache${WHITE} est de : ${GREEN}$CHROME${WHITE}."
   rm /home/antoine/.config/chromium/Default/Service\ Worker/*
-else
-  echo "Le dossier n'existe pas"
 fi
 
 # Poubelle
