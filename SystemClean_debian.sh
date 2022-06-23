@@ -7,7 +7,7 @@
 # Revision	: 22/06/22      	#
 #################################
 
-VERSION=0.2.1
+VERSION=0.2.2
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -41,11 +41,11 @@ sudo rm -rf /home/$SUDO_USER/.cache/
 echo "Le cache à été vidé."
 
 # Chromium - Chromium
-if [ -d "/home/$USER/.config/chromium/Default/Service Worker"]
+if [ -d /home/$SUDO_USER/.config/chromium/Default/Service\ Worker/ ]
 then
   CHROME=$(du -sh /home/antoine/.config/chromium/Default/Service\ Worker/ | awk '{print $1}')
   echo -e "\n${GREEN}>>> [Chrome] ${WHITE}La taille du dossier de Chrome ${BLUE}.cache${WHITE} est de : ${GREEN}$CHROME${WHITE}."
-  rm /home/antoine/.config/chromium/Default/Service\ Worker/*
+  rm -rf /home/antoine/.config/chromium/Default/Service\ Worker/
 fi
 
 # Poubelle
