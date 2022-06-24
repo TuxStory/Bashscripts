@@ -7,7 +7,7 @@
 # Revision	: 22/06/22      	#
 #################################
 
-VERSION=0.2.2
+VERSION=0.2.3
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -46,6 +46,7 @@ then
   CHROME=$(du -sh /home/antoine/.config/chromium/Default/Service\ Worker/ | awk '{print $1}')
   echo -e "\n${GREEN}>>> [Chrome] ${WHITE}La taille du dossier de Chrome ${BLUE}.cache${WHITE} est de : ${GREEN}$CHROME${WHITE}."
   rm -rf /home/antoine/.config/chromium/Default/Service\ Worker/
+  echo "Le cache de chrome a été vidé."
 fi
 
 # Poubelle
