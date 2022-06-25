@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh	#
 # Auteur 	: Antoine Even	    #
 # Date 		: 10/06/22	        #
-# Revision	: 22/06/22      	#
+# Revision	: 25/06/22      	#
 #################################
 
-VERSION=0.2.3
+VERSION=0.2.4
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -68,7 +68,7 @@ echo -e "\n${GREEN}>>> [Résidus] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
 
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
+
+#Resumé
 #echo "$ESPACE - $CACHE - $POUBELLE ont été nettoyé !"
 
-#Chromium ?
-#todo Chromium /home/antoine/.config/chromium/Default/Service Worker
