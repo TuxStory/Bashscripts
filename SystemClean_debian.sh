@@ -4,14 +4,14 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 10/06/22	   #
-# Revision	: 26/06/22         #
+# Revision	: 29/06/22         #
 ####################################
 
-VERSION=0.2.6
+VERSION=0.2.7
 EACCES=13 # Permission denied
 ESPACE=0
 
-############## Couleurs
+############### Couleurs
 GREEN='\033[1;32m'
 WHITE='\033[1;0m' #real white \033[1;37m
 RED='\033[0;91m'
@@ -26,7 +26,7 @@ fi
 # Intro
 echo -e "\n${GREEN}===== System${WHITE}Cleaner Ver: ${BLUE}$VERSION ${WHITE}for${RED} Debian ${WHITE}base system${GREEN} ====="
 
-# journalctl
+############## journalctl
 JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
 ESPACE=$JOURNAL
 echo -e "\n${GREEN}>>> [ Journal ] ${WHITE}La taille du journal système est de : ${RED}$JOURNAL${WHITE}."
@@ -34,13 +34,13 @@ sudo journalctl --vacuum-size 50M
 JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
 echo -e "La taille du journal a été réduite à : ${GREEN}$JOURNAL${WHITE}."
 
-# Dossier .cache
+############### Dossier .cache
 CACHE=$(du -sh /home/$SUDO_USER/.cache/ | awk '{print $1}')
 echo -e "\n${GREEN}>>> [ Cache ] ${WHITE}La taille du dossier personnel ${BLUE}.cache${WHITE} est de : ${GREEN}$CACHE${WHITE}."
 sudo rm -rf /home/$SUDO_USER/.cache/
 echo "Le cache à été vidé."
 
-# Chromium - Chromium
+############### Chromium - Chromium
 if [ -d /home/$SUDO_USER/.config/chromium/Default/Service\ Worker/ ]
 then
   CHROME=$(du -sh /home/antoine/.config/chromium/Default/Service\ Worker/ | awk '{print $1}')
@@ -49,13 +49,13 @@ then
   echo "Le cache de chrome a été vidé."
 fi
 
-# Poubelle
+################ Poubelle
 POUBELLE=$(du -sh /home/$SUDO_USER/.local/share/Trash/files | awk '{print $1}')
 echo -e "\n${GREEN}>>> [ Trash ] ${WHITE}La taille de la poubelle ${BLUE}~/.local/share/Trash/files${WHITE} est de : ${GREEN}$POUBELLE${WHITE}."
 sudo rm -rf /home/$SUDO_USER/.local/share/Trash/files/*
 echo "La poubelle à été vidée."
 
-# Apt
+################ Apt
 echo -e "\n${GREEN}>>> [ Apt Cache ] ${WHITE}Nettoyage du dossier ${BLUE}/var/cache/apt${WHITE}."
 sudo du -sh /var/cache/apt
 sudo apt clean --dry-run
@@ -67,8 +67,6 @@ sudo apt autoremove
 echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
 
+################ The end
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
-
-#Resumé
-#echo "$ESPACE - $CACHE - $POUBELLE ont été nettoyé !"
 
