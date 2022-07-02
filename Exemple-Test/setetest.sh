@@ -11,11 +11,11 @@ echo test
 echo $A
 
 <<"EXPLICATION"
-antoine@Bullseye:~/GitHub/Bashscripts/Exemple-Test$ ./setetest.sh 
+antoine@Bullseye:~/GitHub/Bashscripts/Exemple-Test$ ./setetest.sh
 Hello World !
 ./setetest.sh: ligne 6: error : commande introuvable
-antoine@Bullseye:~/GitHub/Bashscripts/Exemple-Test$ nano setetest.sh 
-antoine@Bullseye:~/GitHub/Bashscripts/Exemple-Test$ ./setetest.sh 
+antoine@Bullseye:~/GitHub/Bashscripts/Exemple-Test$ nano setetest.sh
+antoine@Bullseye:~/GitHub/Bashscripts/Exemple-Test$ ./setetest.sh
 Hello World !
 ./setetest.sh: ligne 6: error : commande introuvable
 test
