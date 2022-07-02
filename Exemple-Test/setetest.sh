@@ -2,8 +2,9 @@
 
 A=10
 
-set +e
-#set -e
+set -x #mode debug
+#set +e #continue en cas d'erreur
+set -e #Le script s'arrête completement lors dune erreur
 
 echo "Hello World !"
 error
