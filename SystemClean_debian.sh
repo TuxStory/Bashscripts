@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 10/06/22	   #
-# Revision	: 29/06/22         #
+# Revision	: 04/07/22         #
 ####################################
 
-VERSION=0.2.7
+VERSION=0.2.9
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -66,6 +66,12 @@ sudo apt autoremove
 
 echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
+
+################ TMP
+TEMPORY=$(du -sh /tmp/ | awk '{print $1}')
+echo -e "\n${GREEN}>>> [ TMP ] ${WHITE}La taille du dossier ${BLUE}/tmp/${WHITE} est de : ${GREEN}$TEMPORY${WHITE}."
+sudo find /tmp -type f -atime +10 -delete
+echo "Les fichiers temporaires de plus de 10 jours ont été éffacés."
 
 ################ The end
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
