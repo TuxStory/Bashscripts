@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#source 'array.sh' #execute tout le code du fichier
+
 function test() {
     echo "fonction 1"
 }
@@ -14,3 +16,4 @@ function main () {
 }
 
 main
+echo ${names[@]}
