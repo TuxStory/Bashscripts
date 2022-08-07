@@ -4,7 +4,7 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 29/06/2022       #
+# Modif  : 07/08/2022       #
 #############################
 
 # Ajouter une ligne similaire à votre crontab [commande : crontab -e]
@@ -31,23 +31,24 @@ exit 1
 fi
 
 #Vérification du dossier.
-if [ ! -d $DOSSIER ]; then
-mkdir -p $DOSSIER
+if [ ! -d "$DOSSIER" ]; then
+mkdir -p "$DOSSIER"
 fi
 
 #Creation PNG du jour
-vnstati -vs -i $INTERFACE -o $DOSSIER/Jour-$DATE.png
+vnstati -vs -i "$INTERFACE" -o "$DOSSIER"/Jour-"$DATE".png
 
 #Stats pour le mois passé
-if [ $JOUR == 28 ] && [ $MOIS == 2 ] || [ $JOUR == 30 ] || [ $JOUR == 31 ]; then
-    vnstati -m -i $INTERFACE -o $DOSSIER/$MOIS-$ANNEE-Mois.png
-    vnstati -d -i $INTERFACE -o $DOSSIER/$MOIS-$ANNEE-jours.png
+if [ "$JOUR" == 28 ] && [ "$MOIS" == 2 ] || [ "$JOUR" == 30 ] || [ "$JOUR" == 31 ]; then
+    vnstati -m -i "$INTERFACE" -o "$DOSSIER"/"$MOIS"-"$ANNEE"-Mois.png
+    vnstati -d -i "$INTERFACE" -o "$DOSSIER"/"$MOIS"-"$ANNEE"-jours.png
 fi
 
 #Stats par année
-if [ $JOUR == 31 ] &&  [ $MOIS == 12 ]; then
-    vnstati -y -i $INTERFACE -o $DOSSIER/Année.png
+if [ "$JOUR" == 31 ] &&  [ "$MOIS" == 12 ]; then
+    vnstati -y -i "$INTERFACE" -o "$DOSSIER"/Année.png
 fi
 
 #Décommenter pour notifier le joural (logs)
 logger "$0 commande effectué à $DATE : PNG [ ok ]"
+
