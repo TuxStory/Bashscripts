@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 10/06/22	   #
-# Revision	: 04/07/22         #
+# Revision	: 07/08/22         #
 ####################################
 
-VERSION=0.2.9
+VERSION=0.3.0
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -35,13 +35,13 @@ JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
 echo -e "La taille du journal a été réduite à : ${GREEN}$JOURNAL${WHITE}."
 
 ############### Dossier .cache
-CACHE=$(du -sh /home/$SUDO_USER/.cache/ | awk '{print $1}')
+CACHE=$(du -sh /home/"$SUDO_USER"/.cache/ | awk '{print $1}')
 echo -e "\n${GREEN}>>> [ Cache ] ${WHITE}La taille du dossier personnel ${BLUE}.cache${WHITE} est de : ${GREEN}$CACHE${WHITE}."
-sudo rm -rf /home/$SUDO_USER/.cache/
+sudo rm -rf /home/"$SUDO_USER"/.cache/
 echo "Le cache à été vidé."
 
 ############### Chromium - Chromium
-if [ -d /home/$SUDO_USER/.config/chromium/Default/Service\ Worker/ ]
+if [ -d /home/"$SUDO_USER"/.config/chromium/Default/Service\ Worker/ ]
 then
   CHROME=$(du -sh /home/antoine/.config/chromium/Default/Service\ Worker/ | awk '{print $1}')
   echo -e "\n${GREEN}>>> [ Chrome ] ${WHITE}La taille du dossier de Chrome ${BLUE}.cache${WHITE} est de : ${GREEN}$CHROME${WHITE}."
@@ -50,9 +50,9 @@ then
 fi
 
 ################ Poubelle
-POUBELLE=$(du -sh /home/$SUDO_USER/.local/share/Trash/files | awk '{print $1}')
+POUBELLE=$(du -sh /home/"$SUDO_USER"/.local/share/Trash/files | awk '{print $1}')
 echo -e "\n${GREEN}>>> [ Trash ] ${WHITE}La taille de la poubelle ${BLUE}~/.local/share/Trash/files${WHITE} est de : ${GREEN}$POUBELLE${WHITE}."
-sudo rm -rf /home/$SUDO_USER/.local/share/Trash/files/*
+sudo rm -rf /home/"$SUDO_USER"/.local/share/Trash/files/*
 echo "La poubelle à été vidée."
 
 ################ Apt
