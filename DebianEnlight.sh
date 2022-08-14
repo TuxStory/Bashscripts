@@ -1,7 +1,8 @@
 ##############################
 # Date : 	13/08/2022   #
+# Maj  :	14/08/2022   #
 # Auteur:	Antoine Even #
-# Version :	0.4          #
+# Version :	0.5          #
 ##############################
 
 #!/bin/bash
@@ -13,6 +14,10 @@ echo "==================================================="
 echo "          Installation d'enlightenment E17         "
 echo "==================================================="
 echo
+echo ">>> Mise à jour des dépots et du système :"
+sudo apt update && sudo apt upgrade -y
+
+echo ">>> E17"
 sudo apt install -y lightdm enlightenment linux-headers-amd64 terminology
 
 echo ">>> Multimedia :"
