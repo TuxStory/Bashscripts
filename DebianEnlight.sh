@@ -2,7 +2,7 @@
 # Date : 	13/08/2022   #
 # Maj  :	14/08/2022   #
 # Auteur:	Antoine Even #
-# Version :	0.5          #
+# Version :	0.6          #
 ##############################
 
 #!/bin/bash
@@ -24,7 +24,7 @@ echo ">>> Multimedia :"
 sudo apt install -y audacious vlc
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi
+sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi git
 
 echo "===================================================="
 echo "               Installation Terminée                "
