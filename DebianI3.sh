@@ -1,8 +1,8 @@
 ##############################
 # Date : 	18/08/2022   #
-# Maj  :	18/08/2022   #
+# Maj  :	19/08/2022   #
 # Auteur:	Antoine Even #
-# Version :	0.2          #
+# Version :	0.3          #
 ##############################
 
 #!/bin/bash
@@ -18,7 +18,7 @@ echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
 echo ">>> I3"
-sudo apt install -y lightdm i3 i3-wm i3blocks terminology thunar
+sudo apt install -y lightdm i3 i3-wm i3blocks terminator thunar nitrogen
 
 echo ">>> Multimedia :"
 sudo apt install -y audacious vlc
@@ -32,4 +32,4 @@ sudo apt install -y synaptic
 echo "===================================================="
 echo "               Installation Terminée                "
 echo "===================================================="
-s
+
