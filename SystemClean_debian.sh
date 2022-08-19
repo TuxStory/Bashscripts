@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 10/06/22	   #
-# Revision	: 07/08/22         #
+# Revision	: 19/08/22         #
 ####################################
 
-VERSION=0.3.0
+VERSION=0.3.1
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -62,7 +62,7 @@ sudo apt clean --dry-run
 sudo apt clean
 
 echo -e "\n${GREEN}>>> [ Apt Autoremove ] ${WHITE}Nettoyage des porgrammes."
-sudo apt autoremove
+sudo apt autoremove -y
 
 echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
