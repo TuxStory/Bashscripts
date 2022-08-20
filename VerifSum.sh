@@ -3,7 +3,7 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.3        #
+# Version  0.0.4        #
 #########################
 
 # Dossier à Analyser
