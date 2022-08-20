@@ -3,22 +3,32 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.1        #
+# Version  0.0.3        #
 #########################
 
+# Dossier à Analyser
 Dossier="$HOME/GitHub/Bashscripts/"
+
+# Fichier & Espace de Travail
+WorkSpace="$HOME/.VerifSum"
 Data="$HOME/.VerifSum/Data_VerifSum"
 Old="$HOME/.VerifSum/Data_Old"
 
-#A completer
-mkdir "$HOME/.VerifSum" #si n'exite pas
-#touch $Data
-#touch $Old
+#A completesr
+if [ ! -d $WorkSpace ]
+then
+  mkdir $WorkSpace
+  touch $Data
+  touch $Old
+fi
+
 # Il faudrait des fichiers avec Dates
 
 for fichier in "$Dossier"/*
 do
-  sha256sum $fichier >> $Data
+  if [ ! -d "$fichier" ]; then
+    sha256sum $fichier >> $Data
+  fi
 done
 
 #Comparer les fichiers
