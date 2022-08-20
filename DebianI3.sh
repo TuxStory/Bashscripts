@@ -21,7 +21,7 @@ echo ">>> I3"
 sudo apt install -y lightdm i3 i3-wm kitty thunar nitrogen
 
 echo ">>> Multimedia :"
-sudo apt install -y audacious vlc
+sudo apt install -y audacious vlc eom
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi

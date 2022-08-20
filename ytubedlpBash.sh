@@ -4,11 +4,11 @@
 # Script : ytubedlpBash.sh  #
 # Auteur : Antoine Even     #
 # Date   : 17/11/2021       #
-# Modif  : 03/01/2022       #
+# Modif  : 21/08/2022       #
 #############################
 
 #Variables
-VERSION="0.1.4"
+VERSION="0.1.5"
 DOSSIER="/home/$USER/Youtube"
 
 #Vérification de la présence du logiciel.
@@ -22,9 +22,9 @@ fi
 
 #message
 clear
-echo "=================="
-echo "Youtube Downloader"
-echo "=================="
+echo "=============================="
+echo "      Youtube Downloader      "
+echo "=============================="
 echo
 echo "0. Liste des formats."
 echo "1. Vidéo au format webp."

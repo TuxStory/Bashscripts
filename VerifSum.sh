@@ -3,7 +3,7 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.4        #
+# Version  0.0.5        #
 #########################
 
 # Dossier à Analyser
@@ -33,6 +33,12 @@ done
 
 #Comparer les fichiers
 diff $Data $Old
+if [[ $? == 1 ]]
+then
+  echo -e "\nChangements détéctés - Status [ FAILED ]"
+else
+  echo -e "\nAucuns changements détéctés - Status [ OK ]"
+fi
 
 #copie temporaire pour test
 cp $Data $Old
