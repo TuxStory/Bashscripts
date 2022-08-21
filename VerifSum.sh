@@ -3,7 +3,7 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.7        #
+# Version  0.0.8        #
 #########################
 
 # Dossier à Analyser
@@ -46,6 +46,9 @@ fi
 
 #copie temporaire pour test
 cp $Data $Old
-
+cp $Old $WorkSpace/"Archive_"$DATE
 #Efface le fichier de Données.
+#Decommenter pour effacer les données
 rm $Data
+#echo -e "Fichier sauvé : $Data \npour comparaison manuelle"
+
