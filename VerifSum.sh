@@ -3,11 +3,12 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.5        #
+# Version  0.0.6        #
 #########################
 
 # Dossier à Analyser
-Dossier="$HOME/GitHub/Bashscripts/"
+#Dossier="$HOME/GitHub/Bashscripts/"
+Dossier="$HOME/Documents/"
 
 # Fichier & Espace de Travail
 WorkSpace="$HOME/.VerifSum"
@@ -23,13 +24,15 @@ then
 fi
 
 # Il faudrait des fichiers avec Dates
-
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b") #Résoud le problème des epaces dans les noms de fichiers
 for fichier in "$Dossier"/*
 do
   if [ ! -d "$fichier" ]; then
     sha256sum $fichier >> $Data
   fi
 done
+IFS=$SAVEIFS
 
 #Comparer les fichiers
 diff $Data $Old
