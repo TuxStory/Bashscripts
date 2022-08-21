@@ -3,7 +3,7 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.6        #
+# Version  0.0.7        #
 #########################
 
 # Dossier à Analyser
@@ -11,8 +11,9 @@
 Dossier="$HOME/Documents/"
 
 # Fichier & Espace de Travail
+DATE=$(date +"%d-%m-%Y")
 WorkSpace="$HOME/.VerifSum"
-Data="$HOME/.VerifSum/Data_VerifSum"
+Data="$HOME/.VerifSum/Data_VerifSum_$DATE"
 Old="$HOME/.VerifSum/Data_Old"
 
 #A completesr
