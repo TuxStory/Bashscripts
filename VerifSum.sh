@@ -3,7 +3,7 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.8        #
+# Version  0.0.9        #
 #########################
 
 # Dossier à Analyser
@@ -11,7 +11,7 @@
 Dossier="$HOME/Documents/"
 
 # Fichier & Espace de Travail
-DATE=$(date +"%d-%m-%Y")
+DATE=$(date +"%d-%m-%Y_%H:%M")
 WorkSpace="$HOME/.VerifSum"
 Data="$HOME/.VerifSum/Data_VerifSum_$DATE"
 Old="$HOME/.VerifSum/Data_Old"
@@ -47,8 +47,8 @@ fi
 #copie temporaire pour test
 cp $Data $Old
 cp $Old $WorkSpace/"Archive_"$DATE
+
 #Efface le fichier de Données.
-#Decommenter pour effacer les données
 rm $Data
 #echo -e "Fichier sauvé : $Data \npour comparaison manuelle"
 
