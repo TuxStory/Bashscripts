@@ -3,20 +3,24 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.0.9        #
+# Version  0.1.1        #
 #########################
 
-# Dossier à Analyser
+############### Couleurs
+GREEN='\033[1;32m'
+WHITE='\033[1;0m' #real white \033[1;37m
+
+############### Dossier à Analyser
 #Dossier="$HOME/GitHub/Bashscripts/"
 Dossier="$HOME/Documents/"
 
-# Fichier & Espace de Travail
+############## Fichier & Espace de Travail
 DATE=$(date +"%d-%m-%Y_%H:%M")
 WorkSpace="$HOME/.VerifSum"
 Data="$HOME/.VerifSum/Data_VerifSum_$DATE"
 Old="$HOME/.VerifSum/Data_Old"
 
-#A completesr
+###############A completesr
 if [ ! -d $WorkSpace ]
 then
   mkdir $WorkSpace
@@ -41,14 +45,14 @@ if [[ $? == 1 ]]
 then
   echo -e "\nChangements détéctés - Status [ FAILED ]"
 else
-  echo -e "\nAucuns changements détéctés - Status [ OK ]"
+  echo -e "\nAucuns changements détéctés - Status [${GREEN} OK ${WHITE}]"
 fi
 
-#copie temporaire pour test
+#Création de l'archive
 cp $Data $Old
 cp $Old $WorkSpace/"Archive_"$DATE
 
 #Efface le fichier de Données.
 rm $Data
-#echo -e "Fichier sauvé : $Data \npour comparaison manuelle"
+echo -e "Fichier sauvé : ${GREEN} $WorkSpace/"Archive_"$DATE${WHITE}\nPour une comparaison manuelle."
 
