@@ -3,7 +3,7 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.1.2        #
+# Version  0.1.4        #
 #########################
 
 ############### Couleurs
@@ -44,7 +44,7 @@ IFS=$SAVEIFS
 diff $Data $Old
 if [[ $? == 1 ]]
 then
-  echo -e "\nChangements détéctés - Status [ ${RED}FAILED${WHITE} ]"
+  echo -e "\nChangements détéctés - Status [ ${RED}CHECK FAILED${WHITE} ]"
 else
   echo -e "\nAucuns changements détéctés - Status [${GREEN} OK ${WHITE}]"
 fi
@@ -56,4 +56,3 @@ cp $Old $WorkSpace/"Archive_"$DATE
 #Efface le fichier de Données.
 rm $Data
 echo -e "Fichier sauvé : ${GREEN} $WorkSpace/"Archive_"$DATE${WHITE}\nPour une comparaison manuelle."
-
