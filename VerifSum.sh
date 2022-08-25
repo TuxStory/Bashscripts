@@ -3,11 +3,12 @@
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
 # Date	   20/08/2022   #
-# Version  0.1.1        #
+# Version  0.1.2        #
 #########################
 
 ############### Couleurs
 GREEN='\033[1;32m'
+RED='\033[0;91m'
 WHITE='\033[1;0m' #real white \033[1;37m
 
 ############### Dossier à Analyser
@@ -43,7 +44,7 @@ IFS=$SAVEIFS
 diff $Data $Old
 if [[ $? == 1 ]]
 then
-  echo -e "\nChangements détéctés - Status [ FAILED ]"
+  echo -e "\nChangements détéctés - Status [ ${RED}FAILED${WHITE} ]"
 else
   echo -e "\nAucuns changements détéctés - Status [${GREEN} OK ${WHITE}]"
 fi
