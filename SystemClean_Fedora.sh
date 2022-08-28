@@ -7,7 +7,7 @@
 # Revision	: 26/08/22         #
 ####################################
 
-VERSION=0.0.1
+VERSION=0.0.2
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -24,7 +24,7 @@ if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
 fi
 
 # Intro
-echo -e "\n${GREEN}===== System${WHITE}Cleaner Ver: ${BLUE}$VERSION ${WHITE}for${RED} Fedora ${WHITE}base system${GREEN} ====="
+echo -e "\n${GREEN}===== System${WHITE}Cleaner Ver: ${BLUE}$VERSION ${WHITE}for${BLUE} Fedora ${WHITE}base system${GREEN} ====="
 
 ############## journalctl
 JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
@@ -76,4 +76,3 @@ echo "Les fichiers temporaires de plus de 10 jours ont été éffacés."
 
 ################ The end
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
-
