@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 26/08/22	   #
-# Revision	: 26/08/22         #
+# Revision	: 29/08/22         #
 ####################################
 
-VERSION=0.0.2
+VERSION=0.0.4
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -30,6 +30,7 @@ echo -e "\n${GREEN}===== System${WHITE}Cleaner Ver: ${BLUE}$VERSION ${WHITE}for$
 JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
 ESPACE=$JOURNAL
 echo -e "\n${GREEN}>>> [ Journal ] ${WHITE}La taille du journal système est de : ${RED}$JOURNAL${WHITE}."
+sudo journalctl --rotate #Recent entries are moved to inactive files.
 sudo journalctl --vacuum-size 50M
 JOURNAL=$(sudo journalctl --disk-usage | awk '{print $7}')
 echo -e "La taille du journal a été réduite à : ${GREEN}$JOURNAL${WHITE}."
