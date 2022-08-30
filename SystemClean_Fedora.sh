@@ -7,7 +7,7 @@
 # Revision	: 30/08/22         #
 ####################################
 
-VERSION=0.0.5
+VERSION=0.0.6
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -66,7 +66,7 @@ echo -e "\n${GREEN}>>> [ DNF Autoremove ] ${WHITE}Nettoyage des porgrammes."
 sudo dnf autoremove -y
 
 echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
-if [ ! -x /usr/local/bin/package-cleanup ] ; then
+if [ ! -x /usr/bin/package-cleanup ] ; then
   echo -e "\n${BLUE}>>> ${WHITE}Installation de dnf-utils."
   dnf install dnf-utils -y
 fi
