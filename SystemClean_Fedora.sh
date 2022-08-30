@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 26/08/22	   #
-# Revision	: 29/08/22         #
+# Revision	: 30/08/22         #
 ####################################
 
-VERSION=0.0.4
+VERSION=0.0.5
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -56,7 +56,7 @@ echo -e "\n${GREEN}>>> [ Trash ] ${WHITE}La taille de la poubelle ${BLUE}~/.loca
 sudo rm -rf /home/"$SUDO_USER"/.local/share/Trash/files/*
 echo "La poubelle à été vidée."
 
-################ Apt
+################ DNF
 echo -e "\n${GREEN}>>> [ DNF Cache ] ${WHITE}Nettoyage du dossier ${BLUE}/var/cache/dnf${WHITE}."
 sudo du -sh /var/cache/dnf
 sudo dnf clean packages
@@ -66,6 +66,10 @@ echo -e "\n${GREEN}>>> [ DNF Autoremove ] ${WHITE}Nettoyage des porgrammes."
 sudo dnf autoremove -y
 
 echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
+if [ ! -x /usr/local/bin/package-cleanup ] ; then
+  echo -e "\n${BLUE}>>> ${WHITE}Installation de dnf-utils."
+  dnf install dnf-utils -y
+fi
 #[[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
 dnf remove `package-cleanup --orphans` -y
 
