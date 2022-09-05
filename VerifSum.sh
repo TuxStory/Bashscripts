@@ -44,9 +44,9 @@ IFS=$SAVEIFS
 diff $Data $Old
 if [[ $? == 1 ]]
 then
-  echo -e "\nChangements détéctés - Status [ ${RED}CHECK FAILED${WHITE} ]"
+  echo -e "Changements détéctés - Status [ ${RED}CHECK FAILED${WHITE} ]"
 else
-  echo -e "\nAucuns changements détéctés - Status [${GREEN} OK ${WHITE}]"
+  echo -e "Aucuns changements détéctés - Status [${GREEN} OK ${WHITE}]"
 fi
 
 #Création de l'archive
