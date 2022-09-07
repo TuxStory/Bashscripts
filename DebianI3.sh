@@ -29,6 +29,10 @@ sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi
 echo ">>>> Admin :"
 sudo apt install -y synaptic
 
+echo ">>> Nettoyage :"
+sudo apt clean
+sudo apt autoremove
+
 echo "===================================================="
 echo "               Installation Terminée                "
 echo "===================================================="
