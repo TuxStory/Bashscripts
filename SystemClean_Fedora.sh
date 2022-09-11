@@ -4,16 +4,16 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 26/08/22	   #
-# Revision	: 06/09/22         #
+# Revision	: 11/09/22         #
 ####################################
 
-VERSION=0.0.7
+VERSION=0.0.8
 EACCES=13 # Permission denied
 ESPACE=0
 
 ############### Couleurs
 GREEN='\033[1;32m'
-WHITE='\033[1;0m' #real white \033[1;37m
+WHITE='\033[1;0m' # Real white \033[1;37m
 RED='\033[0;91m'
 BLUE='\033[0;94m'
 MAGENTA='\033[0;95m'
