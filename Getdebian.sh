@@ -4,6 +4,7 @@ REGEX='https:\/\/[a-z].*.iso\"'
 
 Link=$(wget -qO- www.debian.org/download | grep -Eo $REGEX)
 Link2=${Link%?}
+echo ">>> Téléchargement de la dernière version de Debian."
 wget $Link2 -P ~/
 
 #wget -qO- www.debian.org |
