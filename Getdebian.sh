@@ -4,8 +4,22 @@ REGEX='https:\/\/[a-z].*.iso\"'
 
 Link=$(wget -qO- www.debian.org/download | grep -Eo $REGEX)
 Link2=${Link%?}
+Link3="https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso"
+
+echo ">>> Debian iso Downloader"
+echo "1. Debian Stable netinstall amd64"
+echo "2. Debian Testing netinstall amd64"
+read -p "Votre choix ? : " choix
+
+if [ $choix == '1' ]
+then
+  Download=$Link2
+else
+  Download=$Link3
+fi
+
 echo ">>> Téléchargement de la dernière version de Debian."
-wget $Link2 -P ~/
+wget $Download -P ~/
 
 #wget -qO- www.debian.org |
 #grep -Eoi '<a [^>]+>' |
