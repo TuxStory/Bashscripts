@@ -13,7 +13,7 @@
 #
 
 #Variables
-VERSION="1.2.2"
+VERSION="1.2.3"
 DATE=$(date +"%d-%m-%Y")
 JOUR=$(date +"%d")
 MOIS=$(date +"%B")
