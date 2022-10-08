@@ -32,7 +32,8 @@ clear
 
 echo -e "\033[1;34mAjout dépôts Backports :"
 echo -e "\033[0;0m-------------------------"
-echo -e "\nVoulez-vous ajouter les dépôts Backports ?"
+echo -e "\nVoulez-vous ajouter les dépôts backports ?"
+echo -n "(Oui/Non) :"
 read -r depot
 if [[ $depot =~ ^([oO][uU][iI]|[oO])$ ]]
 then
