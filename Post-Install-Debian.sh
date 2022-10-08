@@ -32,10 +32,16 @@ clear
 
 echo -e "\033[1;34mAjout dépôts Backports :"
 echo -e "\033[0;0m-------------------------"
-
+echo -e "\nVoulez-vous ajouter les dépôts Backports ?"
+read -r depot
+if [[ $depot =~ ^([oO][uU][iI]|[oO])$ ]]
+then
+echo " " >> /etc/apt/sources.list
 echo "#Backports" >> /etc/apt/sources.list
 echo "deb http://deb.debian.org/debian bullseye-backports main contrib non-free" >> /etc/apt/sources.list
 echo "deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free" >> /etc/apt/sources.list
+fi
+clear
 
 #Install ####################################################################### 
 
