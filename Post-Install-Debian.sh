@@ -27,6 +27,18 @@ echo -e "\033[0;0m-------------------------"
 echo
 apt update ; apt upgrade -y
 clear
+
+#Backports #####################################################################
+
+echo -e "\033[1;34mAjout dépôts Backports :"
+echo -e "\033[0;0m-------------------------"
+
+echo "#Backports" >> /etc/apt/sources.list
+echo "deb http://deb.debian.org/debian bullseye-backports main contrib non-free" >> /etc/apt/sources.list
+echo "deb-src http://deb.debian.org/debian bullseye-backports main contrib non-free" >> /etc/apt/sources.list
+
+#Install ####################################################################### 
+
 echo -e "\033[1;34mInstallation des progammes :"
 echo -e "\033[0;0m----------------------------"
 echo
