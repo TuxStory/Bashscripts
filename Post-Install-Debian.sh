@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 07/08/2022 ver 0.9                #
+# 09/10/2022 ver 1.0                #
 # Antoine Even                      #
 #####################################
 
@@ -61,7 +61,7 @@ function Install()
   done
 }
 
-#Liste des programmes. #########################################################
+#Liste des programmes ##########################################################
 
 Programmes="dfc audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
@@ -77,7 +77,7 @@ Admin="fail2ban firewalld samba nmon wavemon nload vnstat vnstati testdisk iperf
 
 Programmes_Dev="gcc git geany nano mu-editor python3-numpy python3-matplotlib ipython3"
 
-#Questionnaire. ################################################################
+#Questionnaire #################################################################
 
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read -r reponse
 printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read -r reponse1
@@ -86,7 +86,7 @@ printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m:
 printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read -r reponse4
 printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read -r reponse5
 
-# Installation #################################################################
+#Installation ##################################################################
 
 if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
 then
@@ -118,7 +118,7 @@ then
 	Install ${Games[@]}
 fi
 
-# Nettoyage ####################################################################
+#Nettoyage #####################################################################
 
 echo -e "\033[1;34mapt clean\033[0m"
 apt clean
