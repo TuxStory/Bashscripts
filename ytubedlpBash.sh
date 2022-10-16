@@ -8,7 +8,7 @@
 #############################
 
 #Variables
-VERSION="0.1.8"
+VERSION="0.1.8.2"
 DOSSIER="/home/$USER/Youtube"
 
 #Vérification de la présence du logiciel.
@@ -35,7 +35,7 @@ echo "5. Mise à jour de yt-dlp."
 
 read -p $'\n'"Votre choix ? : " choix
 
-if [[ $choix != 4 ]]; then
+if [[ $choix != 5 ]]; then
 	if [ ! -d "$DOSSIER" ]; then
     		cd ~ ; mkdir Youtube
         	echo "Création du dossier de sauvegarde."
