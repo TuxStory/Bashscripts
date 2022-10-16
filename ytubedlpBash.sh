@@ -8,7 +8,7 @@
 #############################
 
 #Variables
-VERSION="0.1.7"
+VERSION="0.1.8"
 DOSSIER="/home/$USER/Youtube"
 
 #Vérification de la présence du logiciel.
@@ -65,7 +65,7 @@ fi
 
 if [[ $choix = 3 ]]
 then
-	yt-dlp $URL -f 'bestvideo[ext=mp4]'
+	yt-dlp $URL --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]/best"
 fi
 
 
