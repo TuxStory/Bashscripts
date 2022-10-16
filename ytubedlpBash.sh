@@ -4,11 +4,11 @@
 # Script : ytubedlpBash.sh  #
 # Auteur : Antoine Even     #
 # Date   : 17/11/2021       #
-# Modif  : 21/08/2022       #
+# Modif  : 16/10/2022       #
 #############################
 
 #Variables
-VERSION="0.1.5"
+VERSION="0.1.6"
 DOSSIER="/home/$USER/Youtube"
 
 #Vérification de la présence du logiciel.
@@ -29,8 +29,9 @@ echo
 echo "0. Liste des formats."
 echo "1. Vidéo au format webp."
 echo "2. Vidéo au format mp4."
-echo "3. Bande sonore au format mp3."
-echo "4. Mise à jour de yt-dlp."
+echo "3. Vidéo au format mp4. [BESTVIDEO]"
+echo "4. Bande sonore au format mp3."
+echo "5. Mise à jour de yt-dlp."
 
 read -p $'\n'"Votre choix ? : " choix
 
@@ -64,10 +65,16 @@ fi
 
 if [[ $choix = 3 ]]
 then
+	yt)dlp $url -f 'bestvideo[ext=mp4]'
+fi
+
+
+if [[ $choix = 4 ]]
+then
 	yt-dlp -f 'ba' -x --audio-format mp3 $URL
 fi
 
-if [[ $choix = 4 ]]
+if [[ $choix = 5 ]]
 then
     sudo yt-dlp -U
 fi
