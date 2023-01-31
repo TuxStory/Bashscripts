@@ -63,11 +63,11 @@ function Install()
 
 #Liste des programmes ##########################################################
 
-Programmes="dfc audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
+Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm rsync grsync"
 
-Programmes_Console="ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm"
 
 Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
 
