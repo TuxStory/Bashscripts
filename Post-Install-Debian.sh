@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 09/10/2022 ver 1.0                #
+# 31/01/2023 ver 1.1                #
 # Antoine Even                      #
 #####################################
 
@@ -32,7 +32,7 @@ clear
 
 echo -e "\033[1;34mAjout dépôts Backports :"
 echo -e "\033[0;0m-------------------------"
-echo -n "\nVoulez-vous ajouter les dépôts backports ? (Oui/Non) :"
+echo -e "\nVoulez-vous ajouter les dépôts backports ? (Oui/Non) :"
 read -r depot
 if [[ $depot =~ ^([oO][uU][iI]|[oO])$ ]]
 then
