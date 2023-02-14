@@ -23,24 +23,24 @@ fi
 
 ############### Scrpit
 echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
-sudo dnf update
+sudo dnf update -y
 
 ################ Install RPM Fusion
 echo -e "\n${GREEN}>>> ${WHITE}Installation de RPM Fusion."
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+sudo dnf install -y https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 sudo dnf install rpmfusion-free-release-tainted -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install htop dfc nano tmux screen htop nload nethogs ncdu nmon ranger vnstat smartmontools -y
+sudo dnf install -y htop dfc nano tmux screen htop nload nethogs ncdu nmon ranger vnstat smartmontools
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo dnf install firefox hexchat transmission-gtk -y
+sudo dnf install -y firefox hexchat transmission-gtk
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install audacious cmus vlc
+sudo dnf install -y audacious cmus vlc
 
 ############### Install Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
