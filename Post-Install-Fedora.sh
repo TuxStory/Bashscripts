@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Fedora Post-Installation   #
-# 13/02/2023 ver 0.1                #
+# 14/02/2023 ver 0.3                #
 # Antoine Even                      #
 #####################################
 
@@ -50,4 +50,4 @@ sudo dnf install -y libdvdcss
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
-sudo dnf install -y codium gedit python3 git
+sudo dnf install -y gedit python3 git #codium
