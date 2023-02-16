@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 ver 0.1                     #
+# 16/02/2023 ver 0.2                     #
 # Antoine Even                           #
 ##########################################
 
@@ -31,7 +31,8 @@ sudo apt update -y && sudo apt upgrade -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo apt install -y htop dfc nano tmux inxi screen htop nload nethogs neofetch ncdu nmon ranger vnstat
+sudo apt install -y htop dfc nano tmux inxi screen htop nload nethogs neofetch ncdu nmon ranger vnstat \
+	zsh-theme-powerlevel9k fonts-powerline zsh
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
