@@ -7,7 +7,7 @@
 #########################
 
 ############### Variables
-VERSION="0.0.3"
+VERSION="0.0.4"
 DOSSIER="/home/$USER"
 DESTINATION="/run/media/$USER/data/Backup/$HOSTNAME/"
 
@@ -17,6 +17,7 @@ DESTINATION_DISTANTE=""
 PORT="2222"
 DATE_ARCHIVE=`date +"%d%m%y"`
 DATE=`date +"%d %B %Y @ %T "`
+EACCES=13 # Permission denied
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -25,7 +26,17 @@ RED='\033[0;91m'
 BLUE='\033[0;94m'
 MAGENTA='\033[0;95m'
 
-################ Backup Local
+################ Vérification Borg.
+Verif() {
+	if [ ! -x /usr/bin/borg ]; then
+    		echo -e "${RED}>>> ${WHITE}BorgBackup n'est pas installé !"
+    		exit $EACCES
+	else
+		echo -e "${GREEN}>>> ${WHITE}BorgBackup est installé."
+	fi
+}
+
+################ Backup Local.
 Backup_Local() {
 	echo -e "${GREEN}>>> ${WHITE}Creation du dossier de sauvegarde."
 	mkdir -p $DESTINATION
@@ -53,5 +64,5 @@ Backup_Distant() {
 	fi
 }
 
-
+Verif
 Backup_Local
