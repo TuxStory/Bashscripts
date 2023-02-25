@@ -7,14 +7,14 @@
 #########################
 
 ############### Variables
-VERSION="0.0.4"
+VERSION="0.0.6"
 DOSSIER="/home/$USER"
 DESTINATION="/run/media/$USER/data/Backup/$HOSTNAME/"
 
-USERSSH="tuxstory"
-IP="192.168.1.10"
-DESTINATION_DISTANTE=""
-PORT="2222"
+USERSSH="fr"
+IP="192.168.1.23"
+DESTINATION_DISTANTE="/media/fr/Data/Backup/$HOSTNAME/"
+PORT="22"
 DATE_ARCHIVE=`date +"%d%m%y"`
 DATE=`date +"%d %B %Y @ %T "`
 EACCES=13 # Permission denied
@@ -51,18 +51,39 @@ Backup_Local() {
 		--exclude '/home/*/Téléchargements' \
 		--exclude '/home/*/Musique' \
 		$DESTINATION::$DATE_ARCHIVE $DOSSIER
-
+	logger ===== Sauvegarde locale effectuée : $DATE ====
 }
-################ Test si le serveur est présent #
+################ Backup Distant. >>> Si possible utilisez une clé ssh ou ssh-agent. <<<
 Backup_Distant() {
-	if [[ $(ping -c 1 -W 1 $IP | grep -c "time=") -eq 0 ]]
+	if [[ $(ping -c 1 -W 1 $IP | grep -c "ttl=64") -eq 0 ]] #Verification que la cible est présente.
 	then
-		echo -e "Le serveur $IP ne répond pas [\033[1;31mfalse\033[0m]"
-		exit 41
+		echo -e "${RED}>>> ${WHITE}Le serveur $IP ne répond pas [\033[1;31mfalse\033[0m]"
+		exit $EACCES
 	else
-		echo -e "Réponse du serveur $IP [\033[1;32mok\033[0m]"
+		echo -e "${GREEN}>>> ${WHITE}Réponse du serveur $IP [\033[1;32mok\033[0m]"
 	fi
+	###### Création du dossier
+	echo -e "${GREEN}>>> ${WHITE}Creation du dossier de sauvegarde."
+        ssh $USERSSH@$IP -p $PORT "mkdir -p $DESTINATION_DISTANTE"
+	#ssh $USERSSH@$IP -p $PORT '[ -d $DESTINATION_DISTANTE ] || mkdir -p $DESTINATION_DISTANTE ]'
+
+	#Backup
+	echo -e "${GREEN}>>> ${WHITE}Backup Local."
+	borg init -e none ssh://$USERSSH@$IP:$PORT$DESTINATION_DISTANTE
+	echo -e "${GREEN}>>> ${WHITE}La sauvegarde distante commence.."
+	borg create --progress -C zstd,10 \
+		--exclude '/home/*/.?*' \
+		--exclude '.home/*/.config' \
+		--exclude '/home/*/.cache' \
+		--exclude '/home/*/.mozilla' \
+		--exclude '/home/*/Téléchargements' \
+		--exclude '/home/*/Musique' \
+		--exclude '/home/*/Youtube' \
+		--exclude '/home/*/VirtualBox VMs' \
+		ssh://$USERSSH@$IP:$PORT$DESTINATION_DISTANTE::$DATE_ARCHIVE $DOSSIER
+	logger ===== Sauvegarde distante effectuée : $DATE ====
 }
 
 Verif
-Backup_Local
+#Backup_Local
+Backup_Distant
