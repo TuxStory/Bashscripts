@@ -7,7 +7,7 @@
 # Revision	: 11/09/22         #
 ####################################
 
-VERSION=0.0.8
+VERSION=0.0.9
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -71,7 +71,7 @@ if [ ! -x /usr/bin/package-cleanup ] ; then
   dnf install dnf-utils -y
 fi
 #[[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
-dnf remove `package-cleanup --orphans` -y
+dnf remove `package-cleanup --leaves` -y
 
 ################ TMP
 TEMPORY=$(du -sh /tmp/ | awk '{print $1}')
