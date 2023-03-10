@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Fedora Post-Installation   #
-# 14/02/2023 ver 0.6                #
+# 10/03/2023 ver 0.7                #
 # Antoine Even                      #
 #####################################
 
@@ -23,7 +23,7 @@ fi
 
 ################ Clean dnf cache
 echo -e "${GREEN}>>> ${WHITE}Nettoyage du cache de DNF."
-dnf clean all
+dnf clean packages # dnf clean all = Efface tout = brutal
 
 ############### Scrpit
 echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
