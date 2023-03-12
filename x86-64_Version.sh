@@ -1,5 +1,6 @@
 #!/bin/sh -eu
 
+Version="0.0.2"
 CPU=$(cat /proc/cpuinfo | grep -i "^model name" | awk -F ": " '{print $2}' | head -1 | sed 's/ \+/ /g')
 flags=$(cat /proc/cpuinfo | grep flags | head -n 1 | cut -d: -f2)
 
