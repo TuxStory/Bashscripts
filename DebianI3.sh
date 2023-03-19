@@ -2,7 +2,7 @@
 # Date : 	18/08/2022   #
 # Maj  :	19/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.8          #
+# Version :	0.9          #
 ##############################
 
 #!/bin/bash
@@ -46,7 +46,7 @@ sudo apt autoremove -y
 ###############################################################
 
 #screen resolution for VirtualBox
-echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> /home/$username/.config/i3/config
+#echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> /home/$username/.config/i3/config
 
 #Wallpaper
 nitrogen --set-scaled Wallpaper/debian1.png --save
@@ -56,4 +56,3 @@ echo "exec --no-startup-id nitrogen --restore" >> /home/$username/.config/i3/con
 echo "===================================================="
 echo "               Installation Terminée                "
 echo "===================================================="
-
