@@ -2,7 +2,7 @@
 # Date : 	18/08/2022   #
 # Maj  :	19/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.7          #
+# Version :	0.8          #
 ##############################
 
 #!/bin/bash
@@ -34,20 +34,16 @@ echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload nmon
 
 echo ">>>> Admin :"
-sudo apt install -y synaptic borgbackup
+sudo apt install -y synaptic borgbackup openssh-server
 
 echo ">>> Nettoyage :"
 sudo apt clean
 sudo apt autoremove -y
 
-#screen resolution
+#screen resolution for VirtualBox
 #echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> $HOME/.config/i3/config
 
 #Wallpaper
-#mkdir -p /home/$username/Wallpaper
-#cd /home/$username/Wallpaper
-#wget https://github.com/TuxStory/Bashscripts/Wallpaper/debian1.png
-#wget https://github.com/TuxStory/Bashscripts/Wallpaper/debian2.png
 nitrogen --set-scaled Wallpaper/debian2.png
 
 echo "exec --no-startup-id nitrogen --restore" >> /home/$username/.config/i3/config
