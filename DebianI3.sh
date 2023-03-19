@@ -13,7 +13,9 @@ if [[ $EUID -ne 0 ]]; then
   exit 1
 fi
 
+username=$(id -u -n 1000)
 clear
+
 #installation des paquets
 echo "====================================="
 echo "          Installation de I3         "
@@ -42,8 +44,8 @@ sudo apt autoremove -y
 #echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> $HOME/.config/i3/config
 
 #Wallpaper
-mkdir -p $HOME/Wallpaper
-cd $HOME/Wallpaper
+mkdir -p /home/$username/Wallpaper
+cd /home/$username/Wallpaper
 wget https://github.com/TuxStory/Bashscripts/blob/master/Wallpaper/debian2.png
 nitrogen --set-scaled debian2.png
 
