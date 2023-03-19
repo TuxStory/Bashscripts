@@ -1,8 +1,8 @@
 ##############################
 # Date : 	18/08/2022   #
-# Maj  :	16/03/2023   #
+# Maj  :	19/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.6          #
+# Version :	0.7          #
 ##############################
 
 #!/bin/bash
@@ -32,6 +32,16 @@ sudo apt install -y synaptic borgbackup
 echo ">>> Nettoyage :"
 sudo apt clean
 sudo apt autoremove
+
+#screen resolution
+#echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> $HOME/.config/i3/config
+
+#Wallpaper
+mkdir -p $HOME/Wallpaper
+cd $HOME/Wallpaper
+wget https://github.com/TuxStory/Bashscripts/blob/master/Wallpaper/debian1.png
+nitrogen $HOME/Wallpaper/debian1.png
+echo "exec --no-startup-id nitrogen --restore" >> $HOME/.config/i3/config
 
 echo "===================================================="
 echo "               Installation Terminée                "
