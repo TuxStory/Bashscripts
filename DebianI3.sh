@@ -31,7 +31,7 @@ sudo apt install -y synaptic borgbackup
 
 echo ">>> Nettoyage :"
 sudo apt clean
-sudo apt autoremove
+sudo apt autoremove -y
 
 #screen resolution
 #echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> $HOME/.config/i3/config
