@@ -49,7 +49,7 @@ cd /home/$username/Wallpaper
 wget https://github.com/TuxStory/Bashscripts/blob/master/Wallpaper/debian2.png
 nitrogen --set-scaled debian2.png
 
-echo "exec --no-startup-id nitrogen --restore" >> $HOME/.config/i3/config
+echo "exec --no-startup-id nitrogen --restore" >> /home/$username/.config/i3/config
 
 echo "===================================================="
 echo "               Installation Terminée                "
