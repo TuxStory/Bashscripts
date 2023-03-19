@@ -40,6 +40,11 @@ echo ">>> Nettoyage :"
 sudo apt clean
 sudo apt autoremove -y
 
+###############################################################
+# This part need i3-config-wizard to create .config/i3/config #
+# Re-run the script if i3 was run for the first time          #
+###############################################################
+
 #screen resolution for VirtualBox
 #echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> $HOME/.config/i3/config
 
