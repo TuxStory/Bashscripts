@@ -46,7 +46,7 @@ sudo apt autoremove -y
 ###############################################################
 
 #screen resolution for VirtualBox
-echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> $HOME/.config/i3/config
+echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> /home/$username/.config/i3/config
 
 #Wallpaper
 nitrogen --set-scaled Wallpaper/debian1.png --save
