@@ -40,7 +40,7 @@ sudo apt autoremove -y
 mkdir -p $HOME/Wallpaper
 cd $HOME/Wallpaper
 wget https://github.com/TuxStory/Bashscripts/blob/master/Wallpaper/debian1.png
-nitrogen $HOME/Wallpaper/debian1.png
+nitrogen --set-scaled $HOME/Wallpaper/debian1.png
 echo "exec --no-startup-id nitrogen --restore" >> $HOME/.config/i3/config
 
 echo "===================================================="
