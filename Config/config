@@ -180,7 +180,3 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
-
-exec --no-startup-id nitrogen --restore
-exec --no-startup-id xrandr --output Virtual1 --mode 1360x768
-exec --no-startup-id nitrogen --restore
