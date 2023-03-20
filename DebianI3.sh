@@ -45,6 +45,9 @@ sudo apt autoremove -y
 # Re-run the script if i3 was run for the first time          #
 ###############################################################
 
+#copy I3 config file
+cp Config/config /home/$username/.config/i3/config
+
 #screen resolution for VirtualBox
 #echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> /home/$username/.config/i3/config
 
