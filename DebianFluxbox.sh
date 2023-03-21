@@ -32,7 +32,7 @@ sudo apt install -y audacious vlc
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arandr \
-	xcompmgr nitrogen thunar
+	xcompmgr nitrogen thunar idesk
 
 ####################################################################
 # This part of the script may be run at the first start of FluxBox #
