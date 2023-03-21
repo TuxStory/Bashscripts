@@ -2,7 +2,7 @@
 # Date : 	21/03/2023   #
 # Maj  :	21/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.6          #
+# Version :	0.7          #
 ##############################
 
 #!/bin/bash
@@ -42,7 +42,7 @@ echo ">>>> Wallpaper :"
 fbsetbg -f Wallpaper/debian1.png
 echo "session.screen0.rootCommand: fbsetbg -l" >> /home/$username/.fluxbox/init
 #resolution
-echo "xrand -s 1360x768 &" >> /home/$username/.fluxbox/startup
+echo "xrandr -s 1360x768 &" >> /home/$username/.fluxbox/startup
 echo "exec xcompmgr &" >> /home/$username/.fluxbox/startup
 #menu
 #echo ">>>> Menu/"
