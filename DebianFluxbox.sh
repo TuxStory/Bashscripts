@@ -1,8 +1,8 @@
 ##############################
 # Date : 	21/03/2023   #
-# Maj  :	21/03/2023   #
+# Maj  :	22/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.7          #
+# Version :	0.8          #
 ##############################
 
 #!/bin/bash
@@ -33,7 +33,7 @@ sudo apt install -y audacious vlc
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arandr \
-	xcompmgr nitrogen thunar idesk
+	xcompmgr nitrogen thunar #idesk
 
 ####################################################################
 # This part of the script may be run at the first start of FluxBox #
