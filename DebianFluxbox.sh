@@ -2,7 +2,7 @@
 # Date : 	21/03/2023   #
 # Maj  :	21/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.1          #
+# Version :	0.6          #
 ##############################
 
 #!/bin/bash
@@ -33,13 +33,17 @@ sudo apt install -y audacious vlc
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arandr xcompmgr nitrogen
 
+####################################################################
+# This part of the script may be run at the first start of FluxBox #
+####################################################################
+
 #Wallpaper
 echo ">>>> Wallpaper :"
 fbsetbg -f Wallpaper/debian1.png
 echo "session.screen0.rootCommand: fbsetbg -l" >> /home/$username/.fluxbox/init
 #resolution
-echo "xrand -s 1360x768" >>  /home/$username/.fluxbox/startup
-
+echo "xrand -s 1360x768 &" >> /home/$username/.fluxbox/startup
+echo "exec xcompmgr &" >> /home/$username/.fluxbox/startup
 #menu
 #echo ">>>> Menu/"
 #./fluxbox-generate_menu
