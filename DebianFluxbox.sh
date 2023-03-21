@@ -45,6 +45,7 @@ echo "session.screen0.rootCommand: fbsetbg -l" >> /home/$username/.fluxbox/init
 #resolution
 echo "xrandr -s 1360x768 &" >> /home/$username/.fluxbox/startup
 echo "exec xcompmgr &" >> /home/$username/.fluxbox/startup
+echo "idesk &" >> /home/$username/.fluxbox/startup
 #menu
 #echo ">>>> Menu/"
 #./fluxbox-generate_menu
