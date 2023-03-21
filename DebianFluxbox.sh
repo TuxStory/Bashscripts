@@ -31,7 +31,7 @@ echo ">>> Multimedia :"
 sudo apt install -y audacious vlc
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arand xcompmgr nitrogen
+sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arandr xcompmgr nitrogen
 
 #Wallpaper
 echo ">>>> Wallpaper :"
