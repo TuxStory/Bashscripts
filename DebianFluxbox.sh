@@ -25,7 +25,8 @@ echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
 echo ">>> FluxBox"
-sudo apt install -y lightdm lightdm-gtk-greeter x-window-system-core fluxbox
+sudo apt install -y lightdm lightdm-gtk-greeter x-window-system-core fluxbox \
+	fbautostart fbpager
 
 echo ">>> Multimedia :"
 sudo apt install -y audacious vlc
