@@ -7,6 +7,13 @@
 
 #!/bin/bash
 
+# Check if Script is Run as Root
+if [[ $EUID -ne 0 ]]; then
+  echo "You must be a root user to run this script, please run sudo ./install.sh" 2>&1
+  exit 1
+fi
+
+username=$(id -u -n 1000)
 clear
 
 #installation des paquets
@@ -17,7 +24,7 @@ echo
 echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
-echo ">>> E17"
+echo ">>> FluxBox"
 sudo apt install -y lightdm lightdm-gtk-greeter x-window-system-core fluxbox
 
 echo ">>> Multimedia :"
@@ -33,7 +40,7 @@ fbsetbg -f Wallpaper/debian1.png
 #menu
 echo ">>>> Menu/"
 ./fluxbox-generate_menu
-echo "session.screen0.rootCommand: fbsetbg -l" >> ~/.fluxbox/init
+echo "session.screen0.rootCommand: fbsetbg -l" >> /home/$username/.fluxbox/init
 
 echo "===================================================="
 echo "               Installation Terminée                "
