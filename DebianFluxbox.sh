@@ -38,8 +38,7 @@ echo ">>>> Wallpaper :"
 fbsetbg -f Wallpaper/debian1.png
 echo "session.screen0.rootCommand: fbsetbg -l" >> /home/$username/.fluxbox/init
 #resolution
-echo "xrand -s 1360x768" >>>  /home/$username/.fluxbox/startup
-
+echo "xrand -s 1360x768" >>  /home/$username/.fluxbox/startup
 
 #menu
 #echo ">>>> Menu/"
