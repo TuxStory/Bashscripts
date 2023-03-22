@@ -1,8 +1,8 @@
 ##############################
 # Date : 	21/03/2023   #
-# Maj  :	22/03/2023   #
+# Maj  :	23/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.8          #
+# Version :	0.9          #
 ##############################
 
 #!/bin/bash
@@ -33,7 +33,7 @@ sudo apt install -y audacious vlc
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arandr \
-	xcompmgr nitrogen thunar #idesk
+	xcompmgr nitrogen thunar pluma wbar wbar-config eom psmisc #idesk
 
 ####################################################################
 # This part of the script may be run at the first start of FluxBox #
@@ -47,6 +47,7 @@ echo "session.screen0.rootCommand: fbsetbg -l" >> /home/$username/.fluxbox/init
 echo "xrandr -s 1360x768 &" >> /home/$username/.fluxbox/startup
 echo "exec xcompmgr &" >> /home/$username/.fluxbox/startup
 echo "idesk &" >> /home/$username/.fluxbox/startup
+echo "wbar &" >> /home/$username/.fluxbox/startup
 #menu
 #echo ">>>> Menu/"
 #./fluxbox-generate_menu
