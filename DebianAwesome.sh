@@ -1,8 +1,8 @@
 ##############################
-# Date : 	18/08/2022   #
-# Maj  :	20/03/2023   #
+# Date : 	24/03/2023   #
+# Maj  :	25/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	1.0          #
+# Version :	0.2          #
 ##############################
 
 #!/bin/bash
@@ -24,7 +24,7 @@ echo
 echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
-echo ">>> I3"
+echo ">>> Awesome"
 sudo apt install -y lightdm kitty thunar nitrogen awesome awesome-extra lxappearance compton
 
 echo ">>> Multimedia & Internet :"
@@ -40,22 +40,29 @@ echo ">>> Nettoyage :"
 sudo apt clean
 sudo apt autoremove -y
 
-###############################################################
-# This part need i3-config-wizard to create .config/i3/config #
-# Re-run the script if i3 was run for the first time          #
-###############################################################
-
 #copy Awesome config file
 mkdir /home/$username/.config/awesome
 cp /etc/xdg/awesome/rc.lua /home/$username/.config/awesome/rc.lua
 
-#screen resolution for VirtualBox
-#echo "exec --no-startup-id xrandr --output Virtual1 --mode 1360x768" >> /home/$username/.config/i3/config
-
-#Wallpaper
+#Wallpaper not the best method for awesome
 nitrogen --set-scaled Wallpaper/debian1.png --save
 
-#echo "exec --no-startup-id nitrogen --restore" >> /home/$username/.config/i3/config
+#add this block in rc.lua
+cat <<EOT >> /home/$username/.config/awesome/rc.lua
+do
+  local cmds =
+  {
+    "compton",
+    "xrandr -s 1360x768",
+  }
+
+  for _,i in pairs(cmds) do
+    awful.util.spawn(i)
+  end
+end
+
+awful.spawn.with_shell("nitrogen --restore")
+EOT
 
 echo "===================================================="
 echo "               Installation Terminée                "
