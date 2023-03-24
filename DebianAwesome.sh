@@ -49,6 +49,8 @@ nitrogen --set-scaled Wallpaper/debian1.png --save
 
 #add this block in rc.lua
 cat <<EOT >> /home/$username/.config/awesome/rc.lua
+awful.spawn.with_shell("nitrogen --restore")
+
 do
   local cmds =
   {
@@ -60,8 +62,6 @@ do
     awful.util.spawn(i)
   end
 end
-
-awful.spawn.with_shell("nitrogen --restore")
 EOT
 
 echo "===================================================="
