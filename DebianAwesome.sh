@@ -2,7 +2,7 @@
 # Date : 	24/03/2023   #
 # Maj  :	25/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.2          #
+# Version :	0.3          #
 ##############################
 
 #!/bin/bash
