@@ -68,3 +68,6 @@ EOT
 echo "===================================================="
 echo "               Installation Terminée                "
 echo "===================================================="
+
+#Méthode pour changer de thème
+#https://github.com/lcpz/awesome-copycats
