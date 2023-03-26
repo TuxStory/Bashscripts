@@ -2,7 +2,7 @@
 # Date : 	24/03/2023   #
 # Maj  :	25/03/2023   #
 # Auteur:	Antoine Even #
-# Version :	0.3          #
+# Version :	0.4          #
 ##############################
 
 #!/bin/bash
@@ -25,7 +25,7 @@ echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
 echo ">>> Awesome"
-sudo apt install -y lightdm kitty thunar nitrogen awesome awesome-extra lxappearance compton #picom
+sudo apt install -y lightdm thunar nitrogen awesome awesome-extra lxappearance compton #picom
 
 echo ">>> Multimedia & Internet :"
 sudo apt install -y audacious vlc eom hexchat irssi transmission-gtk gedit cmus firefox-esr \
@@ -35,7 +35,7 @@ echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload nmon
 
 echo ">>>> Admin :"
-sudo apt install -y synaptic borgbackup openssh-server psmisc
+sudo apt install -y synaptic borgbackup openssh-server psmisc vnstat xfce4-terminal
 
 echo ">>> Nettoyage :"
 sudo apt clean
