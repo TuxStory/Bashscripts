@@ -25,17 +25,17 @@ echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
 echo ">>> Awesome"
-sudo apt install -y lightdm thunar nitrogen awesome awesome-extra lxappearance compton #picom
+sudo apt install -y lightdm thunar nitrogen awesome awesome-extra lxappearance xcompmgr #compton #picom
 
 echo ">>> Multimedia & Internet :"
-sudo apt install -y audacious vlc eom hexchat irssi transmission-gtk gedit cmus firefox-esr \
+sudo apt install -y audacious vlc eom hexchat irssi transmission-gtk pluma cmus firefox-esr \
 		firefox-esr-l10n-fr #midori
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload nmon
 
 echo ">>>> Admin :"
-sudo apt install -y synaptic borgbackup openssh-server psmisc vnstat xfce4-terminal
+sudo apt install -y synaptic borgbackup openssh-server psmisc vnstat xfce4-terminal openssh-server
 
 echo ">>> Nettoyage :"
 sudo apt clean
