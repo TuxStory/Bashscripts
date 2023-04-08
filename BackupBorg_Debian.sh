@@ -3,7 +3,7 @@
 #########################
 # Nom	 : BackupBorg   #
 # Auteur : Antoine Even #
-# Date	 : 24/02/2023   #
+# Date	 : 08/04/2023   #
 #########################
 
 ############### Variables
@@ -11,10 +11,10 @@ VERSION="0.0.7"
 DOSSIER="/home/$USER"
 DESTINATION="/run/media/$USER/data/Backup/$HOSTNAME/"
 
-USERSSH="fr"
-IP="192.168.1.23"
-DESTINATION_DISTANTE="/media/fr/Data/Backup/$HOSTNAME/"
-PORT="22"
+USERSSH="antoine"
+IP="192.168.1.49"
+DESTINATION_DISTANTE="/Backup/$HOSTNAME/"
+PORT="222"
 DATE_ARCHIVE=`date +"%d%m%y"`
 DATE=`date +"%d %B %Y @ %T "`
 EACCES=13 # Permission denied
@@ -76,10 +76,9 @@ Backup_Distant() {
 		--exclude '.home/*/.config' \
 		--exclude '/home/*/.cache' \
 		--exclude '/home/*/.mozilla' \
-		--exclude '/home/*/Téléchargements' \
-		--exclude '/home/*/Musique' \
-		--exclude '/home/*/Youtube' \
-		--exclude '/home/*/VirtualBox VMs' \
+		--exclude '/home/*/.steam' \
+		--exclude '/home/*/eternallands2' \
+		--exclude '/home/*/eternallands' \
 		ssh://$USERSSH@$IP:$PORT$DESTINATION_DISTANTE::$DATE_ARCHIVE $DOSSIER
 	logger ===== Sauvegarde distante effectuée : $DATE ====
 }
