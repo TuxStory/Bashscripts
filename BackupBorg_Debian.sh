@@ -6,6 +6,8 @@
 # Date	 : 08/04/2023   #
 #########################
 
+# Run it in USER mode.
+
 ############### Variables
 VERSION="0.0.7"
 DOSSIER="/home/$USER"
