@@ -55,6 +55,7 @@ Backup_Local() {
 		$DESTINATION::$DATE_ARCHIVE $DOSSIER
 	logger ===== Sauvegarde locale effectuée : $DATE ====
 }
+
 ################ Backup Distant. >>> Si possible utilisez une clé ssh ou ssh-agent. <<<
 Backup_Distant() {
 	if [[ $(ping -c 1 -W 1 $IP | grep -c "ttl=64") -eq 0 ]] #Verification que la cible est présente.
