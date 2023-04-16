@@ -50,6 +50,11 @@ Backup_Local() {
 		--exclude '/home/*/.mozilla' \
 		--exclude '/home/*/Téléchargements' \
 		--exclude '/home/*/Musique' \
+		--exclude '/home/*/VirtualBox VMs' \
+		--exclude '/home/*/Bureau/backup2' \
+		--exclude '/home/*/Samba' \
+		--exclude '/home/*/Youtube' \
+		--exclude '/home/*/eternallands' \
 		$DESTINATION::$DATE_ARCHIVE $DOSSIER
 	logger ===== Sauvegarde locale effectuée : $DATE ====
 }
@@ -85,5 +90,5 @@ Backup_Distant() {
 }
 
 Verif
-#Backup_Local
-Backup_Distant
+Backup_Local
+#Backup_Distant
