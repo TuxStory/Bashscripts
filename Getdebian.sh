@@ -2,7 +2,7 @@
 
 REGEX='https:\/\/[a-z].*.iso\"'
 
-Link=$(wget -qO- www.debian.org/download | grep -Eo $REGEX)
+Link=$(wget -qO- www.debian.org/download | grep -Eo $REGEX  2>/dev/null )
 Link2=${Link%?}
 Link3="https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso"
 
