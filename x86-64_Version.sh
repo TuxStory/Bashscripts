@@ -1,7 +1,8 @@
 #!/bin/sh -eu
 
-Version="0.0.6"
-CPU=$(cat /proc/cpuinfo | grep -i "^model name" | awk -F ": " '{print $2}' | head -1 | sed 's/ \+/ /g')
+############### Variables
+Version="0.0.7"
+CPU=$(cat /proc/cpuinfo | grep -i "^model name" | awk -F ": " '{print $2}' | head -1 | sed 's/ \+/ /g' | awk -F "CPU" '{print $1}')
 flags=$(cat /proc/cpuinfo | grep flags | head -n 1 | cut -d: -f2)
 Arch=$(uname -m)
 Vendor=$(cat /proc/cpuinfo | grep vendor | uniq | awk -F ": " '{print $2}')
