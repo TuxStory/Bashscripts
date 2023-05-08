@@ -1,7 +1,7 @@
-#!/bin/bash -eu
+#!/bin/bash
 
 ############### Variables
-Version="0.0.9"
+Version="0.1.0"
 CPU=$(cat /proc/cpuinfo | grep -i "^model name" | awk -F ": " '{print $2}' | head -1 | sed 's/ \+/ /g' | awk -F "CPU" '{print $1}')
 flags=$(cat /proc/cpuinfo | grep flags | head -n 1 | cut -d: -f2)
 Arch=$(uname -m)
