@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ############### Variables
-Version="0.1.0"
+Version="0.1.1"
 CPU=$(cat /proc/cpuinfo | grep -i "^model name" | awk -F ": " '{print $2}' | head -1 | sed 's/ \+/ /g' | awk -F "CPU" '{print $1}')
 flags=$(cat /proc/cpuinfo | grep flags | head -n 1 | cut -d: -f2)
 Arch=$(uname -m)
@@ -21,7 +21,7 @@ echo "Architecture : $Arch"
 echo "Processeur   : $CPU"
 echo ""
 echo -e "${GREEN}>>>${WHITE} Architecture levels"
-echo "$flags" | eval $supports_v1 || exit 1 && echo -e "CPU supports x86-64-v1 [ ${GREEN}Ok ${WHITE}]"
-echo "$flags" | eval $supports_v2 || exit 2 && echo -e "CPU supports x86-64-v2 [ ${GREEN}Ok ${WHITE}]"
-echo "$flags" | eval $supports_v3 || exit 3 && echo -e "CPU supports x86-64-v3 [ ${GREEN}Ok ${WHITE}]"
-echo "$flags" | eval $supports_v4 || exit 4 && echo -e "CPU supports x86-64-v4 [ ${GREEN}Ok ${WHITE}]"
+echo "$flags" | eval $supports_v1 || exit 1 && echo -e "CPU supports x86-64-v1 [  ${GREEN}OK  ${WHITE}]"
+echo "$flags" | eval $supports_v2 || exit 2 && echo -e "CPU supports x86-64-v2 [  ${GREEN}OK  ${WHITE}]"
+echo "$flags" | eval $supports_v3 || exit 3 && echo -e "CPU supports x86-64-v3 [  ${GREEN}OK  ${WHITE}]"
+echo "$flags" | eval $supports_v4 || exit 4 && echo -e "CPU supports x86-64-v4 [  ${GREEN}OK  ${WHITE}]"
