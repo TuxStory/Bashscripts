@@ -4,7 +4,7 @@
 # Script : vnstati-maker.sh #
 # Auteur : Antoine Even     #
 # Date   : 16/09/2020       #
-# Modif  : 30/09/2022       #
+# Modif  : 10/05/2023       #
 #############################
 
 # Ajouter une ligne similaire à votre crontab [commande : crontab -e]
@@ -13,7 +13,7 @@
 #
 
 #Variables
-VERSION="1.2.3"
+VERSION="1.2.4"
 DATE=$(date +"%d-%m-%Y")
 JOUR=$(date +"%d")
 MOIS=$(date +"%B")
@@ -50,5 +50,5 @@ if [ "$JOUR" == 31 ] &&  [ "$MOIS" == 12 ]; then
 fi
 
 #Décommenter pour notifier le joural (logs)
-logger "$0 commande effectué à $DATE : PNG [ ok ]"
+logger "$0 commande effectué à $DATE : PNG [  OK  ]"
 
