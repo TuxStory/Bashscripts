@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Fedora Post-Installation   #
-# 10/03/2023 ver 0.7                #
+# 14/05/2023 ver 0.8                #
 # Antoine Even                      #
 #####################################
 
@@ -42,7 +42,7 @@ sudo dnf install -y htop dfc nano tmux inxi screen htop nload nethogs neofetch n
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo dnf install -y firefox hexchat transmission-gtk
+sudo dnf install -y firefox hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
@@ -57,3 +57,7 @@ sudo dnf install -y libdvdcss
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
 sudo dnf install -y gedit python3 git #codium
+
+############### Gnome
+echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
+sudo dnf install -y gnome-extensions-app gnome-shell-extension-appindicator #gnome-shell-extension-dash-to-dock
