@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 31/01/2023 ver 1.1                #
+# 06/06/2023 ver 1.2                #
 # Antoine Even                      #
 #####################################
 
@@ -43,7 +43,7 @@ echo "deb-src http://deb.debian.org/debian bullseye-backports main contrib non-f
 fi
 clear
 
-#Install ####################################################################### 
+#Install #######################################################################
 
 echo -e "\033[1;34mInstallation des progammes :"
 echo -e "\033[0;0m----------------------------"
@@ -67,7 +67,7 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm rsync grsync"
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf"
 
 Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
 
