@@ -1,0 +1,17 @@
+#Debian 12 Sources List
+
+#Main
+deb http://deb.debian.org/debian bookworm main non-free-firmware
+deb-src http://deb.debian.org/debian bookworm main non-free-firmware
+
+#Security
+deb http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+deb-src http://deb.debian.org/debian-security/ bookworm-security main non-free-firmware
+
+#Updates
+deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
+deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
+
+#Backports
+#deb http://deb.debian.org/debian/ bookworm-backports main non-free non-free-firmware
+#deb-src http://deb.debian.org/debian/ bookworm-backports main non-free non-free-firmware
