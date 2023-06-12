@@ -36,7 +36,7 @@ echo -e "\nVoulez-vous ajouter les dépôts backports ? (Oui/Non) :"
 read -r depot
 if [[ $depot =~ ^([oO][uU][iI]|[oO])$ ]]
 then
- echo "Do Something" #copier sources.list from github wget
+ echo "Do Something" #copier sources.list from FolderConfig
 fi
 clear
 
