@@ -30,13 +30,15 @@ clear
 
 #Backports #####################################################################
 
-echo -e "\033[1;34mAjout dépôts Backports :"
-echo -e "\033[0;0m-------------------------"
-echo -e "\nVoulez-vous ajouter les dépôts backports ? (Oui/Non) :"
+echo -e "\033[1;34mFichier des dépôts :"
+echo -e "\033[0;0m-------------------"
+echo -e "\nVoulez-vous changer le fichier sources.list ? (Oui/Non) :"
 read -r depot
 if [[ $depot =~ ^([oO][uU][iI]|[oO])$ ]]
 then
- echo "Do Something" #copier sources.list from FolderConfig
+	mv /etc/apt/sources.list /etc/apt/sources.list.bak
+	cp ./Config/sources.list /etc/apt/sources.list
+	echo "Fichier sources.list modifié."
 fi
 clear
 
