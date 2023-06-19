@@ -13,5 +13,5 @@ deb http://deb.debian.org/debian bookworm-updates main non-free-firmware
 deb-src http://deb.debian.org/debian bookworm-updates main non-free-firmware
 
 #Backports
-#deb http://deb.debian.org/debian/ bookworm-backports main non-free non-free-firmware
-#deb-src http://deb.debian.org/debian/ bookworm-backports main non-free non-free-firmware
+deb http://deb.debian.org/debian/ bookworm-backports main non-free non-free-firmware
+deb-src http://deb.debian.org/debian/ bookworm-backports main non-free non-free-firmware
