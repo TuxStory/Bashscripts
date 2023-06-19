@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 12/06/2023 ver 0.1                #
+# 19/06/2023 ver 0.2                #
 # Antoine Even                      #
 #####################################
 
@@ -25,7 +25,7 @@ clear
 echo -e "\033[1;34mMises à jour du système :"
 echo -e "\033[0;0m-------------------------"
 echo
-apt update ; apt upgrade -y
+apt update && apt upgrade -y
 clear
 
 #Backports #####################################################################
@@ -40,6 +40,7 @@ then
 	cp ./Config/sources.list /etc/apt/sources.list
 	echo "Fichier sources.list modifié."
 fi
+sleep 5s
 clear
 
 #Install #######################################################################
