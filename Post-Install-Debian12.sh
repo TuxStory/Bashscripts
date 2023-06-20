@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 ver 0.2                #
+# 19/06/2023 ver 0.3                #
 # Antoine Even                      #
 #####################################
 
@@ -30,8 +30,8 @@ clear
 
 #Backports #####################################################################
 
-echo -e "\033[1;34mFichier des dépôts :"
-echo -e "\033[0;0m-------------------"
+echo -e "\033[1;34mFichier des dépôts + (backports) :"
+echo -e "\033[0;0m----------------------------------"
 echo -e "\nVoulez-vous changer le fichier sources.list ? (Oui/Non) :"
 read -r depot
 if [[ $depot =~ ^([oO][uU][iI]|[oO])$ ]]
@@ -120,10 +120,8 @@ fi
 
 #Nettoyage #####################################################################
 
-echo -e "\033[1;34mapt clean\033[0m"
+echo -e "\033[1;34mNettoyage du cache des paquets...\033[0m"
 apt clean
-echo -e "\033[1;34mapt autoremove\033[0m"
+echo -e "\033[1;34mSupression des paquets devenus inutiles...\033[0m"
 apt autoremove -y
-#echo -e "\033[1;34mupdatedb\033[0m"
-#updatedb
-echo -e "\033[1;32mLe système est à jour :)\033[0m"
+echo -e "\033[1;32mLe système est à jour. :)\033[0m"
