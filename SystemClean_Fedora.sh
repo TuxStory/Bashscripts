@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 26/08/22	   #
-# Revision	: 11/09/22         #
+# Revision	: 10/08/23         #
 ####################################
 
-VERSION=0.0.9
+VERSION=0.1.0
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -48,6 +48,15 @@ then
   echo -e "\n${GREEN}>>> [ Chrome ] ${WHITE}La taille du dossier de Chrome ${BLUE}.cache${WHITE} est de : ${GREEN}$CHROME${WHITE}."
   rm -rf /home/antoine/.config/chromium/Default/Service\ Worker/
   echo "Le cache de Google Chrome/Chromium a été vidé."
+fi
+
+############### Firefox [ Already deleted by cache section ]
+if [ -d /home/"$SUDO_USER"/.cache/mozilla/firefox/ ]
+then
+  CHROME=$(du -sh /home/antoine/.cache/mozilla/firefox/ | awk '{print $1}')
+  echo -e "\n${GREEN}>>> [ Firefox ] ${WHITE}La taille du dossier de Firefox ${BLUE}.cache${WHITE} est de : ${GREEN}$Firefox${WHITE}."
+  rm -rf /home/antoine/.cache/mozilla/firefox/*
+  echo "Le cache de Firefox a été vidé."
 fi
 
 ################ Poubelle
