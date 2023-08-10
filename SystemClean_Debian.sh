@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 10/06/22	   #
-# Revision	: 29/08/22         #
+# Revision	: 11/08/23         #
 ####################################
 
-VERSION=0.3.2
+VERSION=0.3.3
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -44,7 +44,7 @@ echo "Le cache à été vidé."
 ############### Chromium - Chromium
 if [ -d /home/"$SUDO_USER"/.config/chromium/Default/Service\ Worker/ ]
 then
-  CHROME=$(du -sh /home/antoine/.config/chromium/Default/Service\ Worker/ | awk '{print $1}')
+  CHROME=$(du -sh /home/"$SUDO_USER"/.config/chromium/Default/Service\ Worker/ | awk '{print $1}')
   echo -e "\n${GREEN}>>> [ Chrome ] ${WHITE}La taille du dossier de Chrome ${BLUE}.cache${WHITE} est de : ${GREEN}$CHROME${WHITE}."
   rm -rf /home/antoine/.config/chromium/Default/Service\ Worker/
   echo "Le cache de chrome a été vidé."
