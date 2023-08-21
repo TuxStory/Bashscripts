@@ -7,7 +7,7 @@
 # Revision	: 21/08/23         #
 ####################################
 
-VERSION=0.0.1
+VERSION=0.0.2
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -59,17 +59,13 @@ echo "La poubelle à été vidée."
 ################ Zypper
 echo -e "\n${GREEN}>>> [ Zypper Cache ] ${WHITE}Nettoyage du dossier ${BLUE}cache${WHITE}."
 #sudo du -sh /var/cache/apt
-sudo zypper clean --dry-run
-sudo zypper clean -y
+sudo zypper clean
 
 echo -e "\n${GREEN}>>> [ Zypper Dependances ] ${WHITE}Verification des dépendances des paquets ."
-sudo zypper verify -y
+sudo zypper verify
 
-echo -e "\n${GREEN}>>> [ Zypper Autoremove ] ${WHITE}Nettoyage des porgrammes."
-sudo zypper autoremove -y
-
-echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
-zypper packages --unneeded -y | awk -F'|' 'NR==0 || NR==1 || NR==2 || NR==3 || NR==4 {next} {print $3}' | grep -v Name | sudo xargs zypper remove --clean-deps
+echo -e "\n${GREEN}>>> [ Autoremove - Résidus ] ${WHITE}Recherche de résidus ... "
+zypper packages --unneeded | awk -F'|' 'NR==0 || NR==1 || NR==2 || NR==3 || NR==4 {next} {print $3}' | grep -v Name | sudo xargs zypper remove --clean-deps
 
 ################ TMP
 TEMPORY=$(du -sh /tmp/ | awk '{print $1}')
