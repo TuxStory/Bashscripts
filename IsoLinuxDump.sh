@@ -1,5 +1,9 @@
 #!/bin/bash
 
+####################
+# NEED TO BE FIXEX #
+####################
+
 echo "Exemple de site possible : "
 echo "www.debian.org"
 echo "www.fedora-fr.org"
@@ -26,3 +30,4 @@ REGEX="https:\/\/[a-z]{7}.*.iso"
 Link=$(wget -qO- $1 | grep -Eo $REGEX)
 echo $Link
 wget $Link -P ~/
+
