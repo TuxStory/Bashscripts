@@ -1,4 +1,6 @@
-#Debian 12 Sources List
+##################################
+#     Debian 12 Sources List     #
+##################################
 
 #Main
 deb http://deb.debian.org/debian bookworm main non-free contrib non-free-firmware
