@@ -22,13 +22,8 @@ exit $EACCES
 fi
 
 clear
-echo -e "\033[1;34mMises à jour du système :"
-echo -e "\033[0;0m-------------------------"
-echo
-apt update && apt upgrade -y
-clear
 
-#Backports #####################################################################
+#Dépots ########################################################################
 
 echo -e "\033[1;34mFichier des dépôts + (backports) :"
 echo -e "\033[0;0m----------------------------------"
@@ -42,6 +37,14 @@ then
 fi
 sleep 5s
 clear
+
+#Update System #################################################################
+echo -e "\033[1;34mMises à jour du système :"
+echo -e "\033[0;0m-------------------------"
+echo
+apt update && apt upgrade -y
+clear
+
 
 #Install #######################################################################
 
