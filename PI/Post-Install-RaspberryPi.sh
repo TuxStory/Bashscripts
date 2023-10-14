@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 ver 0.2                     #
+# 16/02/2023 - ver 0.3 - 14/10/2023      #
 # Antoine Even                           #
 ##########################################
 
@@ -36,7 +36,7 @@ sudo apt install -y htop dfc nano tmux inxi screen htop nload nethogs neofetch n
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo apt install -y hexchat transmission-gtk
+sudo apt install -y hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
