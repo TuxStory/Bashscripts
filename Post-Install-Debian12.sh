@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.4 07/10/2023   #
+# 19/06/2023 - ver 0.5 25/10/2023   #
 # Antoine Even                      #
 #####################################
 
@@ -70,13 +70,13 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm rsync grsync"
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
 
 Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin="fail2ban firewalld samba nmon wavemon nload vnstat vnstati testdisk iperf3 hddtemp lnav tmux lm-sensors glances nethogs smartmontools"
+Admin="fail2ban firewalld samba nload vnstat vnstati testdisk iperf3 hddtemp lnav glances nethogs"
 
 Programmes_Dev="gcc git geany nano mu-editor python3-numpy python3-matplotlib ipython3"
 
