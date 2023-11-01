@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 0.4 - 01/11/2023      #
+# 01/11/2023 - ver 0.1 - 01/11/2023      #
 # Antoine Even                           #
 ##########################################
 
@@ -33,18 +33,6 @@ sudo apt update -y && sudo apt upgrade -y
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo apt install -y dfc nano tmux inxi screen htop nload nethogs neofetch ncdu nmon ranger vnstat \
 	zsh-theme-powerlevel9k fonts-powerline zsh
-
-############### Install Internet
-echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo apt install -y hexchat transmission-gtk filezilla
-
-############### Install Multimédia
-echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo apt install -y audacious cmus vlc eom
-
-############### Install Code
-echo -e "\n${GREEN}>>> ${WHITE}Installation Programmation."
-sudo apt install -y geany pluma
 
 ################ Autoremove
 echo -e "\n${GREEN}>>> ${WHITE}Nettoyage des paquets."
