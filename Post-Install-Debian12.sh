@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.6 02/11/2023   #
+# 19/06/2023 - ver 0.7 03/11/2023   #
 # Antoine Even                      #
 #####################################
 
@@ -70,15 +70,15 @@ Programmes="audacious gparted inxi neofetch hardinfo hexchat vlc ffmpegthumbnail
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm rsync grsync"
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon btop"
 
-Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule firefox"
+Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission firefox"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin="fail2ban firewalld samba nload vnstat vnstati testdisk iperf3 hddtemp lnav glances nethogs"
+Admin="fail2ban firewalld samba nload vnstat vnstati testdisk iperf3 hddtemp lnav nethogs"
 
-Programmes_Dev="gcc git geany nano mu-editor python3-numpy python3-matplotlib ipython3"
+Programmes_Dev="gcc geany nano mu-editor python3-numpy python3-matplotlib ipython3"
 
 #Questionnaire #################################################################
 
