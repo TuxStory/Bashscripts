@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 0.4 - 01/11/2023      #
+# 16/02/2023 - ver 0.5 - 03/11/2023      #
 # Antoine Even                           #
 ##########################################
 
@@ -45,6 +45,11 @@ sudo apt install -y audacious cmus vlc eom
 ############### Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation Programmation."
 sudo apt install -y geany pluma
+
+############### PenTesting
+#echo -e "\n${GREEN}>>> ${WHITE}Installation Sécurité Informatique."
+#sudo apt install -y nmap binwalk strings gobuster hydra traceroute
+
 
 ################ Autoremove
 echo -e "\n${GREEN}>>> ${WHITE}Nettoyage des paquets."
