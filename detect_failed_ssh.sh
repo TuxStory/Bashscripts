@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.3
+# Version : 0.4
 # Author  : Antoine Even
 
 echo "================== "
@@ -25,5 +25,5 @@ echo "==========================="
 echo " Successful Login Attempts "
 echo "==========================="
 echo
-journalctl -u ssh.service -g opened
+#journalctl -u ssh.service -g opened
 journalctl _SYSTEMD_UNIT=ssh.service | grep -E "opened"
