@@ -32,7 +32,7 @@ sudo apt update -y && sudo apt upgrade -y
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo apt install -y dfc nano tmux inxi screen htop nload nethogs neofetch ncdu nmon ranger vnstat \
-	zsh-theme-powerlevel9k fonts-powerline zsh
+	zsh-theme-powerlevel9k fonts-powerline zsh mc
 
 ################ Autoremove
 echo -e "\n${GREEN}>>> ${WHITE}Nettoyage des paquets."
