@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.4
+# Version : 0.5
 # Author  : Antoine Even
 
 echo "================== "
@@ -14,16 +14,17 @@ echo
 #With journalctl
 journalctl _SYSTEMD_UNIT=ssh.service | grep -E "Failed|Failure"
 # journalctl _SYSTEMD_UNIT=sshd.service | egrep "Failed|Failure"  #In RHEL, CentOS
-
+echo
 echo "============"
 echo " Banned IPs "
 echo "============"
 echo
 grep 'Ban' /var/log/fail2ban.log* 2>/dev/null
-
+echo
 echo "==========================="
 echo " Successful Login Attempts "
 echo "==========================="
 echo
 #journalctl -u ssh.service -g opened
 journalctl _SYSTEMD_UNIT=ssh.service | grep -E "opened"
+echo
