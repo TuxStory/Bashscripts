@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.5.2
+# Version : 0.5.3
 # Author  : Antoine Even
 
 JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
@@ -24,9 +24,9 @@ echo "=============================================="
 echo
 grep 'Ban' /var/log/fail2ban.log* 2>/dev/null
 echo
-echo "==========================="
-echo " Successful Login Attempts "
-echo "==========================="
+echo "==================================="
+echo " Lastest Successful Login Attempts "
+echo "==================================="
 echo
 
 #journalctl -u ssh.service -g opened
