@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.5.1
+# Version : 0.5.2
 # Author  : Antoine Even
 
 JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
@@ -30,5 +30,5 @@ echo "==========================="
 echo
 
 #journalctl -u ssh.service -g opened
-$JOURNAL| grep -E "opened"
+$JOURNAL | grep -E "opened" | tail
 echo
