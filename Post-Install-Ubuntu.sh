@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 13/11/2023 - ver 0.3 - 03/11/2023 #
+# 13/11/2023 - ver 0.4 - 03/11/2023 #
 # Antoine Even                      #
 #####################################
 
@@ -25,7 +25,12 @@ clear
 
 #Dépots ########################################################################
 
-#TODO#
+echo -e "\033[1;34mActivation des dépôts :"
+echo -e "\033[0;0m-------------------------"
+echo
+sudo add-apt-repository universe
+sudo add-apt-repository multiverse
+sudo add-apt-repository restricted
 
 #Update System #################################################################
 echo -e "\033[1;34mMises à jour du système :"
