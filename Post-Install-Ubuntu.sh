@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 28/10/2023 - ver 0.2 - 03/11/2023 #
+# 13/11/2023 - ver 0.3 - 03/11/2023 #
 # Antoine Even                      #
 #####################################
 
@@ -63,17 +63,17 @@ function Install()
 
 Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
-	chromium-browser chromium-browser-l10n xterm rsync grsync"
+	xterm rsync grsync" #chromium-browser chromium-browser-l10n
 
 Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
 
-Programmes_Internet="filezilla tnftp iptraffic transmission amule"
+Programmes_Internet="filezilla tnftp iptraffic transmission"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
 Admin="fail2ban firewalld samba nload vnstat vnstati testdisk iperf3 hddtemp lnav glances nethogs"
 
-Programmes_Dev="gcc geany nano mu-editor python3-numpy python3-matplotlib ipython3"
+Programmes_Dev="gcc geany nano" #python3-numpy python3-matplotlib ipython3"
 
 #Questionnaire #################################################################
 
