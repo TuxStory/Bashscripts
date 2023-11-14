@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 13/11/2023 - ver 0.4 - 03/11/2023 #
+# 13/11/2023 - ver 0.5 - 03/11/2023 #
 # Antoine Even                      #
 #####################################
 
@@ -14,6 +14,7 @@
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
 
+VER=0.5
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
@@ -24,13 +25,16 @@ fi
 clear
 
 #Dépots ########################################################################
-
+echo -e "\033[1;32mPost-Install-Ubuntu $VER"
+echo
 echo -e "\033[1;34mActivation des dépôts :"
 echo -e "\033[0;0m-------------------------"
 echo
 sudo add-apt-repository universe
 sudo add-apt-repository multiverse
 sudo add-apt-repository restricted
+echo "Activation des dépots 	[ done ]"
+sleep 3
 
 #Update System #################################################################
 echo -e "\033[1;34mMises à jour du système :"
@@ -47,7 +51,6 @@ snap refresh
 clear
 
 #Install #######################################################################
-
 echo -e "\033[1;34mInstallation des progammes :"
 echo -e "\033[0;0m----------------------------"
 echo
@@ -67,8 +70,8 @@ function Install()
 #Liste des programmes ##########################################################
 
 Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
-	deja-dup system-config-printer bleachbit gnome-disk-utils
-	xterm rsync grsync" #chromium-browser chromium-browser-l10n
+	deja-dup bleachbit gnome-disk-utils xterm rsync grsync"
+	# Old :chromium-browser chromium-browser-l10n
 
 Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
 
