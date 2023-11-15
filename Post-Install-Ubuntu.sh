@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 13/11/2023 - ver 0.5 - 03/11/2023 #
+# 13/11/2023 - ver 0.6 - 03/11/2023 #
 # Antoine Even                      #
 #####################################
 
@@ -14,7 +14,7 @@
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
 
-VER=0.5
+VER=0.6
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
@@ -30,11 +30,14 @@ echo
 echo -e "\033[1;34mActivation des dépôts :"
 echo -e "\033[0;0m-------------------------"
 echo
-sudo add-apt-repository universe
-sudo add-apt-repository multiverse
-sudo add-apt-repository restricted
-echo "Activation des dépots 	[ done ]"
-sleep 3
+
+if [ sudo grep -rhE ^universe /etc/apt/sources.list* ]; then
+  sudo add-apt-repository universe
+  sudo add-apt-repository multiverse
+  sudo add-apt-repository restricted
+  echo "Activation des dépots 	[ done ]"
+  sleep 3
+fi
 
 #Update System #################################################################
 echo -e "\033[1;34mMises à jour du système :"
