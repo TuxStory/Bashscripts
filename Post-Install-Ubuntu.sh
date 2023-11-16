@@ -31,6 +31,7 @@ echo -e "\033[1;34mActivation des dépôts :"
 echo -e "\033[0;0m-------------------------"
 echo
 
+#Il faut revoir le test
 if grep -q universe /etc/apt/sources.list; then
   echo "Dépôts déjà activés	[ ok ]"
   sleep 1
