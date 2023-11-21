@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.8 20/11/2023   #
+# 19/06/2023 - ver 0.9 22/11/2023   #
 # Antoine Even                      #
 #####################################
 
@@ -45,7 +45,6 @@ echo
 apt update && apt upgrade -y
 clear
 
-
 #Install #######################################################################
 
 echo -e "\033[1;34mInstallation des progammes :"
@@ -66,13 +65,15 @@ function Install()
 
 #Liste des programmes ##########################################################
 
-Programmes="audacious gparted inxi neofetch hardinfo hexchat vlc ffmpegthumbnailer
+Programmes="audacious gparted hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
-	chromium-browser chromium-browser-l10n xterm rsync grsync"
+	chromium-browser chromium-browser-l10n xterm grsync"
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon btop" #moc
+Programmes_Console="dfc ranger ansiweather irssi fbi mc inxi rsync neofetch oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon btop"
 
 Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission firefox"
+
+Programmes_Musique="cmus moc cava"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
@@ -85,9 +86,10 @@ Programmes_Dev="gcc geany nano python3-numpy python3-matplotlib ipython3" #mu-ed
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read -r reponse
 printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read -r reponse1
 printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m: (Oui/Non) " ; read -r reponse2
-printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read -r reponse3
-printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read -r reponse4
-printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read -r reponse5
+printf "Voulez-vous installer la liste des programmes \e[35mMusique Console\e[0m: (Oui/Non) " ; read -r reponse3
+printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read -r reponse4
+printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read -r reponse5
+printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read -r reponse6
 
 #Installation ##################################################################
 
@@ -107,6 +109,11 @@ then
 fi
 
 if [[ $reponse3 =~ ^([oO][uU][iI]|[oO])$ ]]
+then
+	Install ${Programmes_Musique[@]}
+fi
+
+if [[ $reponse4 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	Install ${Admin[@]}
 fi
