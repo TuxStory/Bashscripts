@@ -13,7 +13,7 @@ for str in ${names[@]}; do
   echo $str
 done
 
-echo "===== loop 2====="
+echo "===== loop 2 ====="
 for i in ${!names[@]}; do
   echo "element $i is ${myArray[$i]}"
 done
