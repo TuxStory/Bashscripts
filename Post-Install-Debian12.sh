@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.9 22/11/2023   #
+# 19/06/2023 - ver 0.9.1 22/11/2023 #
 # Antoine Even                      #
 #####################################
 
@@ -13,6 +13,8 @@
 #yes Y | command-that-asks-for-input
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
+
+#arr=($line) convert a string into an array
 
 EACCES=13 # Permission denied
 
@@ -71,7 +73,7 @@ Programmes="audacious gparted hardinfo hexchat vlc ffmpegthumbnailer
 
 Programmes_Console="dfc ranger ansiweather irssi fbi mc inxi rsync neofetch oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon btop"
 
-Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission firefox"
+Programmes_Internet="filezilla tnftp iptraffic transmission firefox" #rtorrent
 
 Programmes_Musique="cmus moc cava"
 
