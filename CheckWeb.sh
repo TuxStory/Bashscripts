@@ -12,9 +12,10 @@ for site in "${website[@]}"; do
   ping -c1 $site > /dev/null 2>&1
   RESULT=$?
   if [ $RESULT -eq 0 ]; then
-    echo -e "$site : status [${GREEN} online ${WHITE}]"
-    #printf -e "%-25s %s\n" "$site" ": status [ online ]"
+    #echo -e "$site : status [${GREEN} online ${WHITE}]"
+    printf "%-20s status >>> [ Online ]\n" $site
   else
-    echo -e "$site : status [${RED} offline ${WHITE}]"
+    #echo -e "$site : status [${RED} offline ${WHITE}]"
+    printf "%-20s status >>> [ Offline ]\n" $site
   fi
 done
