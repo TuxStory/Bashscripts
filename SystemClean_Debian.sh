@@ -4,18 +4,18 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 10/06/22	   #
-# Revision	: 11/08/23         #
+# Revision	: 30/11/23         #
 ####################################
 
-VERSION=0.3.3
+VERSION=0.3.4
 EACCES=13 # Permission denied
 ESPACE=0
 
 ############### Couleurs
 GREEN='\033[1;32m'
 WHITE='\033[1;0m' #real white \033[1;37m
-RED='\033[0;91m'
-BLUE='\033[0;94m'
+RED='\033[1;91m'
+BLUE='\033[1;94m'
 MAGENTA='\033[0;95m'
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
