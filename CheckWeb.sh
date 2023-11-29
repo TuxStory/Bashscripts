@@ -1,21 +1,23 @@
 #!/bin/bash
 
-############### Couleurs
+#Version 1.0
+#Example printf color+columnw
+#printf '%-6s' "\e[1;34mThis is text\e[0m"
+
+############### Couleurs #### not in use
 GREEN='\033[1;32m'
-WHITE='\033[1;0m' #real white \033[1;37m
+WHITE='\033[1;0m' # real white \033[1;37m
 RED='\033[0;91m'
 
 ############### Programme
-website=('www.google.be' 'www.yahoo.fr' 'www.distrowatch.com' 'www.debian.org' 'www.instagram.com' 'www.twitter.com' )
+website=('www.google.be' 'www.yahoo.fr' 'www.distrowatch.com' 'www.debian.org' 'www.instagram.com' 'www.twitter.com' 'www.amazon.com.be' )
 
 for site in "${website[@]}"; do
   ping -c1 $site > /dev/null 2>&1
   RESULT=$?
   if [ $RESULT -eq 0 ]; then
-    #echo -e "$site : status [${GREEN} online ${WHITE}]"
-    printf "%-20s status >>> [ Online ]\n" $site
+    printf "%-20s status >>> [\e[1;32m Online \e[0m]\n" $site
   else
-    #echo -e "$site : status [${RED} offline ${WHITE}]"
-    printf "%-20s status >>> [ Offline ]\n" $site
+    printf "%-20s status >>> [\e[1;91m Offline \e[0m]\n" $site
   fi
 done
