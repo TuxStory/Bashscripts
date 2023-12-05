@@ -13,11 +13,9 @@ zenity --forms --title="Ajout d'un ami" \
 
 case $? in
     0)
-        echo "Ami ajouté.";;
+        zenity --info --text "Contact ajouté";;
     1)
-        echo "Aucun ami ajouté."
-	;;
+        zenity --warnings --text "Le contact n'a pas été ajouté";;
     -1)
-        echo "Une erreur inattendue est survenue."
-	;;
+        zenity --warnings --text "Une erreur inattendue est survenue.";;
 esac
