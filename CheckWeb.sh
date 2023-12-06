@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Version 1.0
+#Version 1.1
 #Example printf color+columnw
 #printf '%-6s' "\e[1;34mThis is text\e[0m"
 
