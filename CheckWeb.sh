@@ -10,7 +10,7 @@ WHITE='\033[1;0m' # real white \033[1;37m
 RED='\033[0;91m'
 
 ############### Programme
-website=('www.google.be' 'www.yahoo.fr' 'www.distrowatch.com' 'www.debian.org' 'www.instagram.com' 'www.twitter.com' 'www.amazon.com.be' )
+website=('www.google.be' 'smtp.gmail.com' 'www.amazon.com.be' 'www.duckduckgo.com' 'www.distrowatch.com' 'www.debian.org' 'www.instagram.com' 'www.twitter.com' 'www.amazon.com.be' )
 
 for site in "${website[@]}"; do
   ping -c1 $site > /dev/null 2>&1
