@@ -1,0 +1,12 @@
+cat data.csv |          # get data from file
+  sed '1 d' |           # delete csv header row
+  tr ',' '\n' |         # put each csv field on a separate line
+  zenity --list \
+    --column=name \
+    --column=title \
+    --column=artist \
+    --column=album \
+    --column=year \
+    --column=genre \
+    --column=track \
+    --column=comment    # render data in zenity dialog
