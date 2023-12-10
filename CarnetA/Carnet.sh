@@ -10,7 +10,7 @@ source ZenityAdresse.sh
 source ZenityViewer.sh
 
 ########### Variables
-Version=0.3
+Version=0.4
 Reponse=0
 
 ########## Fonction
@@ -19,14 +19,20 @@ zenity --question --text "Voulez vous ajouter un autre contact ?" --ok-label "Ou
 }
 
 main(){
-  ans=$(viewContact)
-  if [[ "$ans" == "Ajouter un contact" ]]; then
-    while [ $Reponse == 0 ]
-    do
-      addContact
-      question ; Reponse=$?
-    done
-  fi
+  while true
+  do
+    ans=$(viewContact)
+    echo $ans
+    if [[ "$ans" == "Ajouter un contact" ]]; then
+      while [ $Reponse == 0 ]
+      do
+        addContact
+        question ; Reponse=$?
+      done
+    elif [[ "$ans" == "Quitter" ]]; then
+    break
+    fi
+  done
 }
 
 ########## Main
