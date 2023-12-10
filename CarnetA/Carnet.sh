@@ -10,7 +10,7 @@ source ZenityAdresse.sh
 source ZenityViewer.sh
 
 ########### Variables
-Version=0.4
+Version=0.5
 Reponse=0
 
 ########## Fonction
@@ -29,7 +29,7 @@ main(){
         addContact
         question ; Reponse=$?
       done
-    elif [[ "$ans" == "Quitter" ]]; then
+    elif [[ "$ans" == "Quitter" || "$?" != "0" ]]; then
     break
     fi
   done
