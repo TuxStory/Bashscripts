@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 0.6 - 03/11/2023      #
+# 16/02/2023 - ver 0.7 - 16/12/2023      #
 # Antoine Even                           #
 ##########################################
 
@@ -31,16 +31,17 @@ sudo apt update -y && sudo apt upgrade -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo apt install -y dfc nano tmux inxi screen htop nload nethogs neofetch ncdu nmon ranger vnstat \
-	zsh-theme-powerlevel9k fonts-powerline zsh mc
+sudo apt install -y  dfc fonts-powerline htop inxi lnav mc nano ncdu neofetch nethogs nload \
+                     nmon ranger screen tmux vnstat wavemon zsh zsh-theme-powerlevel9k
+
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo apt install -y hexchat transmission-gtk filezilla
+sudo apt install -y hexchat fillezilla transmission-gtk
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo apt install -y audacious cmus vlc eom
+sudo apt install -y audacious cmus eom vlc
 
 ############### Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation Programmation."
