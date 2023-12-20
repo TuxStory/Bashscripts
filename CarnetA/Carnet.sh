@@ -37,3 +37,5 @@ main(){
 
 ########## Main
 main
+
+#corriger la boucle ne peut plus ajouter de contact apres retour a la fenetre principale
