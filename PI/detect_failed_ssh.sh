@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.5.3
+# Version : 0.7.0
 # Author  : Antoine Even
 
 JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
@@ -19,16 +19,22 @@ $JOURNAL | grep -E "Failed|Failure"
 
 echo
 echo "=============================================="
-echo " Banned IPs (In history, Maybe not active now)"
+echo " Banned IPs (In history, May be not active now)"
 echo "=============================================="
 echo
 grep 'Ban' /var/log/fail2ban.log* 2>/dev/null
 echo
-echo "==================================="
-echo " Lastest Successful Login Attempts "
-echo "==================================="
-echo
 
+#echo "==================================="
+#echo " Lastest Successful Login Attempts "
+#echo "==================================="
+#echo
 #journalctl -u ssh.service -g opened
-$JOURNAL | grep -E "opened" | tail
+#$JOURNAL | grep -E "opened" | tail
+#echo
+
+echo "==========================="
+echo " Latest Sucessful Login IP "
+echo "==========================="
 echo
+$JOURNAL | grep -E "Accepted" | awk -F ": " '{print $1 $2}' | tail
