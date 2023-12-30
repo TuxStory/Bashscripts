@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.7.0
+# Version : 0.7.1
 # Author  : Antoine Even
 
 JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
@@ -18,9 +18,9 @@ $JOURNAL | grep -E "Failed|Failure"
 # $JOURNAL | egrep "Failed|Failure"  #In RHEL, CentOS
 
 echo
-echo "=============================================="
+echo "==============================================="
 echo " Banned IPs (In history, May be not active now)"
-echo "=============================================="
+echo "==============================================="
 echo
 grep 'Ban' /var/log/fail2ban.log* 2>/dev/null
 echo
