@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.7.1
+# Version : 0.7.2
 # Author  : Antoine Even
 
 JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
@@ -33,8 +33,8 @@ echo
 #$JOURNAL | grep -E "opened" | tail
 #echo
 
-echo "==========================="
-echo " Latest Sucessful Login IP "
-echo "==========================="
+echo "=========================================="
+echo " Latest Successful login attempts from IP "
+echo "=========================================="
 echo
 $JOURNAL | grep -E "Accepted" | awk -F ": " '{print $1 $2}' | tail
