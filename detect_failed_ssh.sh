@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.7.3
+# Version : 0.8.0
 # Author  : Antoine Even
 
 JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
@@ -10,11 +10,7 @@ echo " Failed SSH Login "
 echo "=================="
 echo
 
-#Without journalctl
-#grep "Failed password" /var/log/auth.log
-#grep "Failed password" /var/log/auth.log | awk ‘{print $10}’ | uniq -c | sort -nr
 #With journalctl
-
 $JOURNAL | grep -E "Failed|Failure"   #debian
 #$JOURNAL | egrep "Failed|Failure"  #In RHEL, CentOS
 
@@ -31,3 +27,4 @@ echo " Latest Successful login attempts from IP "
 echo "=========================================="
 echo
 $JOURNAL | grep -E "Accepted" | awk -F ": " '{print $1 $2}' | tail
+
