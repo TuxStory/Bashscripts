@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.9.1 22/11/2023 #
+# 19/06/2023 - ver 0.9.2 07/01/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -71,7 +71,7 @@ Programmes="audacious gparted hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm grsync"
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc inxi rsync neofetch oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon btop"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc inxi rsync neofetch oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon btop ethstatus"
 
 Programmes_Internet="filezilla tnftp iptraffic transmission firefox" #rtorrent
 
