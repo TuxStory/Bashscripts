@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.9.3 08/01/2024 #
+# 19/06/2023 - ver 0.9.4 10/01/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -77,11 +77,11 @@ Programmes_Internet="filezilla firefox iptraffic tnftp transmission" #rtorrent
 
 Programmes_Musique="cava cmus moc"
 
-Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
+Games="bastet bsdgames bsdgames-nonfree burgerspace cavezofphear cmatrix freesweep frozen-bubble gnome-games lbreakout2 netris nettoe ninvaders nsnake xboard"
 
-Admin="fail2ban firewalld nload vnstat vnstati testdisk iperf3 hddtemp lnav nethogs" #samba apache2
+Admin="fail2ban firewalld hddtemp iperf3 nethogs nload lnav testdisk vnstat vnstati" #samba apache2
 
-Programmes_Dev="gcc geany nano python3-numpy python3-matplotlib ipython3" #mu-editor
+Programmes_Dev="gcc geany ipython3 nano python3-numpy python3-matplotlib" #mu-editor
 
 #Questionnaire #################################################################
 
