@@ -63,10 +63,10 @@ sudo zypper clean
 echo -e "\n${GREEN}>>> [ Zypper Dependances ] ${WHITE}Verification des dépendances des paquets ."
 sudo zypper verify
 
-echo -e "\n${GREEN}>>> [ Zypper Dependances ] ${WHITE}Verification des paquets orphelins."
+echo -e "\n${GREEN}>>> [ Zypper Orphelins ] ${WHITE}Verification des paquets orphelins."
 sudo zypper packages --orphaned
 
-echo -e "\n${GREEN}>>> [ Zypper Dependances ] ${WHITE}Verification des paquets résidus."
+echo -e "\n${GREEN}>>> [ Zypper UnNeeded ] ${WHITE}Verification des paquets résidus."
 sudo zypper packages --unneeded
 
 #Ne fonctionne plus
