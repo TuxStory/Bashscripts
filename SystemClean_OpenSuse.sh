@@ -4,7 +4,7 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 21/08/23	   #
-# Revision	: 21/08/23         #
+# Revision	: 04/02/24         #
 ####################################
 
 VERSION=0.0.2
@@ -58,14 +58,20 @@ echo "La poubelle à été vidée."
 
 ################ Zypper
 echo -e "\n${GREEN}>>> [ Zypper Cache ] ${WHITE}Nettoyage du dossier ${BLUE}cache${WHITE}."
-#sudo du -sh /var/cache/apt
 sudo zypper clean
 
 echo -e "\n${GREEN}>>> [ Zypper Dependances ] ${WHITE}Verification des dépendances des paquets ."
 sudo zypper verify
 
-echo -e "\n${GREEN}>>> [ Autoremove - Résidus ] ${WHITE}Recherche de résidus ... "
-zypper packages --unneeded | awk -F'|' 'NR==0 || NR==1 || NR==2 || NR==3 || NR==4 {next} {print $3}' | grep -v Name | sudo xargs zypper remove --clean-deps
+echo -e "\n${GREEN}>>> [ Zypper Dependances ] ${WHITE}Verification des paquets orphelins."
+sudo zypper packages --orphaned
+
+echo -e "\n${GREEN}>>> [ Zypper Dependances ] ${WHITE}Verification des paquets résidus."
+sudo zypper packages --unneeded
+
+#Ne fonctionne plus
+#echo -e "\n${GREEN}>>> [ Autoremove - Résidus ] ${WHITE}Recherche de résidus ... "
+#zypper packages --unneeded | awk -F'|' 'NR==0 || NR==1 || NR==2 || NR==3 || NR==4 {next} {print $3}' | grep -v Name | sudo xargs zypper remove --clean-deps
 
 ################ TMP
 TEMPORY=$(du -sh /tmp/ | awk '{print $1}')
