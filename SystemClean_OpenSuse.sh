@@ -7,7 +7,7 @@
 # Revision	: 04/02/24         #
 ####################################
 
-VERSION=0.0.2
+VERSION=0.0.3
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -81,4 +81,3 @@ echo "Les fichiers temporaires de plus de 10 jours ont été éffacés."
 
 ################ The end
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
-
