@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Version : 0.8.0
+# Version : 0.8.1
 # Author  : Antoine Even
 
 JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
@@ -22,9 +22,9 @@ echo
 grep 'Ban' /var/log/fail2ban.log* 2>/dev/null
 echo
 
-echo "=========================================="
-echo " Latest Successful login attempts from IP "
-echo "=========================================="
+echo "=============================================="
+echo " Latest Successful SSH login attempts from IP "
+echo "=============================================="
 echo
 $JOURNAL | grep -E "Accepted" | awk -F ": " '{print $1 $2}' | tail
 
