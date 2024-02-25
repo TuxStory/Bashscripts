@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 13/11/2023 - ver 0.8 - 16/11/2023 #
+# 13/11/2023 - ver 0.9 - 25/02/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -83,7 +83,7 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 
 Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
 
-Programmes_Internet="filezilla tnftp iptraffic transmission"
+Programmes_Internet="filezilla tnftp transmission"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
