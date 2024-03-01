@@ -3,19 +3,20 @@
 
 This is a suite of projects, tests and personal scripts.
 
-- Linux & Raspberry Pi scripts.    
+- Linux scripts.    
 - Demo scripts. 
 - Various tools.  
 - Tests & Examples Scripts.  
 - Front end Scripts for application.  
-- Developped or tested in Debian - Ubuntu - Fedora - OpenSuse - Manjaro.   
+- Developped or tested in Debian - Ubuntu - Fedora - OpenSuse - Manjaro.
+   
 
 ### Collaboration
 
 If you want to colaborate on something or correct a script.
-> Feel free to ask.    
+> Feel free to ask or summit your correction.    
 
-`Insérez du code`  
+`git clone https://github.com/TuxStory`  
 
 ###### Auteur : *TuxStory*. 
 
