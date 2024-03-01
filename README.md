@@ -8,8 +8,7 @@ This is a suite of projects, tests and personal scripts.
 - Various tools.  
 - Tests & Examples Scripts.  
 - Front end Scripts for application.  
-- Developped or tested in Debian - Ubuntu - Fedora - OpenSuse - Manjaro.
-   
+- Developped or tested in Debian - Ubuntu - Fedora - OpenSuse - Manjaro - RaspiOS.   
 
 ### Collaboration
 
