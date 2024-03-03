@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Version 1.2
+#Version 1.3
 #Example printf color+columnw
 #printf '%-6s' "\e[1;34mThis is text\e[0m"
 
@@ -10,9 +10,10 @@ WHITE='\033[1;0m' # real white \033[1;37m
 RED='\033[0;91m'
 
 ############### Script
-website=('www.google.be' 'smtp.gmail.com' 'www.amazon.com.be' 'www.duckduckgo.com'
-	'www.distrowatch.com' 'www.debian.org' 'www.instagram.com' 'www.twitter.com'
-	'www.amazon.com.be' )
+website=('www.google.be' 'smtp.gmail.com' 'www.youtube.com' 'www.amazon.com.be'
+	'www.duckduckgo.com' 'www.distrowatch.com' 'www.github.com' 'www.debian.org'
+	'www.instagram.com' 'www.twitter.com' 'www.facebook.com' 'www.rtbf.be'
+	'www.yahoo.fr' )
 
 for site in "${website[@]}"; do
   ping -c1 $site > /dev/null 2>&1
