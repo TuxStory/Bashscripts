@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 21/08/23	   #
-# Revision	: 04/02/24         #
+# Revision	: 04/03/24         #
 ####################################
 
-VERSION=0.0.3
+VERSION=0.0.4
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -68,6 +68,10 @@ sudo zypper packages --orphaned
 
 echo -e "\n${GREEN}>>> [ Zypper UnNeeded ] ${WHITE}Verification des paquets résidus."
 sudo zypper packages --unneeded
+
+echo -e "\n${GREEN}>>> [ Zypper UnNeeded ] ${WHITE}Verification des noyaux Linux."
+sudo zypper purge-kernels
+
 
 #Ne fonctionne plus
 #echo -e "\n${GREEN}>>> [ Autoremove - Résidus ] ${WHITE}Recherche de résidus ... "
