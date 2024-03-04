@@ -7,7 +7,7 @@
 # Revision	: 04/03/24         #
 ####################################
 
-VERSION=0.0.4
+VERSION=0.0.5
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -69,7 +69,7 @@ sudo zypper packages --orphaned
 echo -e "\n${GREEN}>>> [ Zypper UnNeeded ] ${WHITE}Verification des paquets résidus."
 sudo zypper packages --unneeded
 
-echo -e "\n${GREEN}>>> [ Zypper UnNeeded ] ${WHITE}Verification des noyaux Linux."
+echo -e "\n${GREEN}>>> [ Zypper Kernels ] ${WHITE}Verification des noyaux Linux."
 sudo zypper purge-kernels
 
 
