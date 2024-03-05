@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# 04/03/2023 ver 0.2                  #
+# 05/03/2023 ver 0.3                  #
 # Antoine Even                        #
 ########################################
 
@@ -22,15 +22,15 @@ exit $EACCES
 fi
 
 ################ Clean zypper cache
-echo -e "${GREEN}>>> ${WHITE}Nettoyage du cache de Zypper."
+echo -e "\n${GREEN}>>> ${WHITE}Nettoyage du cache de Zypper."
 zypper clean --all
 
 ############### Updates
-echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
+echo -e "\n${GREEN}>>> ${WHITE}Mise à jour du système."
 zypper update -y
 
 ############### Updates
-echo -e "${GREEN}>>> ${WHITE}Mise à jour des Patchs"
+echo -e "\n${GREEN}>>> ${WHITE}Mise à jour des Patchs"
 zypper patch -y
 
 ################ Install Administration
