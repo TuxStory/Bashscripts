@@ -7,7 +7,7 @@
 # Date M : 10/02/2024             #
 ###################################
 
-Version="0.0.1"
+Version="0.0.2"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -47,7 +47,7 @@ echo -e "\n${GREEN}>>>>${WHITE} changer le thème dans le fichier .zshrc -> ZSH_
 p10k configure
 
 #Ajout du script d'autosugestion.
-#git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+#git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 #plugins
