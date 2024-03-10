@@ -1,4 +1,4 @@
-#!/bash/bin
+#!/bin/bash
 
 ###################################
 # Script : zsh-install-config.sh  #
@@ -7,7 +7,7 @@
 # Date M : 10/02/2024             #
 ###################################
 
-Version="0.0.2"
+Version="0.0.3"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -19,12 +19,18 @@ MAGENTA='\033[0;95m'
 #verification de curl et zsh et git
 if [ ! -x /usr/bin/curl ] ; then
 echo "Le logiciel curl est manquant, veulliez l'installer."
+exit 1
+fi
 
 if [ ! -x /usr/bin/zsh ] ; then
 echo "zsh n'est pas présent, veulliez l'installer"
+exit 1
+fi
 
 if [ ! -x /usr/bin/git ] ; then
 echo "git est manquant, veulliez l'installer"
+exit 1
+fi
 
 #Set Zsh as default shell
 #chsh -s /usr/bin/zsh
