@@ -7,7 +7,7 @@
 # Date M : 10/02/2024             #
 ###################################
 
-Version="0.0.4"
+Version="0.0.5"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -39,6 +39,7 @@ echo "Votre shell par défaut est : " $SHELL
 
 #Lancement du script officiel de oh-my-zsh
 if [ ! -d $HOME/.oh-my-zsh/ ] ; then
+echo "le dossier oh-my-zsh n'a pas été trouvé."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #curl
 #sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" #wget
 
