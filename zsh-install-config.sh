@@ -7,7 +7,7 @@
 # Date M : 10/02/2024             #
 ###################################
 
-Version="0.0.3"
+Version="0.0.4"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -47,7 +47,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 #installer powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-echo -e "\n${GREEN}>>>>${WHITE} changer le thème dans le fichier .zshrc -> ZSH_THEME="powerlevel10k/powerlevel10k"
+echo -e "\n${GREEN}>>>>${WHITE} changer le thème dans le fichier .zshrc -> ZSH_THEME="powerlevel10k/powerlevel10k""
 
 #configuration de p10k
 p10k configure
