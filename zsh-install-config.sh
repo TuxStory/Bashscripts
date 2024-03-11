@@ -42,6 +42,7 @@ if [ ! -d $HOME/.oh-my-zsh/ ] ; then
 echo "le dossier oh-my-zsh n'a pas été trouvé."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #curl
 #sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" #wget
+fi
 
 #installer les fonts
 #fonts-powerline
