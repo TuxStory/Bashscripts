@@ -7,7 +7,7 @@
 # Date M : 10/02/2024             #
 ###################################
 
-Version="0.0.5"
+Version="0.0.6"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -45,7 +45,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 fi
 
 #installer les fonts
-#fonts-powerline
+#fonts-powerline apt zypper dnf
+echo "Copie des fonts"
+sudo cp Config/*.ttf /usr/share/fonts
 
 #installer powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
