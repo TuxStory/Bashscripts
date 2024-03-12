@@ -4,10 +4,10 @@
 # Script : zsh-install-config.sh  #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 10/03/2024             #
-# Date M : 10/02/2024             #
+# Date M : 11/03/2024             #
 ###################################
 
-Version="0.0.6"
+Version="0.0.7"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -18,17 +18,17 @@ MAGENTA='\033[0;95m'
 
 #verification de curl et zsh et git
 if [ ! -x /usr/bin/curl ] ; then
-echo "Le logiciel curl est manquant, veulliez l'installer."
+echo -e "\n${RED}>>>>${WHITE} Le logiciel curl est manquant, veulliez l'installer."
 exit 1
 fi
 
 if [ ! -x /usr/bin/zsh ] ; then
-echo "zsh n'est pas présent, veulliez l'installer"
+echo -e "\n${RED}>>>>${WHITE} zsh n'est pas présent, veulliez l'installer"
 exit 1
 fi
 
 if [ ! -x /usr/bin/git ] ; then
-echo "git est manquant, veulliez l'installer"
+echo -e "\n${RED}>>>>${WHITE} git est manquant, veulliez l'installer"
 exit 1
 fi
 
@@ -39,15 +39,20 @@ echo "Votre shell par défaut est : " $SHELL
 
 #Lancement du script officiel de oh-my-zsh
 if [ ! -d $HOME/.oh-my-zsh/ ] ; then
-echo "le dossier oh-my-zsh n'a pas été trouvé."
+echo "Le dossier oh-my-zsh n'a pas été trouvé."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" #curl
-#sh -c "$(wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)" #wget
 fi
 
-#installer les fonts
-#fonts-powerline apt zypper dnf
-echo "Copie des fonts"
+#installation des fonts
+echo -e "\n${GREEN}>>>>${WHITE} Installation des fonts nécessaires ..."
 sudo cp Config/*.ttf /usr/share/fonts
+echo -e "\n${GREEN} [ OK ] ${WHITE}"
+
+#fonts-powerline
+echo -e "\n${GREEN}>>>>${WHITE} Vérification de la présence de fonts-powerline"
+if [ ! -d /usr/share/powerline ] ; then
+echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
+fi
 
 #installer powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -61,3 +66,5 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/p
 #git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
 #plugins
+echo -e "\n${RED}>>>>${WHITE} Ajouter la ligne zsh-autosuggestions dans .zshrc"
+echo -e "plugins=(git \n history \n zsh-autosuggestions \n)"
