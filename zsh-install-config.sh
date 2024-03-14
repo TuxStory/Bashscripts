@@ -4,10 +4,10 @@
 # Script : zsh-install-config.sh  #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 10/03/2024             #
-# Date M : 11/03/2024             #
+# Date M : 14/03/2024             #
 ###################################
 
-Version="0.0.7"
+Version="0.0.8"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -23,18 +23,18 @@ exit 1
 fi
 
 if [ ! -x /usr/bin/zsh ] ; then
-echo -e "\n${RED}>>>>${WHITE} zsh n'est pas présent, veulliez l'installer"
+echo -e "\n${RED}>>>>${WHITE} zsh n'est pas présent, veulliez l'installer."
 exit 1
 fi
 
 if [ ! -x /usr/bin/git ] ; then
-echo -e "\n${RED}>>>>${WHITE} git est manquant, veulliez l'installer"
+echo -e "\n${RED}>>>>${WHITE} git est manquant, veulliez l'installer."
 exit 1
 fi
 
 #Set Zsh as default shell
 #chsh -s /usr/bin/zsh
-echo -e "\n${GREEN}>>>>${WHITE} To set zsh as default shell -> chsh -s /usr/bin/zsh"
+echo -e "\n${GREEN}>>>>${WHITE} Pour changer le shell par défaut-> chsh -s /usr/bin/zsh"
 echo "Votre shell par défaut est : " $SHELL
 
 #Lancement du script officiel de oh-my-zsh
@@ -62,6 +62,7 @@ echo -e "\n${GREEN}>>>>${WHITE} Changer le thème dans le fichier .zshrc -> ZSH_
 p10k configure
 
 #Ajout du script d'autosugestion.
+echo -e "\n${GREEN}>>>>${WHITE} Installation du plugins zsh-autosuggestions."
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 #git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
 
