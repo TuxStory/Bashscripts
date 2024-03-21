@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.9.5 21/03/2024 #
+# 19/06/2023 - ver 0.9.6 21/03/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -85,13 +85,13 @@ Programmes_Dev="gcc geany ipython3 nano python3-numpy python3-matplotlib" #mu-ed
 
 #Questionnaire #################################################################
 
-printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read -r reponse
-printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read -r reponse1
-printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m: (Oui/Non) " ; read -r reponse2
-printf "Voulez-vous installer la liste des programmes \e[35mMusique Console\e[0m: (Oui/Non) " ; read -r reponse3
-printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read -r reponse4
-printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read -r reponse5
-printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read -r reponse6
+printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m (Oui/Non) : " ; read -r reponse
+printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m (Oui/Non) : " ; read -r reponse1
+printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m (Oui/Non) : " ; read -r reponse2
+printf "Voulez-vous installer la liste des programmes \e[35mMusique Console\e[0m (Oui/Non) : " ; read -r reponse3
+printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m (Oui/Non) : " ; read -r reponse4
+printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m (Oui/Non) : " ; read -r reponse5
+printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) : " ; read -r reponse6
 
 #Installation ##################################################################
 

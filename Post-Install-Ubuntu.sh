@@ -1,10 +1,10 @@
 #!/bin/bash
 
-#####################################
-# Scrpit Ubuntu Post-Installation   #
-# 13/11/2023 - ver 0.9 - 25/02/2024 #
-# Antoine Even                      #
-#####################################
+#######################################
+# Scrpit Ubuntu Post-Installation     #
+# 13/11/2023 - ver 0.9.1 - 21/03/2024 #
+# Antoine Even                        #
+#######################################
 
 #The 'yes' command will echo 'y' (or whatever you ask it to) indefinitely.
 #Use it as:
@@ -14,7 +14,7 @@
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
 
-VER=0.8
+VER=0.9.1
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
@@ -93,12 +93,12 @@ Programmes_Dev="gcc geany nano" #python3-numpy python3-matplotlib ipython3"
 
 #Questionnaire #################################################################
 
-printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m: (Oui/Non) " ; read -r reponse
-printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m: (Oui/Non) " ; read -r reponse1
-printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m: (Oui/Non) " ; read -r reponse2
-printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read -r reponse3
-printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read -r reponse4
-printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read -r reponse5
+printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m (Oui/Non) : " ; read -r reponse
+printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m (Oui/Non) : " ; read -r reponse1
+printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m (Oui/Non) : " ; read -r reponse2
+printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m (Oui/Non) : " ; read -r reponse3
+printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m (Oui/Non) : " ; read -r reponse4
+printf "Voulez-vous installer la liste des \e[35mjeux\e[0m (Oui/Non) : " ; read -r reponse5
 
 #Installation ##################################################################
 
