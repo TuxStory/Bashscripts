@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.9.4 10/01/2024 #
+# 19/06/2023 - ver 0.9.5 21/03/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -120,12 +120,12 @@ then
 	Install ${Admin[@]}
 fi
 
-if [[ $reponse4 =~ ^([oO][uU][iI]|[oO])$ ]]
+if [[ $reponse5 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	Install ${Programmes_Dev[@]}
 fi
 
-if [[ $reponse5 =~ ^([oO][uU][iI]|[oO])$ ]]
+if [[ $reponse6 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	Install ${Games[@]}
 fi

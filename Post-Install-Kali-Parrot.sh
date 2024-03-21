@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 21/03/2024 - ver 0.0.1 10/01/2024 #
+# 21/03/2024 - ver 0.0.2 21/03/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -57,7 +57,7 @@ Programmes="audacious gparted hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm grsync"
 
-Programmes_Hacking="binwalk cewl gobuster hashcat hydra john lynis nessus netcat nmap wifite wireshark wordlisctl "
+Programmes_Hacking="binwalk cewl gobuster hashcat hydra john lynis nessus netcat nmap wifite wireshark wordlisctl"
 
 Programmes_Console="ansiweather bmon dfc duf ethstatus fbi htop irssi inxi lm-sensors ncdu neofetch mc nmon oping ranger rsync slurm smartmontools tmux wavemon w3m w3m-img"
 
@@ -80,6 +80,7 @@ printf "Voulez-vous installer la liste des programmes \e[35mMusique Console\e[0m
 printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m: (Oui/Non) " ; read -r reponse4
 printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m: (Oui/Non) " ; read -r reponse5
 printf "Voulez-vous installer la liste des \e[35mjeux\e[0m: (Oui/Non) " ; read -r reponse6
+printf "Voulez-vous installer la liste des programmes \e[35mHacking\e[0m: (Oui/Non) " ; read -r reponse7
 
 #Installation ##################################################################
 
@@ -108,14 +109,19 @@ then
 	Install ${Admin[@]}
 fi
 
-if [[ $reponse4 =~ ^([oO][uU][iI]|[oO])$ ]]
+if [[ $reponse5 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	Install ${Programmes_Dev[@]}
 fi
 
-if [[ $reponse5 =~ ^([oO][uU][iI]|[oO])$ ]]
+if [[ $reponse6 =~ ^([oO][uU][iI]|[oO])$ ]]
 then
 	Install ${Games[@]}
+fi
+
+if [[ $reponse7 =~ ^([oO][uU][iI]|[oO])$ ]]
+then
+	Install ${Programmes_Hacking[@]}
 fi
 
 #Nettoyage #####################################################################
