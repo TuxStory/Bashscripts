@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 0.9.1 - 21/03/2024 #
+# 13/11/2023 - ver 0.9.2 - 21/03/2024 #
 # Antoine Even                        #
 #######################################
 
@@ -81,7 +81,7 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 	deja-dup bleachbit gnome-disk-utils xterm rsync grsync"
 	# Old :chromium-browser chromium-browser-l10n
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
 
 Programmes_Internet="filezilla tnftp transmission"
 
