@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 21/03/2024 - ver 0.0.7 24/03/2024 #
+# 21/03/2024 - ver 0.0.8 24/03/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -19,7 +19,7 @@
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo "Permission refusé : Vous devez être root."
+  echo "Permission refusée : Vous devez être root."
 exit $EACCES
 fi
 
