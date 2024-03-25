@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 21/03/2024 - ver 0.0.8 24/03/2024 #
+# 21/03/2024 - ver 0.0.9 25/03/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -30,7 +30,7 @@ clear
 echo -e "\033[1;34mMises à jour du système :"
 echo -e "\033[0;0m-------------------------"
 echo
-apt update && apt upgrade -y
+#apt update && apt upgrade -y
 clear
 
 #Install #######################################################################
@@ -57,7 +57,7 @@ Programmes="audacious gparted hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm grsync"
 
-Programmes_Hacking="binwalk cewl foremost gobuster hashcat hydra john lynis nessus netcat nmap wifite wireshark wordlisctl perl-image-exiftool strings"
+Programmes_Hacking="binwalk cewl foremost gobuster hashcat hydra john lynis nmap wifite wireshark wordlisctl libimage-exiftool-perl strings"
 
 Programmes_Console="ansiweather bmon dfc duf ethstatus ethtool fbi htop irssi inxi lm-sensors ncdu neofetch mc nmon oping ranger rsync slurm smartmontools tmux wavemon w3m w3m-img"
 
