@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 21/03/2024 - ver 0.1.1 28/03/2024 #
+# 21/03/2024 - ver 0.1.2 30/03/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -19,7 +19,7 @@
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo "Permission refusée : Vous devez être root."
+  echo "Permission refusée : vous devez être root."
 exit $EACCES
 fi
 
@@ -57,7 +57,7 @@ Programmes="audacious gparted hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm grsync"
 
-Programmes_Hacking="binwalk cewl foremost gobuster hashcat hcxtools hcxdumptool hydra john lynis nmap wifite wireshark wordlisctl libimage-exiftool-perl binutils"
+Programmes_Hacking="binwalk cewl foremost gobuster hashcat hcxtools hcxdumptool hydra john lynis nmap sherlock wifite wireshark wordlisctl libimage-exiftool-perl binutils"
 
 Programmes_Console="ansiweather bmon dfc duf ethstatus ethtool fbi htop irssi inxi lm-sensors ncdu neofetch mc nmon oping ranger rsync slurm smartmontools tmux wavemon w3m w3m-img"
 
@@ -74,13 +74,13 @@ Programmes_Dev="gcc geany ipython3 nano python3-numpy python3-matplotlib" #mu-ed
 #Questionnaire #################################################################
 
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m (Oui/Non) : " ; read -r reponse
-printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m (Oui/Non) : " ; read -r reponse1
+printf "Voulez-vous installer la liste des programmes de \e[35mconsoles\e[0m (Oui/Non) : " ; read -r reponse1
 printf "Voulez-vous installer la liste des programmes \e[35mInternet\e[0m (Oui/Non) : " ; read -r reponse2
 printf "Voulez-vous installer la liste des programmes \e[35mMusique Console\e[0m (Oui/Non) : " ; read -r reponse3
 printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m (Oui/Non) : " ; read -r reponse4
-printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m (Oui/Non) : " ; read -r reponse5
+printf "Voulez-vous installer la liste des programmes de \e[35mDeveloppement\e[0m (Oui/Non) : " ; read -r reponse5
 printf "Voulez-vous installer la liste des \e[35mjeux\e[0m (Oui/Non) : " ; read -r reponse6
-printf "Voulez-vous installer la liste des programmes \e[35mHacking\e[0m (Oui/Non) : " ; read -r reponse7
+printf "Voulez-vous installer la liste des programmes de \e[35mHacking\e[0m (Oui/Non) : " ; read -r reponse7
 
 #Installation ##################################################################
 
