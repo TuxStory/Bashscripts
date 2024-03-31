@@ -4,10 +4,10 @@
 # Script : zsh-install-config.sh  #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 10/03/2024             #
-# Date M : 14/03/2024             #
+# Date M : 31/03/2024             #
 ###################################
 
-Version="0.0.8"
+Version="0.0.9"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -32,6 +32,11 @@ echo -e "\n${RED}>>>>${WHITE} git est manquant, veulliez l'installer."
 exit 1
 fi
 
+#fonts-powerline
+if [ ! -d /usr/share/powerline ] ; then
+echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
+fi
+
 #Set Zsh as default shell
 #chsh -s /usr/bin/zsh
 echo -e "\n${GREEN}>>>>${WHITE} Pour changer le shell par défaut-> chsh -s /usr/bin/zsh"
@@ -46,13 +51,8 @@ fi
 #installation des fonts
 echo -e "\n${GREEN}>>>>${WHITE} Installation des fonts nécessaires ..."
 sudo cp Config/*.ttf /usr/share/fonts
-echo -e "\n${GREEN} [ OK ] ${WHITE}"
-
-#fonts-powerline
-echo -e "\n${GREEN}>>>>${WHITE} Vérification de la présence de fonts-powerline"
-if [ ! -d /usr/share/powerline ] ; then
-echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
-fi
+echo -e "\n${GREEN} Copie des fonts nécessaires [ OK ] ${WHITE}"
+echo -e "\n${RED}>>>>${WHITE} Veulliez changer les fonts du terminal."
 
 #installer powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
