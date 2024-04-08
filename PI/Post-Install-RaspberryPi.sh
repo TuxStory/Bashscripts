@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 0.8 - 07/01/2023      #
+# 16/02/2023 - ver 0.9 - 08/04/2023      #
 # Antoine Even                           #
 ##########################################
 
@@ -37,7 +37,7 @@ sudo apt install -y  dfc ethstatus fonts-powerline htop inxi lnav mc nano ncdu n
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo apt install -y hexchat fillezilla transmission-gtk
+sudo apt install -y hexchat filezilla transmission-gtk
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
