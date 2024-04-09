@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 0.9.7 22/03/2024 #
+# 19/06/2023 - ver 0.9.8 10/04/2024 #
 # Antoine Even                      #
 #####################################
 
@@ -67,9 +67,9 @@ function Install()
 
 #Liste des programmes ##########################################################
 
-Programmes="audacious gparted hardinfo hexchat vlc ffmpegthumbnailer
-	deja-dup system-config-printer bleachbit gnome-disk-utils
-	chromium-browser chromium-browser-l10n xterm grsync"
+Programmes="audacious chromium-browser chromium-browser-l10n bleachbit deja-dup
+            gparted gnome-disk-utils grsync hardinfo hexchat ffmpegthumbnailer
+	    system-config-printer scrot vlc xterm"
 
 Programmes_Console="ansiweather bmon dfc duf ethstatus ethtool fbi htop irssi inxi lm-sensors ncdu neofetch mc nmon oping ranger rsync slurm smartmontools tmux wavemon w3m w3m-img"
 
