@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 26/08/22	   #
-# Revision	: 30/11/23         #
+# Revision	: 24/04/24         #
 ####################################
 
-VERSION=0.1.2
+VERSION=0.1.3
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -87,6 +87,13 @@ TEMPORY=$(du -sh /tmp/ | awk '{print $1}')
 echo -e "\n${GREEN}>>> [ TMP ] ${WHITE}La taille du dossier ${BLUE}/tmp/${WHITE} est de : ${GREEN}$TEMPORY${WHITE}."
 sudo find /tmp -type f -atime +10 -delete
 echo "Les fichiers temporaires de plus de 10 jours ont été éffacés."
+
+################ Flatpak
+FLAT=$(du -sh /var/lib/flatpak | awk '{print $1}')
+echo -e "\n${GREEN}>>> [ TMP ] ${WHITE}La taille du dossier ${BLUE}/var/lib/flatpak${WHITE} est de : ${GREEN}$FLAT${WHITE}."
+sudo flatpak list --app
+sudo flatpak remove --unused
+sudo flatpak repair --system
 
 ################ The end
 echo -e "\n${BLUE}>>> ${WHITE}Nettoyage Effectué."
