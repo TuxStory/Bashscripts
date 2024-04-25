@@ -15,7 +15,7 @@ done
 
 echo "===== loop 2 ====="
 for i in ${!names[@]}; do
-  echo "element $i is ${myArray[$i]}"
+  echo "element $i is ${names[$i]}"
 done
 
 echo "===== Removes ====="
