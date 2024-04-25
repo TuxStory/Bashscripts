@@ -1,6 +1,6 @@
 #!/bin/bash
 
-names=('riri' 'fifi' 'loulou')
+names=('riri' 'fifi' 'loulou' 'Mickey' 'Minnie')
 echo ${names[@]}
 names+=('Picsou')
 echo ${names[@]}
