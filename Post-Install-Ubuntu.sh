@@ -14,7 +14,7 @@
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
 
-VER=0.9.1
+VER=0.9.3
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
