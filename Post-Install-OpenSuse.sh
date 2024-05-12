@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# 05/03/2023 ver 0.4                  #
+# 05/03/2023 ver 0.5                  #
 # Antoine Even                        #
 ########################################
 
@@ -44,7 +44,7 @@ zypper install -y firefox hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-zypper install -y audacious cmus vlc
+zypper install -y audacious cmus vlc eom
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
