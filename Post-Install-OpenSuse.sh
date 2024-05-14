@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# 05/03/2023 ver 0.6                  #
+# 05/03/2023 ver 0.7                  #
 # Antoine Even                        #
 ########################################
 
@@ -40,7 +40,7 @@ zypper install -y htop dfc nano tmux inxi screen htop nload nethogs neofetch ncd
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-zypper install -y firefox hexchat transmission-gtk filezilla
+zypper install -y MozillaFirefox hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
