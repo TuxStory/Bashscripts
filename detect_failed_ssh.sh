@@ -1,9 +1,10 @@
 #!/bin/bash
 
-# Version : 0.8.1
+# Version : 0.8.2
 # Author  : Antoine Even
 
-JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service"
+JOURNAL="journalctl _SYSTEMD_UNIT=ssh.service" #Debian
+#JOURNAL="journalctl _SYSTEMD_UNIT=sshd.service" #Fedora Centos Rockylinux
 
 echo "================== "
 echo " Failed SSH Login "
@@ -11,8 +12,7 @@ echo "=================="
 echo
 
 #With journalctl
-$JOURNAL | grep -E "Failed|Failure"   #debian
-#$JOURNAL | egrep "Failed|Failure"  #In RHEL, CentOS
+$JOURNAL | grep -E "Failed|Failure"
 
 echo
 echo "==============================================="
