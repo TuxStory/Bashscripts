@@ -2,7 +2,7 @@
 # Date : 	02/04/2023   #
 # Maj  :	14/04/2024   #
 # Auteur:	Antoine Even #
-# Version :	0.2          #
+# Version :	0.3          #
 ##############################
 
 #!/bin/bash
@@ -28,7 +28,7 @@ echo ">>> XFCE"
 sudo apt install -y task-xfce-desktop
 
 echo ">>> Multimedia & Internet :"
-sudo apt install -y audacious vlc eom hexchat transmission-gtk
+sudo apt install -y audacious vlc eom hexchat transmission-gtk thunderbird
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload nmon ethstatus vnstat
