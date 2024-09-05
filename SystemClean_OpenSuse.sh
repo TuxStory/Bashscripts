@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 21/08/23	   #
-# Revision	: 04/03/24         #
+# Revision	: 05/09/24         #
 ####################################
 
-VERSION=0.0.5
+VERSION=0.0.7
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -72,10 +72,8 @@ sudo zypper packages --unneeded
 echo -e "\n${GREEN}>>> [ Zypper Kernels ] ${WHITE}Verification des noyaux Linux."
 sudo zypper purge-kernels
 
-
-#Ne fonctionne plus
-#echo -e "\n${GREEN}>>> [ Autoremove - Résidus ] ${WHITE}Recherche de résidus ... "
-#zypper packages --unneeded | awk -F'|' 'NR==0 || NR==1 || NR==2 || NR==3 || NR==4 {next} {print $3}' | grep -v Name | sudo xargs zypper remove --clean-deps
+echo -e "\n${GREEN}>>> [ Autoremove - Résidus ] ${WHITE}Recherche de résidus ... "
+zypper packages --unneeded | awk -F'|' 'NR==0 || NR==1 || NR==2 || NR==3 || NR==4 {next} {print $3}' | grep -v Name | sudo xargs zypper remove --clean-deps
 
 ################ TMP
 TEMPORY=$(du -sh /tmp/ | awk '{print $1}')
