@@ -19,7 +19,7 @@ do
     echo -n "[ "
     for ((i = 0 ; i <= k; i++)); do echo -n "#"; done
     for ((j = i ; j <= 50 ; j++)); do echo -n " "; done
-    v=$((k * 1))
+    v=$((k * 2)) #x2 pour avoir 100%
     echo -n " ] "
     echo -n "$v %" $'\r'
     sleep 0.05
