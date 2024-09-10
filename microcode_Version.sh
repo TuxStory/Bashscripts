@@ -2,7 +2,7 @@
 
 ############################
 # Date 		: 19/08/24 #
-# Version 	: 0.0.1    #
+# Version 	: 0.0.2    #
 ############################
 
 EACCES=13 # Permission denied
@@ -10,6 +10,7 @@ EACCES=13 # Permission denied
 ############### Couleurs
 GREEN='\033[1;32m'
 WHITE='\033[1;0m' #real white \033[1;37m
+RED=""
 
 ################ Root
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
