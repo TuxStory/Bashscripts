@@ -4,10 +4,10 @@
 # Nom		: SystemClean_Manjaro.sh #
 # Auteur 	: Antoine Even	         #
 # Date 		: 13/09/24	         #
-# Revision	: 13/09/24               #
+# Revision	: 14/09/24               #
 ##########################################
 
-VERSION=0.0.1
+VERSION=0.0.2
 EACCES=13 # Permission denied
 ESPACE=0
 
