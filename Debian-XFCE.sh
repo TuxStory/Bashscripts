@@ -33,7 +33,7 @@ sudo apt install -y audacious vlc eom hexchat transmission-gtk thunderbird \
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload \
-		nmon ethstatus vnstat
+		nmon ethstatus vnstat btop screen
 
 echo ">>>> Admin :"
 sudo apt install -y synaptic borgbackup openssh-server
