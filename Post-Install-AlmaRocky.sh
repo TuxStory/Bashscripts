@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 21/09/2024 ver 0.0.2                #
+# 21/09/2024 ver 0.0.3                #
 # Antoine Even                        #
 #######################################
 
@@ -31,12 +31,12 @@ sudo dnf update -y
 
 ############### Install Epel
 echo -e "${GREEN}>>> ${WHITE}Installation de Epel."
-sudo dnf install epel-release
+sudo dnf install epel-release -y
 
 ############### Install RPM Fusion
 # From Almalinux Doc
 echo -e "\n${GREEN}>>> ${WHITE}Distribution-gpg-keys."
-sudo dnf install distribution-gpg-keys
+sudo dnf install distribution-gpg-keys -y
 echo -e "\n${GREEN}>>> ${WHITE}GPG Keys rpmfusion."
 # RPM Fusion (free packages)
 sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-free-el-$(rpm -E %rhel)
@@ -52,7 +52,7 @@ sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/fre
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo dnf install -y htop dfc fastfetch nano tmux inxi screen htop nload nethogs ncdu nmon ranger vnstat \
-	smartmontools duf ethtool
+	smartmontools ethtool #duf
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
@@ -60,7 +60,7 @@ sudo dnf install -y firefox hexchat transmission-gtk filezilla thunderbird
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install -y audacious cmus vlc ffmpegthumbnailer gthumb
+sudo dnf install -y audacious vlc
 
 ############### Install Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
