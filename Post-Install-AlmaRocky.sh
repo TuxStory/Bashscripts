@@ -30,7 +30,7 @@ echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
 sudo dnf update -y
 
 ############### Install Epel
-echo -e "${GREEN}>>> ${WHITE}Installation de Epel."
+echo -e "${GREEN}>>> ${WHITE}Installation de EPEL."
 sudo dnf install epel-release -y
 
 ############### Install RPM Fusion
