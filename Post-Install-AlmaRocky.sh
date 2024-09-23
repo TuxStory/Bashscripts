@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 21/09/2024 ver 0.0.3                #
+# 23/09/2024 ver 0.0.4                #
 # Antoine Even                        #
 #######################################
 
@@ -60,7 +60,7 @@ sudo dnf install -y firefox hexchat transmission-gtk filezilla thunderbird
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install -y audacious vlc
+sudo dnf install -y audacious vlc cava
 
 ############### Install Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
