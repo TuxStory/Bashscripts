@@ -39,9 +39,9 @@ echo -e "\n${GREEN}>>> ${WHITE}Distribution-gpg-keys."
 sudo dnf install distribution-gpg-keys -y
 echo -e "\n${GREEN}>>> ${WHITE}GPG Keys rpmfusion."
 # RPM Fusion (free packages)
-sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-free-el-$(rpm -E %rhel)
+sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-free-el-$(rpm -E %rhel) -y 
 # RPM Fusion (nonfree packages)
-sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-el-$(rpm -E %rhel)
+sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-el-$(rpm -E %rhel) -y
 # RPM Fusion (free packages)
 gpg --show-keys --with-fingerprint /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-free-el-$(rpm -E %rhel)
 # RPM Fusion (nonfree packages)
