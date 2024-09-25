@@ -80,6 +80,21 @@ while true; do
         fi
     done
 
+    # Si le joueur a perdu, passer à la prochaine main
+    if [ $player_value -gt 21 ]; then
+        echo "Il vous reste $player_money $."
+        if [ $player_money -le 0 ]; then
+            echo "Vous n'avez plus d'argent. Merci d'avoir joué !"
+            break
+        fi
+        read -p "Voulez-vous jouer à nouveau ? (o/n) " play_again
+        if [[ $play_again != "o" ]]; then
+            echo "Merci d'avoir joué !"
+            break
+        fi
+        continue
+    fi
+
     # Tour du croupier
     while [ $dealer_value -lt 17 ]; do
         dealer_hand+=($(draw_card))
