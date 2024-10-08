@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	15/09/2024   #
+# Maj  :	09/10/2024   #
 # Auteur:	Antoine Even #
-# Version :	0.5          #
+# Version :	0.6          #
 ##############################
 
 #!/bin/bash
@@ -29,7 +29,7 @@ sudo apt install -y task-xfce-desktop
 
 echo ">>> Multimedia & Internet :"
 sudo apt install -y audacious vlc eom hexchat transmission-gtk thunderbird \
-		filezilla remmina
+		filezilla remmina cava
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload \
