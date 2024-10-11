@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit RedHat Post-Installation     #
-# 11/10/2024 ver 0.0.1                #
+# 11/10/2024 ver 0.0.2                #
 # Antoine Even                        #
 #######################################
 
@@ -30,8 +30,9 @@ echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
 sudo dnf update -y
 
 ############### Install Epel
-#echo -e "${GREEN}>>> ${WHITE}Installation de EPEL."
-#sudo dnf install epel-release -y
+echo -e "${GREEN}>>> ${WHITE}Installation de EPEL."
+sudo subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms #RedHat
+sudo dnf install epel-release epel-next-release -y
 
 ############### Install RPM Fusion
 # From Almalinux Doc
@@ -63,10 +64,10 @@ echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
 sudo dnf install -y audacious vlc
 
 ############### Install Codecs
-echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
-sudo dnf install -y gstreamer1-plugins-{base,good,bad-free,good-extras,bad-free-extras,ugly-free} gstreamer1-libav
-sudo dnf install -y gstreamer1-plugins-{bad-freeworld,ugly}
-sudo dnf install -y libdvdcss
+#echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
+#sudo dnf install -y gstreamer1-plugins-{base,good,bad-free,good-extras,bad-free-extras,ugly-free} gstreamer1-libav
+#sudo dnf install -y gstreamer1-plugins-{bad-freeworld,ugly}
+#sudo dnf install -y libdvdcss
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
