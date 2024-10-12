@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit RedHat Post-Installation     #
-# 11/10/2024 ver 0.0.2                #
+# 11/10/2024 ver 0.0.3                #
 # Antoine Even                        #
 #######################################
 
@@ -32,6 +32,7 @@ sudo dnf update -y
 ############### Install Epel
 echo -e "${GREEN}>>> ${WHITE}Installation de EPEL."
 sudo subscription-manager repos --enable codeready-builder-for-rhel-9-$(arch)-rpms #RedHat
+sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-9.noarch.rpm
 sudo dnf install epel-release epel-next-release -y
 
 ############### Install RPM Fusion
