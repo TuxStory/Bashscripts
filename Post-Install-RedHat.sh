@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit RedHat Post-Installation     #
-# 11/10/2024 ver 0.0.4                #
+# 11/10/2024 ver 0.0.5                #
 # Antoine Even                        #
 #######################################
 
@@ -76,4 +76,4 @@ sudo dnf install -y gedit python3 #codium
 
 ############### Gnome
 echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
-sudo dnf install -y gnome-extensions-app gnome-shell-extension-appindicator #gnome-shell-extension-dash-to-dock
+sudo dnf install -y gnome-extensions-app gnome-shell-extension-appindicator gnome-tweaks #gnome-shell-extension-dash-to-dock
