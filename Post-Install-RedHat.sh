@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit RedHat Post-Installation     #
-# 11/10/2024 ver 0.0.5                #
+# 11/10/2024 ver 0.0.6                #
 # Antoine Even                        #
 #######################################
 
@@ -53,7 +53,7 @@ sudo dnf install epel-release epel-next-release -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install -y htop dfc fastfetch nano tmux inxi screen htop nload nethogs ncdu nmon ranger vnstat \
+sudo dnf install -y btop htop dfc fastfetch nano tmux inxi screen htop nload nethogs ncdu nmon ranger vnstat \
 	smartmontools ethtool #duf
 
 ############### Install Internet
