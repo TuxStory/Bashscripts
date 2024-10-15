@@ -2,7 +2,7 @@
 # Date : 	02/04/2023   #
 # Maj  :	09/10/2024   #
 # Auteur:	Antoine Even #
-# Version :	0.6          #
+# Version :	0.7          #
 ##############################
 
 #!/bin/bash
@@ -32,11 +32,11 @@ sudo apt install -y audacious vlc eom hexchat transmission-gtk thunderbird \
 		filezilla remmina cava
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload \
-		nmon ethstatus vnstat btop screen
+sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus htop ncdu ranger inxi tmux nano \
+		neofetch nload nmon vnstat screen wget
 
 echo ">>>> Admin :"
-sudo apt install -y synaptic borgbackup openssh-server
+sudo apt install -y synaptic borgbackup openssh-server rsync
 
 echo ">>> Nettoyage :"
 sudo apt clean
