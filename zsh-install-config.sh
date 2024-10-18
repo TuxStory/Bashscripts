@@ -4,10 +4,10 @@
 # Script : zsh-install-config.sh  #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 10/03/2024             #
-# Date M : 31/03/2024             #
+# Date M : 19/10/2024             #
 ###################################
 
-Version="0.0.9"
+Version="0.1.0"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -35,6 +35,7 @@ fi
 #fonts-powerline
 if [ ! -d /usr/share/powerline ] ; then
 echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
+exit 1
 fi
 
 #Set Zsh as default shell
