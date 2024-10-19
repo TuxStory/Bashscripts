@@ -1,7 +1,10 @@
 #!/bin/bash
 
+#notes of some bashes i used
+
 [Default] red hat / Rocky / Alma
 [\u@\h \W]\$
+[\t][\u@\h \W]\$
 
 [User] Bleu
 [Dir] Mauve
