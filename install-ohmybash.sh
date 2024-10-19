@@ -4,10 +4,10 @@
 # Script : install-ohmybash.sh    #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 18/10/2024             #
-# Date M : 19/10/2024             #
+# Date M : 20/10/2024             #
 ###################################
 
-Version="0.0.2"
+Version="0.0.3"
 
 # curl
 if [ ! -x /usr/bin/curl ] ; then
@@ -30,4 +30,7 @@ fi
 echo -e "\n${GREEN}>>>>${WHITE} Installation de Oh-My-Bash."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
+if [ $? -ne 0 ]; then
+echo -e "\n${GREEN}>>>>${WHITE} Installation terminé."
 #Theme in .bashrc theme="powerline-icons"
+fi
