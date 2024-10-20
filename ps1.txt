@@ -3,6 +3,9 @@
 [Default] red hat / Rocky / Alma
 [\u@\h \W]\$
 
+[\t][\u@\h \W]$
+[00:18:27][tuxstory@localhost ~]$ 
+
 [User] Bleu
 [Dir] Mauve
 export PS1="\[$(tput setaf 33)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 105)\]\h \[$(tput setaf 141)\]\w \[$(tput sgr0)\]$ "
