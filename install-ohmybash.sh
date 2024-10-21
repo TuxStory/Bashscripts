@@ -7,7 +7,7 @@
 # Date M : 20/10/2024             #
 ###################################
 
-Version="0.0.3"
+Version="0.0.4"
 
 # curl
 if [ ! -x /usr/bin/curl ] ; then
@@ -26,6 +26,12 @@ if [ ! -d /usr/share/powerline ] ; then
 echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
 exit 1
 fi
+
+echo -e "\n${GREEN}>>>>${WHITE} Installation de PowerlineSymbols."
+wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
+sudo mv PowerlineSymbols.otf /usr/share/fonts/
+sudo fc-cache -vf
+sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
 
 echo -e "\n${GREEN}>>>>${WHITE} Installation de Oh-My-Bash."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
