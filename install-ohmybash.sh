@@ -4,10 +4,10 @@
 # Script : install-ohmybash.sh    #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 18/10/2024             #
-# Date M : 20/10/2024             #
+# Date M : 23/10/2024             #
 ###################################
 
-Version="0.0.4"
+Version="0.0.5"
 
 # curl
 if [ ! -x /usr/bin/curl ] ; then
@@ -23,7 +23,7 @@ fi
 
 #fonts-powerline
 if [ ! -d /usr/share/powerline ] ; then
-echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
+echo -e "\n${RED}>>>>${WHITE} Veulliez installer les fonts-powerline."
 exit 1
 fi
 
