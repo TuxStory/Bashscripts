@@ -9,6 +9,13 @@
 
 Version="0.0.5"
 
+############### Couleurs
+GREEN='\033[1;32m'
+WHITE='\033[1;0m' #real white \033[1;37m
+RED='\033[0;91m'
+BLUE='\033[0;94m'
+MAGENTA='\033[0;95m'
+
 # curl
 if [ ! -x /usr/bin/curl ] ; then
 echo -e "\n${RED}>>>>${WHITE} Le logiciel curl est manquant, veulliez l'installer."
