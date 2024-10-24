@@ -7,7 +7,7 @@
 # Date M : 23/10/2024             #
 ###################################
 
-Version="0.0.6"
+Version="0.0.7"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -15,6 +15,14 @@ WHITE='\033[1;0m' #real white \033[1;37m
 RED='\033[0;91m'
 BLUE='\033[0;94m'
 MAGENTA='\033[0;95m'
+
+check_powerline_fonts() {
+  if [ -e "/usr/share/fonts/truetype/PowerlineSymbols.otf" ] || [ -e "/usr/share/fonts/opentype/PowerlineSymbols.otf" ]; then
+      echo -e "\n${GREEN}>>>>${WHITE} Fonts-powerline est installé."
+  else
+      echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
+  fi
+}
 
 # curl
 if [ ! -x /usr/bin/curl ] ; then
@@ -29,16 +37,11 @@ exit 1
 fi
 
 #fonts-powerline
-if [ ! -d /usr/share/powerline ] ; then
-echo -e "\n${RED}>>>>${WHITE} Veulliez installer les fonts-powerline."
-exit 1
-fi
-
-#echo -e "\n${GREEN}>>>>${WHITE} Installation de PowerlineSymbols."
-#wget https://github.com/Lokaltog/powerline/raw/develop/font/PowerlineSymbols.otf https://github.com/Lokaltog/powerline/raw/develop/font/10-powerline-symbols.conf
-#sudo mv PowerlineSymbols.otf /usr/share/fonts/
-#sudo fc-cache -vf
-#sudo mv 10-powerline-symbols.conf /etc/fonts/conf.d/
+check_powerline_fonts(
+#if [ ! -d /usr/share/powerline ] ; then
+#echo -e "\n${RED}>>>>${WHITE} Veulliez installer les fonts-powerline."
+#exit 1
+#fi
 
 echo -e "\n${GREEN}>>>>${WHITE} Installation de Oh-My-Bash."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
@@ -47,3 +50,13 @@ if [ $? -ne 0 ]; then
 echo -e "\n${GREEN}>>>>${WHITE} Installation terminé."
 #Theme in .bashrc theme="powerline-icons"
 fi
+
+#Autre solution pour verifier si POWERLINE est installé (moi je ne veux que les fonts)
+#check_powerline_fonts() {
+#    if command -v powerline-daemon &> /dev/null; then
+#        echo "powerline-fonts est installé."
+#    else
+#        echo "powerline-fonts n'est pas installé."
+#    fi
+#}
+
