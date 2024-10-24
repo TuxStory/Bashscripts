@@ -37,7 +37,7 @@ exit 1
 fi
 
 #fonts-powerline
-check_powerline_fonts(
+check_powerline_fonts
 #if [ ! -d /usr/share/powerline ] ; then
 #echo -e "\n${RED}>>>>${WHITE} Veulliez installer les fonts-powerline."
 #exit 1
