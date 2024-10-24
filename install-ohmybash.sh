@@ -7,7 +7,7 @@
 # Date M : 23/10/2024             #
 ###################################
 
-Version="0.0.7"
+Version="0.0.8"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -50,6 +50,9 @@ if [ $? -ne 0 ]; then
 echo -e "\n${GREEN}>>>>${WHITE} Installation terminé."
 #Theme in .bashrc theme="powerline-icons"
 fi
+
+#Theme
+echo -e "\n${GREEN}>>>>${WHITE} Themes préférés : powerline-icon / agnoster / powerline."
 
 #Autre solution pour verifier si POWERLINE est installé (moi je ne veux que les fonts)
 #check_powerline_fonts() {
