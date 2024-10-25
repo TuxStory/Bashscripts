@@ -4,10 +4,10 @@
 # Script : install-ohmybash.sh    #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 18/10/2024             #
-# Date M : 23/10/2024             #
+# Date M : 26/10/2024             #
 ###################################
 
-Version="0.0.8"
+Version="0.0.9"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -21,6 +21,7 @@ check_powerline_fonts() {
       echo -e "\n${GREEN}>>>>${WHITE} Fonts-powerline est installé."
   else
       echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
+      echo -e "\n${RED}>>>>${WHITE} RPM base distro : install epel-release."
   fi
 }
 
@@ -43,16 +44,15 @@ check_powerline_fonts
 #exit 1
 #fi
 
+#Theme
+echo -e "\n${GREEN}>>>>${WHITE} Themes préférés : powerline-icon / agnoster / powerline."
+#Execution du script
 echo -e "\n${GREEN}>>>>${WHITE} Installation de Oh-My-Bash."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 if [ $? -ne 0 ]; then
 echo -e "\n${GREEN}>>>>${WHITE} Installation terminé."
-#Theme in .bashrc theme="powerline-icons"
 fi
-
-#Theme
-echo -e "\n${GREEN}>>>>${WHITE} Themes préférés : powerline-icon / agnoster / powerline."
 
 #Autre solution pour verifier si POWERLINE est installé (moi je ne veux que les fonts)
 #check_powerline_fonts() {
