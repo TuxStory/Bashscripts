@@ -50,6 +50,7 @@ echo -e "\n${GREEN}>>>>${WHITE} Themes préférés : powerline-icon / agnoster /
 echo -e "\n${GREEN}>>>>${WHITE} Installation de Oh-My-Bash."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
+#ne sert à rien - à corriger.
 if [ $? -ne 0 ]; then
 echo -e "\n${GREEN}>>>>${WHITE} Installation terminé."
 fi
