@@ -4,10 +4,10 @@
 # Script : install-ohmybash.sh    #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 18/10/2024             #
-# Date M : 26/10/2024             #
+# Date M : 28/10/2024             #
 ###################################
 
-Version="0.0.9"
+Version="0.1.0"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -21,7 +21,7 @@ check_powerline_fonts() {
       echo -e "\n${GREEN}>>>>${WHITE} Fonts-powerline est installé."
   else
       echo -e "\n${RED}>>>>${WHITE} Veulliez installer fonts-powerline."
-      echo -e "\n${RED}>>>>${WHITE} RPM base distro : install epel-release."
+      echo -e "${RED}>>>>${WHITE} RPM base distro : install epel-release."
   fi
 }
 
