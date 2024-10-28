@@ -4,10 +4,10 @@
 # Script : install-ohmybash.sh    #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 18/10/2024             #
-# Date M : 28/10/2024             #
+# Date M : 29/10/2024             #
 ###################################
 
-Version="0.1.0"
+Version="0.1.1"
 
 ############### Couleurs
 GREEN='\033[1;32m'
