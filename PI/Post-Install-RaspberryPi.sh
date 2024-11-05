@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 0.9 - 08/04/2023      #
+# 16/02/2023 - ver 1.0 - 05/11/2024      #
 # Antoine Even                           #
 ##########################################
 
@@ -49,7 +49,7 @@ sudo apt install -y geany pluma
 
 ############### PenTesting
 echo -e "\n${GREEN}>>> ${WHITE}Installation Sécurité Informatique."
-sudo apt install -y nmap binwalk strings gobuster hydra traceroute
+sudo apt install -y nmap binwalk binutils gobuster hydra traceroute
 
 ################ Autoremove
 echo -e "\n${GREEN}>>> ${WHITE}Nettoyage des paquets."
