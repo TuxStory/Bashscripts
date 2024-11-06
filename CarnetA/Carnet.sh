@@ -30,6 +30,7 @@ main(){
         question ; Reponse=$?
       done
     elif [[ "$ans" == "Quitter" || "$?" != "0" ]]; then
+    #question ; Reponse=$?
     break
     fi
   done

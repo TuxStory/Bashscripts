@@ -20,4 +20,5 @@ case $? in
     -1)
         zenity --warnings --text "Une erreur inattendue est survenue.";;
 esac
+
 }
