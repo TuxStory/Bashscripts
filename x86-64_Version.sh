@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ############### Variables
-Version="0.1.2"
+Version="0.1.3"
 CPU=$(cat /proc/cpuinfo | grep -i "^model name" | awk -F ": " '{print $2}' | head -1 | sed 's/ \+/ /g' | awk -F "CPU" '{print $1}')
 flags=$(cat /proc/cpuinfo | grep flags | head -n 1 | cut -d: -f2)
 Arch=$(uname -m)
@@ -16,7 +16,7 @@ supports_v2='awk "/cx16/&&/lahf/&&/popcnt/&&/sse4_1/&&/sse4_2/&&/ssse3/ {found=1
 supports_v3='awk "/avx/&&/avx2/&&/bmi1/&&/bmi2/&&/f16c/&&/fma/&&/abm/&&/movbe/&&/xsave/ {found=1} END {exit !found}"'
 supports_v4='awk "/avx512f/&&/avx512bw/&&/avx512cd/&&/avx512dq/&&/avx512vl/ {found=1} END {exit !found}"'
 
-echo -e "${GREEN}>>>${WHITE} Architecture Infos :"
+echo -e "${GREEN}>>>${WHITE} Architecture infos :"
 echo -e "Marque       : $Vendor"
 echo -e "Architecture : $Arch"
 echo -e "Processeur   : $CPU"
