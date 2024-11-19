@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ############### Variables
-Version="0.1.4"
+Version="0.1.5"
 CPU=$(cat /proc/cpuinfo | grep -i "^model name" | awk -F ": " '{print $2}' | head -1 | sed 's/ \+/ /g' | awk -F "CPU" '{print $1}')
 flags=$(cat /proc/cpuinfo | grep flags | head -n 1 | cut -d: -f2)
 Arch=$(uname -m)
@@ -19,8 +19,7 @@ supports_v4='awk "/avx512f/&&/avx512bw/&&/avx512cd/&&/avx512dq/&&/avx512vl/ {fou
 echo -e "${GREEN}>>>${WHITE} Architecture infos :"
 echo -e "Marque       : $Vendor"
 echo -e "Architecture : $Arch"
-echo -e "Processeur   : $CPU"
-echo -e "Nombre cpu   : $(nproc)"
+echo -e "Processeur   : $CPU(${GREEN}$(nproc)${WHITE})"
 echo ""
 echo -e "${GREEN}>>>${WHITE} Architecture levels :"
 echo "$flags" | eval $supports_v1 || exit 1 && echo -e "CPU supports x86-64-v1 [  ${GREEN}OK  ${WHITE}]"
