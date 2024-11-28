@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	09/10/2024   #
+# Maj  :	29/11/2024   #
 # Auteur:	Antoine Even #
-# Version :	0.7          #
+# Version :	0.8          #
 ##############################
 
 #!/bin/bash
@@ -32,7 +32,7 @@ sudo apt install -y audacious vlc eom hexchat transmission-gtk thunderbird \
 		filezilla remmina cava
 
 echo ">>>> Utils :"
-sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus htop ncdu ranger inxi tmux nano \
+sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool htop ncdu ranger inxi tmux nano \
 		neofetch nload nmon vnstat screen wget
 
 echo ">>>> Admin :"
