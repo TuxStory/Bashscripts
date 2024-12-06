@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 0.9.4 - 02/05/2024 #
+# 13/11/2023 - ver 0.9.5 - 07/12/2024 #
 # Antoine Even                        #
 #######################################
 
@@ -14,7 +14,7 @@
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
 
-VER=0.9.4
+VER=0.9.5
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
@@ -83,7 +83,7 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 	deja-dup bleachbit gnome-disk-utils gnome-software xterm rsync grsync"
 	# Old :chromium-browser chromium-browser-l10n
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf htop nmon tmux lm-sensors smartmontools wavemon"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf htop nmon nvtop tmux lm-sensors smartmontools wavemon"
 
 Programmes_Internet="filezilla tnftp transmission"
 
