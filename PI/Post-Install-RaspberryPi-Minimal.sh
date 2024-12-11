@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 01/11/2023 - ver 0.4 - 08/12/2024      #
+# 01/11/2023 - ver 0.5 - 12/12/2024      #
 # Antoine Even                           #
 ##########################################
 
@@ -31,7 +31,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo apt install -y  dfc ethstatus fonts-powerline htop inxi irssi lnav mc nano ncdu neofetch nethogs nload \
+sudo apt install -y  btop dfc ethstatus fonts-powerline htop inxi irssi lnav mc nano ncdu neofetch nethogs nload \
 			nmon ranger screen tmux vnstat wavemon zsh zsh-theme-powerlevel9k
 
 ################ Autoremove
