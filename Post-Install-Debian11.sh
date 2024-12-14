@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 06/06/2023 ver 1.3                #
+# 06/06/2023 ver 1.4                #
 # Antoine Even                      #
 #####################################
 
@@ -69,7 +69,7 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 
 Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf ethstatus"
 
-Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission amule"
+Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission irssi"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
