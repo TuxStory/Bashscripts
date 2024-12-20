@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 1.3 - 12/12/2024      #
+# 16/02/2023 - ver 1.4 - 20/12/2024      #
 # Antoine Even                           #
 ##########################################
 
@@ -34,7 +34,6 @@ echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo apt install -y  btop dfc ethstatus fonts-powerline htop inxi lnav mc nano ncdu neofetch nethogs nload \
                      mmc-utils nmon ranger screen tmux vnstat wavemon zsh zsh-theme-powerlevel9k
 
-
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
 sudo apt install -y hexchat filezilla transmission-gtk
@@ -42,6 +41,10 @@ sudo apt install -y hexchat filezilla transmission-gtk
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
 sudo apt install -y audacious cmus eom vlc
+
+############### Install des Jeux
+echo -e "\n${GREEN}>>> ${WHITE}Installation des Jeux."
+sudo apt install -y code-the-classics code-the-classics-2
 
 ############### Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation Programmation."
