@@ -1,7 +1,11 @@
 #!/bin/bash
-MP4FILE=$(ls ~/Music/ |grep .mp4)
-for filename in $MP4FILE
-do
- name=`echo "$filename" | sed -e "s/.mp4$//g"`
- ffmpeg -i ~/Music/$filename -b:a 192K -vn ~/Music/$name.mp3
-done
+
+#################
+#### TESTING ####
+#################
+
+name="test"
+#ffmpeg -i $1 -b:a 192K -vn ~/Musique/$name.mp3
+#ffmpeg -i $1 -vn -acodec copy ~/Musique/$name.mp3
+mplayer -dumpaudio -dumpfile $1 audio.mp3
+ffmpeg -i $1 -c:v libx264 -qp 0 output.mp4
