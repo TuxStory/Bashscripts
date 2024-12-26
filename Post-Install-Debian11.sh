@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 06/06/2023 ver 1.4                #
+# 06/06/2023 ver 1.5                #
 # Antoine Even                      #
 #####################################
 
@@ -67,7 +67,7 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm rsync grsync"
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf ethstatus"
+Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus oping w3m w3m-img bmon ncdu slurm duf ethstatus tty-clock"
 
 Programmes_Internet="filezilla tnftp rtorrent iptraffic transmission irssi"
 
