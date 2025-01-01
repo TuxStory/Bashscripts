@@ -36,7 +36,7 @@ sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool ht
 		neofetch nload nmon vnstat screen wget
 
 echo ">>>> Admin :"
-sudo apt install -y synaptic borgbackup openssh-server rsync
+sudo apt install -y synaptic borgbackup openssh-server rsync timeshift
 
 echo ">>> Nettoyage :"
 sudo apt clean

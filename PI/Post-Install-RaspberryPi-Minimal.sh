@@ -31,7 +31,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo apt install -y  btop dfc ethstatus fonts-powerline htop inxi irssi lnav mc nano ncdu neofetch nethogs nload \
+sudo apt install -y  btop borgbackup dfc ethstatus fonts-powerline htop inxi irssi lnav mc nano ncdu neofetch nethogs nload \
 			mmc-utils nmon oping ranger screen tmux tty-clock vnstat wavemon zsh zsh-theme-powerlevel9k
 
 ################ Autoremove
