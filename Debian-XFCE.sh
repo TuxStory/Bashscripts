@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	29/11/2024   #
+# Maj  :	07/01/2025   #
 # Auteur:	Antoine Even #
-# Version :	0.8          #
+# Version :	0.9          #
 ##############################
 
 #!/bin/bash
@@ -33,7 +33,7 @@ sudo apt install -y audacious vlc eom hexchat transmission-gtk thunderbird \
 
 echo ">>>> Utils :"
 sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool htop ncdu ranger inxi tmux nano \
-		neofetch nload nmon vnstat screen wget
+		neofetch nload nmon vnstat screen wget tty-clock
 
 echo ">>>> Admin :"
 sudo apt install -y synaptic borgbackup openssh-server rsync timeshift
