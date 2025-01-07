@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 01/01/2025 ver 0.0.9                #
+# 08/01/2025 ver 0.1.0                #
 # Antoine Even                        #
 #######################################
 
@@ -51,12 +51,12 @@ sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/fre
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install -y htop dfc fastfetch nano tmux inxi screen htop nload nethogs ncdu nmon ranger timeshift \
-	vnstat smartmontools ethtool iperf3 borgbackup #duf
+sudo dnf install -y borgbackup dfc ethtool fastfetch htop inxi iperf3 nano ncdu nethogs nload nmon ranger \
+		screen smartmontools timeshift tmux vnstat
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo dnf install -y firefox hexchat transmission-gtk filezilla thunderbird evince
+sudo dnf install -y evince fillezilla firefox hexchat transmission-gtk thunderbird
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
