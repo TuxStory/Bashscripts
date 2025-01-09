@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	07/01/2025   #
+# Maj  :	10/01/2025   #
 # Auteur:	Antoine Even #
-# Version :	0.9          #
+# Version :	1.0          #
 ##############################
 
 #!/bin/bash
@@ -36,7 +36,7 @@ sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool ht
 		neofetch nload nmon vnstat screen wget tty-clock
 
 echo ">>>> Admin :"
-sudo apt install -y synaptic borgbackup openssh-server rsync timeshift
+sudo apt install -y borgbackup nano openssh-server pluma rsync synaptic timeshift
 
 echo ">>> Nettoyage :"
 sudo apt clean
