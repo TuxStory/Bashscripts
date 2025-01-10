@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 08/01/2025 ver 0.1.0                #
+# 10/01/2025 ver 0.1.1                #
 # Antoine Even                        #
 #######################################
 
@@ -56,7 +56,7 @@ sudo dnf install -y borgbackup dfc ethtool fastfetch htop inxi iperf3 nano ncdu 
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo dnf install -y evince fillezilla firefox hexchat transmission-gtk thunderbird
+sudo dnf install -y evince filezilla firefox hexchat transmission-gtk thunderbird
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
