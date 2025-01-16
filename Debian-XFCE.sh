@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	10/01/2025   #
+# Maj  :	17/01/2025   #
 # Auteur:	Antoine Even #
-# Version :	1.0          #
+# Version :	1.1          #
 ##############################
 
 #!/bin/bash
@@ -25,18 +25,18 @@ echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
 echo ">>> XFCE"
-sudo apt install -y task-xfce-desktop
+sudo apt install -y task-xfce-desktop xfce4 xfce4-goodies
 
 echo ">>> Multimedia & Internet :"
-sudo apt install -y audacious vlc eom hexchat transmission-gtk thunderbird \
-		filezilla remmina cava
+sudo apt install -y audacious cava eom filezilla hexchat thunderbird \
+		transmission-gtk remmina vlc
 
 echo ">>>> Utils :"
 sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool htop ncdu ranger inxi tmux nano \
 		neofetch nload nmon vnstat screen wget tty-clock
 
 echo ">>>> Admin :"
-sudo apt install -y borgbackup nano openssh-server pluma rsync synaptic timeshift
+sudo apt install -y borgbackup lm-sensors nano openssh-server pluma rsync synaptic timeshift
 
 echo ">>> Nettoyage :"
 sudo apt clean
