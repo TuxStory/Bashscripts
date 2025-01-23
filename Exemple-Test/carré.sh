@@ -6,7 +6,7 @@ carre() {
     echo $((nombre * nombre))
 }
 
-# Boucle pour calculer le carré des nombres de 1 à 10
+# Boucle pour calculer le carré des nombres de 1 à 30
 for i in {1..30}; do
     resultat=$(carre $i)
     echo "Le carré de $i est $resultat"
