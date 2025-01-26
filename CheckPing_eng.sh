@@ -1,4 +1,4 @@
-ls#!/bin/bash
+#!/bin/bash
 
 IP="192.168.1.1"
 TIME="25"
