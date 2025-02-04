@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Version 0.1
+#Version 0.2
 #Example printf color+columnw
 #printf '%-6s' "\e[1;34mThis is text\e[0m"
 
@@ -12,11 +12,12 @@ RED='\033[0;91m'
 ############### Script
 declare -a ip_array
 
-# Remplissage du tableau avec les adresses IP
+############### Remplissage du tableau avec les adresses IP
 for i in {1..255}; do
     ip_array+=("192.168.1.$i")
 done
 
+############### Vérification des IPs
 for address in "${ip_array[@]}"; do
   ping -c1 $address > /dev/null 2>&1
   RESULT=$?
