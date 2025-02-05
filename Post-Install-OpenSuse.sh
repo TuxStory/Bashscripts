@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# 05/03/2023 ver 0.8                  #
+# 05/03/2023 ver 0.9                  #
 # Antoine Even                        #
 ########################################
 
@@ -35,7 +35,7 @@ zypper patch -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-zypper install -y dfc nano tmux inxi screen htop nload nethogs neofetch ncdu nmon ranger rsync \
+zypper install -y bleachbit dfc nano tmux inxi screen htop nload nethogs neofetch ncdu nmon ranger rsync \
 	smartmontools ethtool vnstat slurm
 
 ############### Install Internet
