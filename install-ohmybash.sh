@@ -4,10 +4,10 @@
 # Script : install-ohmybash.sh    #
 # Auteur : Tuxstory@instagram.com #
 # Date C : 18/10/2024             #
-# Date M : 29/10/2024             #
+# Date M : 12/02/2024             #
 ###################################
 
-Version="0.1.1"
+Version="0.1.2"
 
 ############### Couleurs
 GREEN='\033[1;32m'
@@ -51,7 +51,7 @@ echo -e "\n${GREEN}>>>>${WHITE} Installation de Oh-My-Bash."
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 #ne sert à rien - à corriger.
-if [ $? -ne 0 ]; then
+if [ $? -eq 0 ]; then
 echo -e "\n${GREEN}>>>>${WHITE} Installation terminé."
 fi
 
