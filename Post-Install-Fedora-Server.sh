@@ -2,7 +2,7 @@
 
 ############################################
 # Scrpit Fedora Server Post-Installation   #
-# 06/06/2023 ver 0.0.3                     #
+# 06/06/2023 ver 0.0.4                     #
 # Antoine Even                             #
 ############################################
 
@@ -37,5 +37,5 @@ sudo dnf update -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install -y btop dfc fastfetch nano tmux inxi screen htop nload nethogs nvtop ncdu nmon ranger vnstat \
-	smartmontools duf ethtool
+sudo dnf install -y btop dfc duf ethtool fastfetch fail2ban htop inxi nano ncdu nethogs nload nmon nvtop ranger screen \
+	smartmontools tmux vnstat
