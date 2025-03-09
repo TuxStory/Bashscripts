@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	17/01/2025   #
+# Maj  :	09/03/2025   #
 # Auteur:	Antoine Even #
-# Version :	1.1          #
+# Version :	1.2          #
 ##############################
 
 #!/bin/bash
@@ -33,7 +33,7 @@ sudo apt install -y audacious cava eom filezilla hexchat thunderbird \
 
 echo ">>>> Utils :"
 sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool htop ncdu ranger inxi tmux nano \
-		neofetch nload nmon vnstat screen wget tty-clock
+		neofetch nload nmon mediainfo vnstat screen tilix wget tty-clock
 
 echo ">>>> Admin :"
 sudo apt install -y borgbackup lm-sensors nano openssh-server pluma rsync synaptic timeshift
