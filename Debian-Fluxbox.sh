@@ -1,8 +1,8 @@
 ##############################
 # Date : 	21/03/2023   #
-# Maj  :	23/03/2023   #
+# Maj  :	12/03/2025   #
 # Auteur:	Antoine Even #
-# Version :	0.9          #
+# Version :	0.9.1        #
 ##############################
 
 #!/bin/bash
@@ -29,11 +29,11 @@ sudo apt install -y lightdm lightdm-gtk-greeter x-window-system-core fluxbox \
 	fbautostart fbpager
 
 echo ">>> Multimedia :"
-sudo apt install -y audacious vlc
+sudo apt install -y audacious vlc mediainfo
 
 echo ">>>> Utils :"
 sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arandr \
-	xcompmgr nitrogen thunar pluma wbar wbar-config eom psmisc #idesk
+	xcompmgr nitrogen thunar tilix pluma wbar wbar-config eom psmisc #idesk
 
 ####################################################################
 # This part of the script may be run at the first start of FluxBox #
