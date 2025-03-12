@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 03/03/2025 ver 0.1.2                #
+# 12/03/2025 ver 0.1.3                #
 # Antoine Even                        #
 #######################################
 
@@ -52,7 +52,7 @@ sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/fre
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo dnf install -y btop borgbackup dfc ethtool fastfetch htop inxi iperf3 nano ncdu nethogs nload nmon ranger \
-		screen smartmontools timeshift tmux vnstat
+		screen smartmontools timeshift tilix tmux vnstat
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
@@ -60,7 +60,7 @@ sudo dnf install -y evince filezilla firefox hexchat transmission-gtk thunderbir
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install -y audacious vlc
+sudo dnf install -y audacious vlc mediainfo
 
 ############### Install Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
