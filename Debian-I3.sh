@@ -1,6 +1,6 @@
 ##############################
 # Date : 	18/08/2022   #
-# Maj  :	20/03/2023   #
+# Maj  :	15/03/2025   #
 # Auteur:	Antoine Even #
 # Version :	1.0          #
 ##############################
@@ -31,7 +31,7 @@ echo ">>> Multimedia & Internet :"
 sudo apt install -y audacious vlc eom hexchat transmission-gtk midori gedit
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux nano nload nmon
+sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux tilix nano nload nmon
 
 echo ">>>> Admin :"
 sudo apt install -y synaptic borgbackup openssh-server
