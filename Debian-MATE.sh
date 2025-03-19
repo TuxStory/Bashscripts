@@ -1,8 +1,8 @@
 ##############################
 # Date : 	17/04/2025   #
-# Maj  :	17/04/2025   #
+# Maj  :	19/04/2025   #
 # Auteur:	Antoine Even #
-# Version :	0.2          #
+# Version :	0.3          #
 ##############################
 
 #!/bin/bash
@@ -28,7 +28,7 @@ echo ">>> XFCE"
 sudo apt install -y task-mate-desktop mate-desktop-environment mate-desktop-environment-extras
 
 echo ">>> Multimedia & Internet :"
-sudo apt install -y audacious cava eom filezilla hexchat thunderbird \
+sudo apt install -y audacious cava eom filezilla gnome-games hexchat thunderbird \
 		transmission-gtk remmina vlc
 
 echo ">>>> Utils :"
