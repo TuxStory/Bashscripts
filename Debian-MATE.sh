@@ -2,7 +2,7 @@
 # Date : 	17/04/2025   #
 # Maj  :	20/04/2025   #
 # Auteur:	Antoine Even #
-# Version :	0.4          #
+# Version :	0.5          #
 ##############################
 
 #!/bin/bash
@@ -36,7 +36,7 @@ sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool ht
 		neofetch nload nmon mediainfo vnstat screen tilix wget tty-clock
 
 echo ">>>> Admin :"
-sudo apt install -y borgbackup gnome-disk-utility gnowme-firmware gparted firewalld-config lm-sensors nano openssh-server  rsync synaptic smartmontools \
+sudo apt install -y borgbackup gnome-disk-utility gnome-firmware gparted firewall-config lm-sensors nano openssh-server  rsync synaptic smartmontools \
 		timeshift
 
 echo ">>> Nettoyage :"
