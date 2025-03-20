@@ -1,8 +1,8 @@
 ##############################
 # Date : 	17/04/2025   #
-# Maj  :	19/04/2025   #
+# Maj  :	20/04/2025   #
 # Auteur:	Antoine Even #
-# Version :	0.3          #
+# Version :	0.4          #
 ##############################
 
 #!/bin/bash
@@ -25,7 +25,7 @@ echo ">>> Mise à jour des dépots et du système :"
 sudo apt update && sudo apt upgrade -y
 
 echo ">>> XFCE"
-sudo apt install -y task-mate-desktop mate-desktop-environment mate-desktop-environment-extras
+sudo apt install -y pluma task-mate-desktop mate-desktop-environment mate-desktop-environment-extras
 
 echo ">>> Multimedia & Internet :"
 sudo apt install -y audacious cava eom filezilla gnome-games hexchat thunderbird \
@@ -36,7 +36,7 @@ sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool ht
 		neofetch nload nmon mediainfo vnstat screen tilix wget tty-clock
 
 echo ">>>> Admin :"
-sudo apt install -y borgbackup gnome-disk-utility lm-sensors nano openssh-server pluma rsync synaptic smartmontools \
+sudo apt install -y borgbackup gnome-disk-utility gnowme-firmware gparted firewalld-config lm-sensors nano openssh-server  rsync synaptic smartmontools \
 		timeshift
 
 echo ">>> Nettoyage :"
