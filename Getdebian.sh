@@ -1,5 +1,10 @@
 #!/bin/bash
 
+#########################
+# Name   : Getdebian.sh #
+# Author : Tuxstory     #
+#########################
+
 REGEX='https:\/\/[a-z].*.iso\"'
 
 Link=$(wget -qO- www.debian.org/download | grep -Eo $REGEX  2>/dev/null )
