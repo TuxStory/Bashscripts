@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 0.9.6 - 17/02/2025 #
+# 13/11/2023 - ver 0.9.7 - 02/04/2025 #
 # Antoine Even                        #
 #######################################
 
@@ -80,7 +80,7 @@ function Install()
 #Liste des programmes ##########################################################
 
 Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
-	deja-dup bleachbit gnome-disk-utils gnome-software xterm rsync grsync timeshift"
+	deja-dup bleachbit gnome-disk-utils gnome-software xterm rsync grsync timeshift tilix"
 	# Old :chromium-browser chromium-browser-l10n
 
 Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf htop nmon nvtop tmux lm-sensors smartmontools wavemon"
