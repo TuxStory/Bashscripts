@@ -1,5 +1,7 @@
-# Exemples d'alias
-# Debian .bash_aliases
+########################
+# Exemples d'alias     #
+# Debian .bash_aliases #
+########################
 
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
