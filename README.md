@@ -4,7 +4,7 @@
 This is a suite of projects, tests and personal scripts.
 
 - Linux scripts.  
-- Demo scripts.   
+- Demo - Test scripts.  
 - Various tools.  
 - Tests & Examples Scripts.  
 - Front end Scripts for application.  
