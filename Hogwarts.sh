@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Name : Hogwarts.sh
-# Date : 29/03/2035
+# Date : 29/03/2025
 # version : 0.4
 # Delete coredump file systemd
 
