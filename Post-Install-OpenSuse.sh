@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# 05/03/2023 ver 1.1                  #
+# 05/03/2023 ver 1.2                  #
 # Antoine Even                        #
 ########################################
 
@@ -50,3 +50,6 @@ zypper install -y audacious cmus vlc eom
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
 zypper install -y gedit python3 git #codium
 
+## to install Gnome or XFCE
+# sudo zypper install -t pattern gnome
+# sudo zypper install -t pattern xfce
