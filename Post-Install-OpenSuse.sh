@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# 05/03/2023 ver 1.4                  #
+# 05/03/2023 ver 1.5                  #
 # Antoine Even                        #
 ########################################
 
@@ -36,15 +36,15 @@ zypper patch -y
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 zypper install -y btop bleachbit borgbackup dfc fastfetch nano tmux inxi screen htop nload nethogs ncdu nmon ranger rsync \
-	smartmontools ethtool vnstat slurm tilix wavemon
+	smartmontools ethtool vnstat tilix wavemon
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-zypper install -y MozillaFirefox hexchat transmission-gtk filezilla
+zypper install -y MozillaFirefox transmission-gtk filezilla neochat
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-zypper install -y audacious cmus vlc eom
+zypper install -y cmus vlc eom
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
