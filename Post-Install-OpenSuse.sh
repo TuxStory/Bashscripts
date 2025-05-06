@@ -50,6 +50,7 @@ zypper install -y cmus vlc eom
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
 zypper install -y gedit python3 git #codium
 
-## to install Gnome or XFCE
+## to install Gnome or XFCE or Gnome ##
 # sudo zypper install -t pattern gnome
 # sudo zypper install -t pattern xfce
+# sudo zypper in patterns-xfce-xfce
