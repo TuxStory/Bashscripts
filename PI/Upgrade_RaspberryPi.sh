@@ -2,7 +2,7 @@
 
 #########################################
 #	Upgrade Raspberry Pi Script	#
-#	Version :	0.7		#
+#	Version :	0.8		#
 #########################################
 
 EACCES=13 # Permission denied
@@ -26,7 +26,7 @@ fi
 
 ################ Root
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo "Permission denied : you must be root."
+  echo -e "Permission denied : you must be ${RED}root${WHITE}."
 exit $EACCES
 fi
 
