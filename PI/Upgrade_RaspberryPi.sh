@@ -2,7 +2,7 @@
 
 #########################################
 #	Upgrade Raspberry Pi Script	#
-#	Version :	0.6		#
+#	Version :	0.7		#
 #########################################
 
 EACCES=13 # Permission denied
@@ -31,17 +31,17 @@ exit $EACCES
 fi
 
 ################ Clean apt cache.
-echo -e "${GREEN}>>> ${WHITE}Nettoyage du cache de APT."
+echo -e "\n${GREEN}>>> ${WHITE}Nettoyage du cache de APT."
 sudo apt clean
 Check
 
 ############### Mise à jour du système.
-echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
+echo -e "\n${GREEN}>>> ${WHITE}Mise à jour du système."
 sudo apt update -y && sudo apt upgrade -y
 Check
 
 ################ Full-upgrade
-echo -e "${GREEN}>>> ${WHITE}Mise à niveau du système."
+echo -e "\n${GREEN}>>> ${WHITE}Mise à niveau du système."
 sudo apt full-upgrade -y
 Check
 
