@@ -2,7 +2,7 @@
 
 #########################################
 #	Upgrade Raspberry Pi Script	#
-#	Version :	0.5		#
+#	Version :	0.6		#
 #########################################
 
 EACCES=13 # Permission denied
@@ -18,9 +18,9 @@ MAGENTA='\033[0;95m'
 function Check()
 {
 if [ $? -eq 0 ]; then
-	printf "Résultat de la commande  >>> %30s [\e[1;32m OK \e[0m]\n"
+	printf "Résultat de la commande %40s [\e[1;32m OK \e[0m]\n"
 else
-	printf "Résultat de la commande >>> %30s [\e[1;91m Erreur \e[0m]\n"
+	printf "Résultat de la commande %40s [\e[1;91m Erreur \e[0m]\n"
 fi
 }
 
