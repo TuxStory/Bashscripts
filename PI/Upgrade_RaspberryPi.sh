@@ -2,7 +2,7 @@
 
 #########################################
 #	Upgrade Raspberry Pi Script	#
-#	Version :	0.8		#
+#	Version :	0.9		#
 #########################################
 
 EACCES=13 # Permission denied
@@ -29,6 +29,9 @@ if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
   echo -e "Permission denied : you must be ${RED}root${WHITE}."
 exit $EACCES
 fi
+
+################ Affichage
+echo -e "\n${GREEN}>>> ${WHITE}Mise à jour de Raspery Pi OS."
 
 ################ Clean apt cache.
 echo -e "\n${GREEN}>>> ${WHITE}Nettoyage du cache de APT."
