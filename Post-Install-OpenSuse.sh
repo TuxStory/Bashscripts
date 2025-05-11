@@ -3,8 +3,8 @@
 #######################################
 # Scrpit OpenSuse Post-Installation   #
 # 05/03/2023 ver 1.6                  #
-# Antoine Even                        #
-########################################
+# Author	: 	Antoine Even  #
+#######################################
 
 EACCES=13 # Permission denied
 
