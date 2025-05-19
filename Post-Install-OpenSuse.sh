@@ -2,8 +2,8 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# 05/03/2023 ver 1.6                  #
-# Author	: 	Antoine Even  #
+# Date		: 10/04/2023 ver 1.7  #
+# Author	: Antoine Even        #
 #######################################
 
 EACCES=13 # Permission denied
@@ -17,7 +17,7 @@ MAGENTA='\033[0;95m'
 
 ################ Root
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo "Permission denied : you must be root."
+  echo -e "Permission denied : you must be ${RED}root${WHITE}."
 exit $EACCES
 fi
 
