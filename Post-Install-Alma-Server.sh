@@ -6,6 +6,8 @@
 # Antoine Even                        #
 #######################################
 
+#Voir si le script fonctionne avec AlmaLinux10
+
 EACCES=13 # Permission denied
 
 ############### Couleurs
