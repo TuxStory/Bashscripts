@@ -2,11 +2,11 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 10/03/2025 ver 0.0.6                #
+# 10/03/2025 ver 0.0.7                #
 # Antoine Even                        #
 #######################################
 
-#Voir si le script fonctionne avec AlmaLinux10
+#Voir si le script fonctionne avec AlmaLinux 10 
 
 EACCES=13 # Permission denied
 
