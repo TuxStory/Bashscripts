@@ -2,11 +2,11 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 26/05/2025 ver 0.0.8                #
+# 26/05/2025 ver 0.0.9                #
 # Antoine Even                        #
 #######################################
 
-#Voir si le script fonctionne avec AlmaLinux 10
+#Voir si le script fonctionne avec AlmaLinux 10 - 27/05 pas de Epel et fusion donc non.
 
 EACCES=13 # Permission denied
 
@@ -48,6 +48,7 @@ sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpm
 gpg --show-keys --with-fingerprint /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-free-el-$(rpm -E %rhel)
 # RPM Fusion (nonfree packages)
 gpg --show-keys --with-fingerprint /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-el-$(rpm -E %rhel)
+
 echo -e "\n${GREEN}>>> ${WHITE}Installation de RPM Fusion."
 sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm -y
 
