@@ -2,11 +2,9 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 26/05/2025 ver 0.0.9.1              #
+# 29/05/2025 ver 0.0.9.2              #
 # Antoine Even                        #
 #######################################
-
-#Voir si le script fonctionne avec AlmaLinux 10 - 27/05 pas de Epel et fusion donc non.
 
 EACCES=13 # Permission denied
 
@@ -54,5 +52,5 @@ sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/fre
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install -y bash-completion borgbackup cockpit dfc btop ethtool fastfetch htop iftop inxi iperf3 nano ncdu nethogs nload nmon \
+sudo dnf install -y bash-completion borgbackup clamav-freshclam cockpit dfc btop ethtool fastfetch htop iftop inxi iperf3 nano ncdu nethogs nload nmon \
 		mediainfo mc ranger screen smartmontools timeshift tmux vnstat
