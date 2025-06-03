@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit AlmaRocky Post-Installation  #
-# 12/03/2025 ver 0.1.3                #
+# 03/06/2025 ver 0.1.4                #
 # Antoine Even                        #
 #######################################
 
@@ -51,7 +51,7 @@ sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/fre
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install -y btop borgbackup dfc ethtool fastfetch htop inxi iperf3 nano ncdu nethogs nload nmon ranger \
+sudo dnf install -y bash-completion btop borgbackup dfc ethtool fastfetch htop inxi iperf3 nano ncdu nethogs nload nmon ranger \
 		screen smartmontools timeshift tilix tmux vnstat
 
 ############### Install Internet
