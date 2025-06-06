@@ -22,12 +22,13 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\][\t] \033[01;32m\u@\h\[\03
 [Dir] Mauve
 export PS1="\[$(tput setaf 33)\]\u\[$(tput setaf 69)\]@\[$(tput setaf 105)\]\h \[$(tput setaf 141)\]\w \[$(tput sgr0)\]$ "
 export PS1="\[\e[38;5;33m\]\u\[\e[38;5;69m\]@\[\e[38;5;105m\]\h \[\e[38;5;141m\]\w \[\033[0m\]$ "
+
 + time
 export PS1="\[\e[38;5;33m\][\t] \u\[\e[38;5;69m\]@\[\e[38;5;105m\]\h \[\e[38;5;141m\]\w \[\033[0m\]$ "
+
 +time color (made with site and me)
 export PS1="\[\e[33m\][\t]\[\e[m\] \[\e[38;5;33m\]\u\[\e[m\]\[\e[38;5;105m\]@\[\e[m\]\[\e[38;5;105m\]\h \W\[\e[m\] $ "
 + time color + jaune clair
-
 
 [User] Vert
 [Dir] Jaune
