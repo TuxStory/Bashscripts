@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Fedora Post-Installation   #
-# 13/06/2025 ver 0.0.1              #
+# 14/06/2025 ver 0.0.2              #
 # Antoine Even                      #
 #####################################
 
@@ -36,7 +36,7 @@ sudo pamac install --no-confirm btop borgbackup dfc fastfetch nano tmux inxi scr
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo pamac install --no-confirm firefox hexchat transmission-gtk filezilla
+sudo pamac install --no-confirm firefox filezilla hexchat transmission-gtk thunderbird
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
