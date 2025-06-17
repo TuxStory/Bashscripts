@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #####################################
-# Scrpit Fedora Post-Installation   #
-# 14/06/2025 ver 0.0.2              #
+# Scrpit Manjaro Post-Installation   #
+# 17/06/2025 ver 0.0.3              #
 # Antoine Even                      #
 #####################################
 
