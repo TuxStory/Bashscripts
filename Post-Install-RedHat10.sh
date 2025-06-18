@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit RedHat Post-Installation     #
-# 20/05/2025 ver 0.0.1                #
+# 18/06/2025 ver 0.0.2                #
 # Antoine Even                        #
 #######################################
 
@@ -36,20 +36,14 @@ sudo dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.no
 sudo dnf install epel-release epel-next-release -y
 
 ############### Install RPM Fusion
-# From Almalinux Doc
-#echo -e "\n${GREEN}>>> ${WHITE}Distribution-gpg-keys."
-#sudo dnf install distribution-gpg-keys -y
-#echo -e "\n${GREEN}>>> ${WHITE}GPG Keys rpmfusion."
+echo -e "\n${GREEN}>>> ${WHITE}Installation de RPM Fusion."
+sudo subscription-manager repos --enable "codeready-builder-for-rhel-$(rpm -E %{rhel})-$(uname -m)-rpms"
+
 # RPM Fusion (free packages)
-#sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-free-el-$(rpm -E %rhel)
+sudo dnf install --nogpgcheck https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E %rhel).noarch.rpm
+
 # RPM Fusion (nonfree packages)
-#sudo rpmkeys --import /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-el-$(rpm -E %rhel)
-# RPM Fusion (free packages)
-#gpg --show-keys --with-fingerprint /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-free-el-$(rpm -E %rhel)
-# RPM Fusion (nonfree packages)
-#gpg --show-keys --with-fingerprint /usr/share/distribution-gpg-keys/rpmfusion/RPM-GPG-KEY-rpmfusion-nonfree-el-$(rpm -E %rhel)
-#echo -e "\n${GREEN}>>> ${WHITE}Installation de RPM Fusion."
-#sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm -y
+sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-$(rpm -E %rhel).noarch.rpm https://mirrors.rpmfusion.org/nonfree/el/rpmfusion-nonfree-release-$(rpm -E %rhel).noarch.rpm
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
