@@ -2,7 +2,7 @@
 
 ##############################################
 # Scrpit AlmaRocky Server Post-Installation  #
-# Date : 05/06/2025    version : 0.0.9.5     #
+# Date : 18/06/2025    version : 0.0.9.6     #
 # Author : Antoine Even                      #
 ##############################################
 
@@ -28,6 +28,10 @@ dnf clean packages # dnf clean all = Efface tout = brutal
 ############### Scrpit
 echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
 sudo dnf update -y
+
+############### Dépôt CRB
+echo -e "${GREEN}>>> ${WHITE}Activation du dépôt CRB."
+sudo dnf config-manager --set-enabled crb
 
 ############### Install Epel
 echo -e "${GREEN}>>> ${WHITE}Installation de EPEL."
