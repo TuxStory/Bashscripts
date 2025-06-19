@@ -1,15 +1,14 @@
 #!/bin/bash
 
 #notes of some bashes i used
-[Raspberry Pi Zero] [Time Purple + Standard]
+[Raspberry Pi Zero] [Time Blue + Standard]
 \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\t] \033[01;32m\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\]
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\t] \033[01;32m\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
-[Raspberry Pi White]
+[Raspberry Pi White] [Time Purple]
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\]
 [Raspberry Pi Gris]
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\][\t] \033[01;32m\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
-
 
 [Default] red hat / Rocky / Alma
 [\u@\h \W]\$
