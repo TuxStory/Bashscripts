@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Manjaro Post-Installation   #
-# 17/06/2025 ver 0.0.3              #
+# 21/06/2025 ver 0.0.4              #
 # Antoine Even                      #
 #####################################
 
@@ -31,7 +31,7 @@ sudo pamac update --no-confirm
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo pamac install --no-confirm btop borgbackup dfc fastfetch nano tmux inxi screen htop ncdu nload nethogs nmon nvtop ranger \
+sudo pamac install --no-confirm btop borgbackup dfc fastfetch nano tmux timeshift inxi screen htop ncdu nload nethogs nmon nvtop ranger \
 	smartmontools duf ethtool vnstat
 
 ############### Install Internet
@@ -40,7 +40,7 @@ sudo pamac install --no-confirm firefox filezilla hexchat transmission-gtk thund
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo pamac install --no-confirm audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
+sudo pamac install --no-confirm audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb gimp
 
 ################ Install jeux
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Jeux."
