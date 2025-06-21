@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 1.0.4 16/03/2025 #
+# 19/06/2023 - ver 1.0.5 21/06/2025 #
 # Antoine Even                      #
 #####################################
 
@@ -76,7 +76,7 @@ Programmes_Console="ansiweather bash-completion bmon dfc duf ethstatus ethtool c
 
 Programmes_Internet="filezilla firefox hexchat iptraffic tnftp transmission" #rtorrent
 
-Programmes_Musique="cava cmus moc audacious vlc"
+Programmes_Musique="asunder audacious cava cmus moc vlc"
 
 Games="bastet bsdgames bsdgames-nonfree burgerspace cavezofphear cmatrix freesweep frozen-bubble gnome-games lbreakout2 netris nettoe ninvaders nsnake xboard"
 
