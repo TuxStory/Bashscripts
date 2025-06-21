@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Fedora Post-Installation   #
-# 15/04/2025 ver 0.9.6              #
+# 21/06/2025 ver 0.9.7              #
 # Antoine Even                      #
 #####################################
 
@@ -46,7 +46,7 @@ sudo dnf install -y firefox hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install -y audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
+sudo dnf install -y asunder audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
 
 ############### Install Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
