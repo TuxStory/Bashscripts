@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 06/06/2023 ver 1.5                #
+# 23/06/2025 ver 1.6                #
 # Antoine Even                      #
 #####################################
 
@@ -63,7 +63,7 @@ function Install()
 
 #Liste des programmes ##########################################################
 
-Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
+Programmes="audacious asunder gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup system-config-printer bleachbit gnome-disk-utils
 	chromium-browser chromium-browser-l10n xterm rsync grsync"
 
