@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #####################################
-# Scrpit Manjaro Post-Installation   #
-# 21/06/2025 ver 0.0.4              #
+# Scrpit Manjaro Post-Installation  #
+# 25/06/2025 ver 0.0.5              #
 # Antoine Even                      #
 #####################################
 
@@ -52,4 +52,4 @@ sudo pamac install --no-confirm manjaro-backgrounds mate-backgrounds gnome-backg
 
 ############### Gnome
 echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
-sudo pamac install --no-confirm gnome-shell-extension-appindicator #gnome-shell-extension-dash-to-dock
+sudo pamac install --no-confirm gnome-shell-extension-appindicator
