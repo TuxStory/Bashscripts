@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 1.0.5 21/06/2025 #
+# 19/06/2023 - ver 1.0.6 27/06/2025 #
 # Antoine Even                      #
 #####################################
 
@@ -80,7 +80,7 @@ Programmes_Musique="asunder audacious cava cmus moc vlc"
 
 Games="bastet bsdgames bsdgames-nonfree burgerspace cavezofphear cmatrix freesweep frozen-bubble gnome-games lbreakout2 netris nettoe ninvaders nsnake xboard"
 
-Admin="fail2ban firewalld hddtemp iperf3 nethogs nload lnav testdisk vnstat vnstati" #samba apache2
+Admin="fail2ban firewalld hddtemp iperf3 nethogs nload lnav  gsmartcontrol testdisk vnstat vnstati" #samba apache2
 
 Programmes_Dev="gcc geany ipython3 nano python3-numpy python3-matplotlib" #mu-editor
 
