@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian Post-Installation   #
-# 19/06/2023 - ver 1.0.6 27/06/2025 #
+# 19/06/2023 - ver 1.0.7 02/07/2025 #
 # Antoine Even                      #
 #####################################
 
@@ -19,7 +19,7 @@
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo "Permission denied : you must be root."
+  echo -e "Permission denied : you must be ${RED}root${WHITE}."
 exit $EACCES
 fi
 
