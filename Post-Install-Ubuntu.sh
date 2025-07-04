@@ -2,8 +2,8 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 0.9.8 - 24/06/2025 #
-# Antoine Even                        #
+# 13/11/2023 - ver 0.9.9 - 04/07/2025 #
+# Author	:	Antoine Even  #
 #######################################
 
 #The 'yes' command will echo 'y' (or whatever you ask it to) indefinitely.
@@ -14,11 +14,11 @@
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
 
-VER=0.9.5
+VER=0.9.9
 EACCES=13 # Permission denied
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo "Permission denied : you must be root."
+  echo -e "Permission denied : you must be ${RED}root${WHITE}."
 exit $EACCES
 fi
 
