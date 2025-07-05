@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Fedora Post-Installation   #
-# 02/07/2025 ver 0.9.9              #
+# 05/07/2025 ver 0.1.0              #
 # Antoine Even                      #
 #####################################
 
@@ -37,8 +37,8 @@ sudo dnf install rpmfusion-free-release-tainted -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install -y btop dfc fastfetch nano tmux inxi screen htop ncdu nload nethogs nmon nvtop ranger \
-	smartmontools gsmartcontrol duf ethtool vnstat
+sudo dnf install -y bat btop dfc fastfetch nano tmux inxi screen htop ncdu nload nethogs nmon nvtop ranger \
+	smartmontools tldr gsmartcontrol duf ethtool vnstat
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
