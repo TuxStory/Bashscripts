@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit ArchLinux Post-Installation  #
-# 02/07/2025 ver 0.0.3                #
+# 06/07/2025 ver 0.0.4                #
 # Antoine Even                        #
 #######################################
 
@@ -25,6 +25,7 @@ fi
 echo -e "${GREEN}>>> ${WHITE}Nettoyage du cache des paquets."
 sudo pacman -S --noconfirm pacman-contrib
 sudo paccache -r
+#sudo pacman -Scc #vide le cache de pacman
 
 ############### Scrpit
 echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
@@ -32,8 +33,8 @@ sudo pacman -Suy --noconfirm
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo pacman -S --noconfirm btop borgbackup dfc fastfetch nano nmap tmux timeshift inxi screen htop ncdu nload nethogs nmon nvtop ranger \
-	smartmontools duf ethtool vnstat
+sudo pacman -S --noconfirm bat btop borgbackup dfc duf fastfetch nano nmap tmux timeshift inxi screen htop ncdu nload nethogs nmon \
+	nvtop ranger smartmontools tldr ethtool vnstat
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."

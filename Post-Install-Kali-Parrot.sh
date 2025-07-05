@@ -2,7 +2,7 @@
 
 ########################################
 # Scrpit Kali-Parrot Post-Installation #
-# 21/03/2024 - ver 0.1.4 10/08/2024    #
+# 21/03/2024 - ver 0.1.6 06/07/2025    #
 # Antoine Even                         #
 ########################################
 
@@ -59,7 +59,7 @@ Programmes="gparted hardinfo ffmpegthumbnailer
 
 Programmes_Hacking="binwalk cewl foremost gobuster hashcat hcxtools hcxdumptool hydra john lynis nmap sherlock wifite wireshark libimage-exiftool-perl binutils"
 
-Programmes_Console="ansiweather bmon dfc duf ethstatus ethtool fbi htop irssi inxi lm-sensors ncdu neofetch mc nmon oping ranger rsync slurm smartmontools tmux wavemon w3m w3m-img"
+Programmes_Console="ansiweather bat bmon dfc duf ethstatus ethtool fbi htop irssi inxi lm-sensors ncdu neofetch mc nmon oping ranger rsync slurm smartmontools tmux wavemon w3m w3m-img"
 
 Programmes_Internet="filezilla firefox iptraffic tnftp transmission hexchat" #rtorrent
 
@@ -67,7 +67,7 @@ Programmes_Musique="cava cmus moc audacious vlc"
 
 Games="bastet bsdgames bsdgames-nonfree burgerspace cavezofphear cmatrix freesweep frozen-bubble gnome-games lbreakout2 netris nettoe ninvaders nsnake xboard"
 
-Admin="fail2ban firewalld hddtemp iperf3 nethogs nload lnav testdisk vnstat vnstati" #samba apache2
+Admin="fail2ban firewalld hddtemp iperf3 nethogs nload lnav tldr testdisk vnstat vnstati" #samba apache2
 
 Programmes_Dev="gcc geany ipython3 nano python3-numpy python3-matplotlib" #mu-editor
 

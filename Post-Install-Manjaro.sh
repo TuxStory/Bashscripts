@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Manjaro Post-Installation  #
-# 02/07/2025 ver 0.0.8              #
+# 06/07/2025 ver 0.0.9              #
 # Antoine Even                      #
 #####################################
 
@@ -24,6 +24,7 @@ fi
 ################ Clean cache
 echo -e "${GREEN}>>> ${WHITE}Nettoyage du cache des paquets."
 sudo pamac clean
+#sudo pacman -Scc #vide le cache de pacman
 
 ############### Scrpit
 echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
@@ -31,8 +32,8 @@ sudo pamac update --no-confirm
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo pamac install --no-confirm btop borgbackup dfc dysk fastfetch nano tmux timeshift inxi screen htop ncdu nload nethogs nmon nvtop ranger \
-	smartmontools duf ethtool vnstat
+sudo pamac install --no-confirm bat btop borgbackup dfc duf dysk fastfetch nano tmux timeshift tldr inxi screen htop ncdu nload nethogs \
+	nmon nvtop ranger smartmontools ethtool vnstat
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
