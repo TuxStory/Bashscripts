@@ -2,7 +2,7 @@
 
 ##############################################
 # Scrpit AlmaRocky Server Post-Installation  #
-# Date : 18/06/2025    version : 0.0.9.6     #
+# Date : 06/07/2025    version : 0.0.9.7     #
 # Author : Antoine Even                      #
 ##############################################
 
@@ -56,5 +56,5 @@ sudo dnf --setopt=localpkg_gpgcheck=1 install  https://mirrors.rpmfusion.org/fre
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo dnf install -y bash-completion borgbackup btop clamav-freshclam cockpit dfc ethtool fastfetch firewall-config htop iftop inxi iperf3 nano ncdu nethogs \
-		nload nmon mediainfo mc pcp python3-pcp ranger screen smartmontools timeshift tmux vnstat
+sudo dnf install -y bat bash-completion borgbackup btop clamav-freshclam cockpit dfc ethtool fastfetch firewall-config htop iftop inxi iperf3 nano ncdu nethogs \
+		nload nmon mediainfo mc pcp python3-pcp ranger screen smartmontools timeshift tldr tmux vnstat
