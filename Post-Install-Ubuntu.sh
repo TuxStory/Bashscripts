@@ -83,13 +83,13 @@ Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthum
 	deja-dup bleachbit gnome-disk-utils gnome-software xterm rsync grsync timeshift tilix"
 	# Old :chromium-browser chromium-browser-l10n
 
-Programmes_Console="dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf htop nmon nvtop tmux lm-sensors smartmontools wavemon"
+Programmes_Console="bat dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf htop nmon nvtop tmux lm-sensors smartmontools wavemon"
 
 Programmes_Internet="filezilla tnftp transmission"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin="fail2ban firewalld smartmontools nload vnstat vnstati testdisk iperf3 hddtemp lnav nethogs" #samba glances
+Admin="fail2ban firewalld smartmontools nload vnstat vnstati testdisk tldr iperf3 hddtemp lnav nethogs" #samba glances
 
 Programmes_Dev="gcc geany nano" #python3-numpy python3-matplotlib ipython3"
 
