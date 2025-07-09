@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Fedora Post-Installation   #
-# 05/07/2025 ver 0.1.0              #
+# 09/07/2025 ver 0.1.1              #
 # Antoine Even                      #
 #####################################
 
@@ -61,3 +61,6 @@ sudo dnf install -y gedit python3 git #codium
 ############### Gnome
 echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
 sudo dnf install -y gnome-extensions-app gnome-shell-extension-appindicator #gnome-shell-extension-dash-to-dock
+
+############### Done
+echo -e "\n${GREEN}>>> ${WHITE}Installation Terminée."
