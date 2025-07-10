@@ -1,7 +1,8 @@
 ########################
 # Exemples d'alias     #
 # Debian .bash_aliases #
-# Date :     2025      #
+# Date :	2025   #
+# Version :	0.2    #
 ########################
 
 alias egrep='egrep --color=auto'
