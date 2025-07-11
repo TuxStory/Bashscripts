@@ -4,7 +4,7 @@
 # Date :	2025   #
 # Version :	0.2    #
 ########################
-.
+
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
