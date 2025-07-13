@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Manjaro Post-Installation  #
-# 06/07/2025 ver 0.0.9              #
+# 06/07/2025 ver 0.1.0              #
 # Antoine Even                      #
 #####################################
 
@@ -32,7 +32,7 @@ sudo pamac update --no-confirm
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo pamac install --no-confirm bat btop borgbackup dfc duf dysk fastfetch nano tmux timeshift tldr inxi screen htop ncdu nload nethogs \
+sudo pamac install --no-confirm bat btop borgbackup dfc duf dysk exfat-utils fastfetch fuse3 nano tmux timeshift tldr inxi screen htop ncdu nload nethogs \
 	nmon nvtop ranger smartmontools ethtool vnstat
 
 ############### Install Internet
