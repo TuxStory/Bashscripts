@@ -2,8 +2,11 @@
 
 # Name : Hogwarts.sh
 # Date : 29/03/2025
-# version : 0.4
+# version : 0.5
 # Delete coredump file systemd
+
+
+echo -e "\n>>> Hogwarts tmp file cleaner"
 
 ls /var/lib/systemd/coredump/
 echo -e "\n>>> Deleting the file"
