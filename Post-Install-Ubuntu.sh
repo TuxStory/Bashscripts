@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 0.9.9 - 04/07/2025 #
+# 13/11/2023 - ver 1.0.0 - 15/07/2025 #
 # Author	:	Antoine Even  #
 #######################################
 
@@ -17,6 +17,13 @@
 VER=0.9.9
 EACCES=13 # Permission denied
 
+# Couleurs ####################################################################
+GREEN='\033[1;32m'
+WHITE='\033[1;0m' #real white \033[1;37m
+RED='\033[0;91m'
+BLUE='\033[0;94m'
+MAGENTA='\033[0;95m'
+
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
   echo -e "Permission denied : you must be ${RED}root${WHITE}."
 exit $EACCES
@@ -24,7 +31,7 @@ fi
 
 clear
 
-#Dépots ########################################################################
+# Dépots #######################################################################
 echo -e "\033[1;32mPost-Install-Ubuntu $VER"
 echo
 echo -e "\033[1;34mActivation des dépôts :"
@@ -44,14 +51,14 @@ else
 fi
 clear
 
-#Update System #################################################################
+# Update System ################################################################
 echo -e "\033[1;34mMises à jour du système :"
 echo -e "\033[0;0m-------------------------"
 echo
 apt update && apt upgrade -y
 clear
 
-#Update System #################################################################
+# Update System ##################################################################
 echo -e "\033[1;34mMises à jour des SNAPs :"
 echo -e "\033[0;0m------------------------"
 echo
@@ -60,12 +67,12 @@ snap install firefox
 #snap install thunderbird
 clear
 
-#Install #######################################################################
+# Install ##########################################################################
 echo -e "\033[1;34mInstallation des progammes :"
 echo -e "\033[0;0m----------------------------"
 echo
 
-#Fonction ######################################################################
+# Fonction ##########################################################################
 
 function Install()
 {
@@ -77,7 +84,7 @@ function Install()
   done
 }
 
-#Liste des programmes ##########################################################
+# Liste des programmes ###############################################################
 
 Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
 	deja-dup bleachbit gnome-disk-utils gnome-software xterm rsync grsync timeshift tilix"
@@ -93,7 +100,7 @@ Admin="fail2ban firewalld smartmontools nload vnstat vnstati testdisk tldr iperf
 
 Programmes_Dev="gcc geany nano" #python3-numpy python3-matplotlib ipython3"
 
-#Questionnaire #################################################################
+# Questionnaire ########################################################################
 
 printf "Voulez-vous installer la liste des programmes \e[35mcourants\e[0m (Oui/Non) : " ; read -r reponse
 printf "Voulez-vous installer la liste des programmes \e[35mconsoles\e[0m (Oui/Non) : " ; read -r reponse1
@@ -102,7 +109,7 @@ printf "Voulez-vous installer la liste des programmes \e[35mAdministration\e[0m 
 printf "Voulez-vous installer la liste des programmes \e[35mDeveloppement\e[0m (Oui/Non) : " ; read -r reponse4
 printf "Voulez-vous installer la liste des \e[35mjeux\e[0m (Oui/Non) : " ; read -r reponse5
 
-#Installation ##################################################################
+# Installation ##########################################################################
 
 if [[ $reponse =~ ^([oO][uU][iI]|[oO])$ ]]
 then
@@ -134,7 +141,7 @@ then
 	Install ${Games[@]}
 fi
 
-#Nettoyage #####################################################################
+# Nettoyage ###########################################################################
 
 echo -e "\033[1;34mNettoyage du cache des paquets...\033[0m"
 apt clean
