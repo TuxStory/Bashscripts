@@ -11,8 +11,9 @@ MAGENTA='\033[0;95m'
 echo -e "\n${GREEN}>>> ${WHITE}Nettoyage des anciens noyaux!"
 
 ################ Programme
-echo ">>> Apt List"
-apt list -i linux-image* linux-headers*
+echo "\n${GREEN}>>> ${WHITE}Apt List"
+apt list -i linux-image* #linux-headers*
 
-echo ">>> dpkg"
-dpkg --list | egrep -i --color 'linux-image|linux-headers'
+echo "\n${GREEN}>>> ${WHITE}Dpkg"
+dpkg --list | egrep -i --color 'linux-image'
+#dpkg --list | egrep -i --color 'linux-image|linux-headers'
