@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#########################
+# Script : Old-Kernels	#
+# Clean old Kernels	#
+# Date	 : 18/07/25	#
+# Auteur : Antoine	#
+#########################
+
+Version=0.0.1
+
 ################ Couleurs
 GREEN='\033[1;32m'
 WHITE='\033[1;0m' #real white \033[1;37m
