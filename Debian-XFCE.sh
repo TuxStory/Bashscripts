@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	09/03/2025   #
+# Maj  :	20/73/2025   #
 # Auteur:	Antoine Even #
-# Version :	1.2          #
+# Version :	1.3          #
 ##############################
 
 #!/bin/bash
@@ -36,7 +36,7 @@ sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool ht
 		neofetch nload nmon mediainfo vnstat screen tilix wget tty-clock
 
 echo ">>>> Admin :"
-sudo apt install -y borgbackup lm-sensors nano openssh-server pluma rsync synaptic timeshift
+sudo apt install -y bat borgbackup lm-sensors nano openssh-server pluma rsync synaptic tldr timeshift
 
 echo ">>> Nettoyage :"
 sudo apt clean
