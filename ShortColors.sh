@@ -8,11 +8,11 @@ w="\033[0m"
 
 echo -e $b">"$w" prepare for installing dependencies ..."
 sleep 3
-echo -e $b">"$w" installing pacakge: "$g"python3"$w
+echo -e $b">>"$w" installing pacakge: "$g"python3"$w
 sleep 3
-echo -e $b">"$w" installing pacakge: "$g"LibreOffice"$w
+echo -e $b">>>"$w" installing pacakge: "$g"LibreOffice"$w
 sleep 3
-echo -e $b">"$w" Don't forget to "$r"update"$w
+echo -e $b">>>>"$w" Don't forget to "$r"update"$w
 
 #r = "\033[31m"
 #g = "\033[32m"
