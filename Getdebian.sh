@@ -5,6 +5,14 @@
 # Author : Tuxstory     #
 #########################
 
+
+########################### Couleurs
+g="\033[1;32m"
+r="\033[1;31m"
+b="\033[1;34m"
+w="\033[0m"
+
+
 REGEX='https:\/\/[a-z].*.iso\"'
 
 Link=$(wget -qO- www.debian.org/download | grep -Eo $REGEX  2>/dev/null )
@@ -23,7 +31,7 @@ else
   Download=$Link3
 fi
 
-echo ">>> Téléchargement de la dernière version de Debian."
+echo -e $b">>>"$w" Téléchargement de la dernière version de Debian."
 wget $Download -P ~/
 
 #wget -qO- www.debian.org |
