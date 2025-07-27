@@ -2,7 +2,7 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.2    #
+# Version :	0.3    #
 ########################
 
 alias egrep='egrep --color=auto'
@@ -18,6 +18,7 @@ alias ll='ls -hl'
 alias ls='ls --color=auto'
 alias ncdu='ncdu --color dark'
 
+#MAJ Debian
 alias MAJ='sudo apt update -y && sudo apt upgrade -y'
 alias BigMAJ='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove'
 alias REM='sudo apt autoremove -y'
@@ -28,14 +29,13 @@ alias apug='sudo apt upgrade'
 alias apuu='sudo apt update && sudo apt upgrade'
 alias apfu='sudo apt full-upgrade'
 
+#apt
 alias apin='sudo apt install'
 alias apri='sudo apt install --reinstall'
-
 alias aprm='sudo apt remove'
 alias apur='sudo apt purge'
 alias apar='sudo apt autoremove'
 alias apcl='sudo apt-get autoclean'
-
 alias apse='apt search'
 alias apsh='apt show'
 alias apsc='apt-get source'
