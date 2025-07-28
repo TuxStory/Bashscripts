@@ -2,14 +2,15 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.3    #
+# Version :	0.4    #
 ########################
 
+#shortcuts & commands
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
 alias hl='history | less'
-alias bye='shutdown -h now'
+alias bye='sudo shutdown -h now'
 alias al='alias'
 alias ip='ip -c a'
 alias l='ls -CF'
@@ -36,16 +37,17 @@ alias aprm='sudo apt remove'
 alias apur='sudo apt purge'
 alias apar='sudo apt autoremove'
 alias apcl='sudo apt-get autoclean'
+
 alias apse='apt search'
 alias apsh='apt show'
 alias apsc='apt-get source'
 alias apesr='sudo apt edit-sources'
 alias apdl='apt-get download'
-
 alias apbd='sudo apt build-deb'
 alias aphst='cat /var/log/apt/history.log | less'
 
 alias drcf='sudo dpkg-reconfigure'
 
+#### Grub & initramfs
 alias upgrb='sudo update-grub'
 alias uirfs='sudo update-initramfs -u'
