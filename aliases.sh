@@ -51,3 +51,5 @@ alias drcf='sudo dpkg-reconfigure'
 #### Grub & initramfs
 alias upgrb='sudo update-grub'
 alias uirfs='sudo update-initramfs -u'
+
+#Fedora
