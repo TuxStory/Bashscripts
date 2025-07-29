@@ -52,4 +52,11 @@ alias drcf='sudo dpkg-reconfigure'
 alias upgrb='sudo update-grub'
 alias uirfs='sudo update-initramfs -u'
 
-#Fedora
+# DNF Aliases
+alias dnfins='sudo dnf install'
+alias dnfrm='sudo dnf remove'
+alias dnfup='sudo dnf update -y' # update is an alias for upgrade in dnf
+alias dnfsearch='dnf search'
+alias dnfgrplst='dnf group list'
+alias dnfgrpins='sudo dnf group install'
+alias dnfautoclean='sudo dnf autoremove'
