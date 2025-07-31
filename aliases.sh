@@ -2,7 +2,7 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.4    #
+# Version :	0.5    #
 ########################
 
 #shortcuts & commands
