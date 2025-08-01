@@ -4,6 +4,7 @@
 #   Personal Customized PS1     #
 #################################
 
+## Raspberry Pi
 [Raspberry Pi Zero] [Time Blue + Standard]
 \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\t] \033[01;32m\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\]
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;35m\][\t] \033[01;32m\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
@@ -13,6 +14,7 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[0
 [Raspberry Pi Gris]
 PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\][\t] \033[01;32m\u@\h\[\033[00m\]:\[\033[01;34m\]\w \$\[\033[00m\] '
 
+## Fedora - Alma - Rocky - RedHat
 [Default] red hat / Rocky / Alma
 [\u@\h \W]\$
 [\t][\u@\h \W]\$
