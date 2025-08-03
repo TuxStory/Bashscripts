@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 1.0.0 - 15/07/2025 #
+# 13/11/2023 - ver 1.0.1 - 03/08/2025 #
 # Author	:	Antoine Even  #
 #######################################
 
@@ -96,7 +96,7 @@ Programmes_Internet="filezilla tnftp transmission"
 
 Games="ntetris nsnake cavezofphear bsdgames bsdgames-nonfree cmatrix freesweep bastet nettoe ninvaders frozen-bubble gnome-games xboard lbreakout2 burgerspace"
 
-Admin="fail2ban firewalld smartmontools nload vnstat vnstati testdisk tldr iperf3 hddtemp lnav nethogs" #samba glances
+Admin="clamav fail2ban firewalld smartmontools nload vnstat vnstati testdisk tldr iperf3 hddtemp lnav nethogs" #samba glances
 
 Programmes_Dev="gcc geany nano" #python3-numpy python3-matplotlib ipython3"
 
