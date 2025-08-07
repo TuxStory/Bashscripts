@@ -2,7 +2,7 @@
 
 ########################################
 # Scrpit Kali-Parrot Post-Installation #
-# 21/03/2024 - ver 0.1.7 07/07/2025    #
+# 21/03/2024 - ver 0.1.8 07/08/2025    #
 # Antoine Even                         #
 ########################################
 
@@ -67,7 +67,7 @@ Programmes_Musique="cava cmus moc audacious vlc"
 
 Games="bastet bsdgames bsdgames-nonfree burgerspace cavezofphear cmatrix freesweep frozen-bubble gnome-games lbreakout2 netris nettoe ninvaders nsnake xboard"
 
-Admin="fail2ban firewalld hddtemp iperf3 nethogs nload lnav tldr testdisk vnstat vnstati" #samba apache2
+Admin="clamav fail2ban firewalld hddtemp iperf3 nethogs nload lnav tldr testdisk vnstat vnstati" #samba apache2
 
 Programmes_Dev="gcc geany ipython3 nano python3-numpy python3-matplotlib" #mu-editor
 
