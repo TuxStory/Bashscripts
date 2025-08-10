@@ -1,0 +1,22 @@
+##################################
+#     Debian 13 Sources List     #
+##################################
+
+#Main
+deb http://deb.debian.org/debian trixie main contrib non-free non-free-firmware
+deb-src http://deb.debian.org/debian trixie main contrib non-free non-free-firmware
+
+#Security
+deb http://deb.debian.org/debian-security/ trixie-security main non-free-firmware
+deb-src http://deb.debian.org/debian-security/ trixie-security main non-free-firmware
+
+#Updates
+deb http://deb.debian.org/debian trixie-updates main non-free-firmware
+deb-src http://deb.debian.org/debian trixie-updates main non-free-firmware
+
+#Backports
+deb http://deb.debian.org/debian/ trixie-backports main non-free non-free-firmware
+deb-src http://deb.debian.org/debian/ trixie-backports main non-free non-free-firmware
+
+#Proposed updates for the next point release
+#deb http://deb.debian.org/debian/ bookworm-proposed-updates main contrib non-free non-free-firmware
