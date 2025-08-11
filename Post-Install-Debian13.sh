@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 11/08/2025 ver 0.0.5              #
+# 11/08/2025 ver 0.0.6              #
 # Antoine Even                      #
 #####################################
 
@@ -46,12 +46,12 @@ sudo apt update && sudo apt upgrade -y
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo apt install -y ansiweather bash-completion bmon bat btop curl ethtool ethstatus fastfetch dysk dfc nano tmux \
-			inxi iptraffic screen htop ncdu nload nethogs nmon nvtop nvidia-detect rsync ranger radeontop fbi clamav fail2ban firewalld \
-			smartmontools synaptic slurm scrot tilix tldr tty-clock gsmartcontrol duf vnstat wavemon
+			inxi screen htop ncdu nload nethogs nmon nvtop nvidia-detect rsync ranger radeontop fbi clamav fail2ban firewalld \
+			smartmontools synaptic slurm scrot tilix tldr-py tty-clock gsmartcontrol duf vnstat wavemon
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo apt install -y firefox hexchat transmission-gtk filezilla
+sudo apt install -y firefox-esr hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
