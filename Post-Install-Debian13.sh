@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 09/08/2025 ver 0.0.1              #
+# 11/08/2025 ver 0.0.2              #
 # Antoine Even                      #
 #####################################
 
@@ -37,11 +37,11 @@ sudo apt install -y ansiweather bash-completion bmon batcat btop dfc curl ethtoo
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo dnf install -y firefox hexchat transmission-gtk filezilla
+sudo apt install -y firefox hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
+sudo apt install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
 
 ############### Install Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
