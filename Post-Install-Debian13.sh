@@ -21,11 +21,25 @@ if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
 exit $EACCES
 fi
 
-################ Clean dnf cache
+#Dépots ########################################################################
+echo -e "\033[1;34mFichier des dépôts + (backports) :"
+echo -e "\033[0;0m----------------------------------"
+echo -e "\nVoulez-vous changer le fichier sources.list ? (Oui/Non) :"
+read -r depot
+if [[ $depot =~ ^([oO][uU][iI]|[oO])$ ]]
+then
+	mv /etc/apt/sources.list /etc/apt/sources.list.bak
+	cp ./Config/sources13.list /etc/apt/sources.list
+	echo "Fichier sources.list modifié."
+fi
+sleep 5s
+clear
+
+################ Clean apt cache
 echo -e "${GREEN}>>> ${WHITE}Nettoyage du cache de APT."
 sudo apt clean
 
-############### Scrpit
+############### Update
 echo -e "${GREEN}>>> ${WHITE}Mise à jour du système."
 sudo apt update && sudo apt upgrade -y
 
