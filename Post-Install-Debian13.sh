@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 11/08/2025 ver 0.0.6              #
+# 12/08/2025 ver 0.0.7              #
 # Antoine Even                      #
 #####################################
 
@@ -58,8 +58,8 @@ echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
 sudo apt install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
 
 ############### Install Codecs
-echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
-sudo apt install -y libdvdcss
+#echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
+#sudo apt install -y libdvdcss
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
