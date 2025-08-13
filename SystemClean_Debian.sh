@@ -7,7 +7,7 @@
 # Revision	: 13/08/25         #
 ####################################
 
-VERSION=0.3.5
+VERSION=0.3.6
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -62,11 +62,11 @@ sudo du -sh /var/cache/apt
 sudo apt clean --dry-run
 sudo apt clean
 
+echo -e "\n${GREEN}>>> [ Apt Obseletes] ${WHITE}Nettoyage des porgrammes obselètes."
+sudo apt purge '~o' -y
+
 echo -e "\n${GREEN}>>> [ Apt Autoremove ] ${WHITE}Nettoyage des porgrammes."
 sudo apt autoremove -y
-
-echo -e "\n${GREEN}>>> [ Apt Obseletes] ${WHITE}Nettoyage des porgrammes obselètes."
-sudo apt purge '~o'
 
 echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
