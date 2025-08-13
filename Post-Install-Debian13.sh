@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 12/08/2025 ver 0.0.7              #
+# 12/08/2025 ver 0.0.8              #
 # Antoine Even                      #
 #####################################
 
@@ -31,6 +31,7 @@ then
 	mv /etc/apt/sources.list /etc/apt/sources.list.bak
 	cp ./Config/sources13.list /etc/apt/sources.list
 	echo "Fichier sources.list modifié."
+	apt modernize-sources --assumez-yes
 fi
 sleep 5s
 clear
