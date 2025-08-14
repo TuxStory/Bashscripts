@@ -1,8 +1,8 @@
-#!/bin/bash
+µ#!/bin/bash
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 12/08/2025 ver 0.0.8              #
+# 12/08/2025 ver 0.0.9              #
 # Antoine Even                      #
 #####################################
 
@@ -58,9 +58,9 @@ sudo apt install -y firefox-esr hexchat transmission-gtk filezilla
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
 sudo apt install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
 
-############### Install Codecs
-#echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
-#sudo apt install -y libdvdcss
+############### Install DVD + Codecs
+echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
+sudo apt install -y  libdvd-pkg
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
