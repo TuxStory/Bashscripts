@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit ArchLinux Post-Installation  #
-# 16/08/2025 ver 0.0.7                #
+# 17/08/2025 ver 0.0.8                #
 # Antoine Even                        #
 #######################################
 
@@ -42,7 +42,7 @@ sudo pacman -S --noconfirm firefox filezilla hexchat transmission-gtk thunderbir
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo pacman -S --noconfirm audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb gimp
+sudo pacman -S --noconfirm audacious cava cmus mpg123 mpv vlc ffmpegthumbnailer gthumb gimp
 
 ################ Install jeux
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Jeux."
