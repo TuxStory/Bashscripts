@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit ArchLinux Post-Installation  #
-# 17/08/2025 ver 0.0.8                #
+# 18/08/2025 ver 0.0.9                #
 # Antoine Even                        #
 #######################################
 
@@ -46,7 +46,7 @@ sudo pacman -S --noconfirm audacious cava cmus mpg123 mpv vlc ffmpegthumbnailer 
 
 ################ Install jeux
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Jeux."
-sudo pacman -S --noconfirm luanti gnome-games shattered-pixel-dungeon
+sudo pacman -S --noconfirm luanti gnome-games shattered-pixel-dungeon xboard gnuchess
 
 ################ Install Backgrounds
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Wallpapers."
