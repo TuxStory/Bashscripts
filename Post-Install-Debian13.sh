@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 12/08/2025 ver 0.0.9              #
+# 19/08/2025 ver 0.1.0              #
 # Antoine Even                      #
 #####################################
 
@@ -56,7 +56,7 @@ sudo apt install -y firefox-esr hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo apt install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
+sudo apt install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc mpv ffmpegthumbnailer gthumb
 
 ############### Install DVD + Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
