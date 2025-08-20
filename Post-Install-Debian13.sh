@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 19/08/2025 ver 0.1.0              #
+# 20/08/2025 ver 0.1.1              #
 # Antoine Even                      #
 #####################################
 
@@ -64,7 +64,7 @@ sudo apt install -y  libdvd-pkg
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
-sudo apt install -y gedit python3 git #codium
+sudo apt install -y gedit python3 #codium
 
 ############### Gnome
 echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
