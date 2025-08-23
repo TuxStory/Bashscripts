@@ -2,7 +2,7 @@
 # Date : 	02/04/2023   #
 # Maj  :	23/08/2025   #
 # Auteur:	Antoine Even #
-# Version :	1.4          #
+# Version :	1.5          #
 ##############################
 
 #!/bin/bash
@@ -41,6 +41,9 @@ sudo apt install -y bat borgbackup lm-sensors nano openssh-server pluma rsync sy
 echo ">>> Nettoyage :"
 sudo apt clean
 sudo apt autoremove -y
+
+echo -e ">>>  Recherche de résidus ... "
+[[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
 
 echo "===================================================="
 echo "               Installation Terminée                "
