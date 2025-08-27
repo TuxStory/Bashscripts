@@ -2,7 +2,7 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.5    #
+# Version :	0.6    #
 ########################
 
 #shortcuts & commands
@@ -18,6 +18,7 @@ alias la='ls -A'
 alias ll='ls -hl'
 alias ls='ls --color=auto'
 alias ncdu='ncdu --color dark'
+alias bat='batcat'
 
 #MAJ Debian
 alias MAJ='sudo apt update -y && sudo apt upgrade -y'
