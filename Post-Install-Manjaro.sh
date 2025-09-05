@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Manjaro Post-Installation  #
-# 05/09/2025 ver 0.1.1              #
+# 05/09/2025 ver 0.1.2              #
 # Antoine Even                      #
 #####################################
 
@@ -53,4 +53,4 @@ sudo pamac install --no-confirm manjaro-backgrounds mate-backgrounds gnome-backg
 
 ############### Gnome
 echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
-sudo pamac install --no-confirm gnome-shell-extension-appindicator
+sudo pamac install --no-confirm gnome-shell-extension-appindicator gnome-console
