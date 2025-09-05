@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Manjaro Post-Installation  #
-# 06/07/2025 ver 0.1.0              #
+# 05/09/2025 ver 0.1.1              #
 # Antoine Even                      #
 #####################################
 
@@ -41,7 +41,7 @@ sudo pamac install --no-confirm firefox filezilla hexchat irssi transmission-gtk
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo pamac install --no-confirm audacious cava cmus eog mpg123 vlc ffmpegthumbnailer gthumb gimp
+sudo pamac install --no-confirm audacious cava cmus eog mpg123 mpv vlc ffmpegthumbnailer gthumb gimp
 
 ################ Install jeux
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Jeux."
