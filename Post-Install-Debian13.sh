@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 01/09/2025 ver 0.1.2              #
+# 06/09/2025 ver 0.1.3              #
 # Antoine Even                      #
 #####################################
 
@@ -46,9 +46,9 @@ sudo apt update && sudo apt upgrade -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo apt install -y ansiweather bash-completion bmon bat btop curl clamav ethtool ethstatus fastfetch dysk dfc nano tmux \
+sudo apt install -y ansiweather bash-completion bmon bat btop curl clamav ethtool ethstatus fastfetch dysk dfc duf nano tmux \
 			inxi screen htop ncdu nload nethogs nmon nvtop nvidia-detect rsync ranger radeontop fbi fail2ban firewalld \
-			gnome-console smartmontools synaptic slurm scrot tilix tldr-py tty-clock gsmartcontrol duf vnstat wavemon
+			gnome-console smartmontools synaptic slurm scrot tilix tldr-py tty-clock gsmartcontrol vnstat wavemon
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
@@ -56,7 +56,7 @@ sudo apt install -y firefox-esr hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo apt install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc mpv ffmpegthumbnailer gthumb
+sudo apt install -y adwaita-icon-theme asunder audacious cava cmus eog mpg123 vlc mpv ffmpegthumbnailer gthumb
 
 ############### Install DVD + Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
