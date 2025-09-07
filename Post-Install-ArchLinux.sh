@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit ArchLinux Post-Installation  #
-# 28/08/2025 ver 0.1.2                #
+# 07/09/2025 ver 0.1.3                #
 # Antoine Even                        #
 #######################################
 
@@ -38,11 +38,11 @@ sudo pacman -S --noconfirm bat btop borgbackup dfc duf fastfetch exfat-utils fus
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
-sudo pacman -S --noconfirm firefox filezilla hexchat transmission-gtk thunderbird
+sudo pacman -S --noconfirm firefox firefox-i18n-fr filezilla hexchat transmission-gtk thunderbird
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo pacman -S --noconfirm audacious cava cmus mpg123 mpv vlc ffmpegthumbnailer gthumb gimp
+sudo pacman -S --noconfirm audacious cava cmus eog mpg123 mpv vlc ffmpegthumbnailer gthumb gimp
 
 ################ Install jeux
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Jeux."
@@ -58,5 +58,5 @@ sudo pacman -S --noconfirm gnome-shell-extension-appindicator
 
 ############## nanorc
 echo -e "\n${GREEN}>>> ${WHITE}Copie du fichier de configuration de nano."
-cp /etc/nanorc ~/.nanorc
+cp /etc/nanorc ~/.nanorc #à corriger car copier le fichier chez root. 
 echo ">>> Noubliez pas de modifier le fichier ~/.nanorc."
