@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	23/08/2025   #
+# Maj  :	08/09/2025   #
 # Auteur:	Antoine Even #
-# Version :	1.5          #
+# Version :	1.6          #
 ##############################
 
 #!/bin/bash
@@ -32,8 +32,8 @@ sudo apt install -y audacious cava eom filezilla hexchat thunderbird \
 		transmission-gtk remmina vlc mpv
 
 echo ">>>> Utils :"
-sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool fastfetch htop ncdu ranger inxi tmux nano \
-		 nload nmon mediainfo vnstat screen tilix wget tty-clock
+sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool fastfetch gparted gnome-console htop ncdu ranger \
+		 inxi tmux nano nload nmon mediainfo vnstat screen tilix wget tty-clock
 
 echo ">>>> Admin :"
 sudo apt install -y bat borgbackup lm-sensors nano openssh-server pluma rsync synaptic tldr timeshift
