@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit ArchLinux Post-Installation  #
-# 07/09/2025 ver 0.1.3                #
+# 09/09/2025 ver 0.1.4                #
 # Antoine Even                        #
 #######################################
 
@@ -33,7 +33,7 @@ sudo pacman -Suy --noconfirm
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo pacman -S --noconfirm bat btop borgbackup dfc duf fastfetch exfat-utils fuse3 gedit gnome-console eog nano nmap lm_sensors tmux timeshift inxi screen htop \
+sudo pacman -S --noconfirm bat btop borgbackup dfc duf dysk fastfetch exfat-utils fuse3 gedit gnome-console eog nano nmap lm_sensors tmux timeshift inxi screen htop \
 	ncdu nload nethogs nmon nvtop ranger smartmontools tldr ethtool vnstat zsh
 
 ############### Install Internet
@@ -58,5 +58,5 @@ sudo pacman -S --noconfirm gnome-shell-extension-appindicator
 
 ############## nanorc
 echo -e "\n${GREEN}>>> ${WHITE}Copie du fichier de configuration de nano."
-cp /etc/nanorc ~/.nanorc #à corriger car copier le fichier chez root. 
+cp /etc/nanorc /home/$SUDO_USER/.nanorc
 echo ">>> Noubliez pas de modifier le fichier ~/.nanorc."
