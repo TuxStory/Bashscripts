@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Debian13 Post-Installation #
-# 06/09/2025 ver 0.1.3              #
+# 10/09/2025 ver 0.1.4              #
 # Antoine Even                      #
 #####################################
 
@@ -48,7 +48,7 @@ sudo apt update && sudo apt upgrade -y
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo apt install -y ansiweather bash-completion bmon bat btop curl clamav ethtool ethstatus fastfetch dysk dfc duf nano tmux \
 			inxi screen htop ncdu nload nethogs nmon nvtop nvidia-detect rsync ranger radeontop fbi fail2ban firewalld \
-			gnome-console smartmontools synaptic slurm scrot tilix tldr-py tty-clock gsmartcontrol vnstat wavemon
+			firewall-config gnome-console smartmontools synaptic slurm scrot tilix tldr-py tty-clock gsmartcontrol vnstat wavemon
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
