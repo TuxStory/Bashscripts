@@ -2,7 +2,7 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.7    #
+# Version :	0.8    #
 ########################
 
 #shortcuts & commands
@@ -19,6 +19,7 @@ alias ll='ls -hl'
 alias ls='ls --color=auto'
 alias ncdu='ncdu --color dark'
 alias bat='batcat'
+alias error='journalctl -b -p err' 
 
 #MAJ Debian
 alias MAJ='sudo apt update -y && sudo apt upgrade -y'
@@ -61,3 +62,8 @@ alias dnfsearch='dnf search'
 alias dnfgrplst='dnf group list'
 alias dnfgrpins='sudo dnf group install'
 alias dnfautoclean='sudo dnf autoremove'
+
+# Arch Linux 
+alias Up='pacman -Suy'
+alias rmb='pacman -Rns $(pacman -Qdtq)'
+
