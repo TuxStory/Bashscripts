@@ -64,6 +64,6 @@ alias dnfgrpins='sudo dnf group install'
 alias dnfautoclean='sudo dnf autoremove'
 
 # Arch Linux 
-alias Up='pacman -Suy'
+alias Up='sudo pacman -Suy'
 alias rmb='pacman -Rns $(pacman -Qdtq)'
 
