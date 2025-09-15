@@ -2,7 +2,7 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.9    #
+# Version :	0.9.1  #
 ########################
 
 #shortcuts & commands
@@ -20,6 +20,9 @@ alias ls='ls --color=auto'
 alias ncdu='ncdu --color dark'
 alias bat='batcat'
 alias error='journalctl -b -p err'
+alias untar='tar -zxvf '
+alias ipe='curl ipinfo.io/ip'
+alias IPE='curl ipinfo.io'
 
 #MAJ Debian
 alias MAJ='sudo apt update -y && sudo apt upgrade -y'
