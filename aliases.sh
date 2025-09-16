@@ -2,7 +2,7 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.9.1  #
+# Version :	0.9.2  #
 ########################
 
 #shortcuts & commands
@@ -23,6 +23,8 @@ alias error='journalctl -b -p err'
 alias untar='tar -zxvf '
 alias ipe='curl ipinfo.io/ip'
 alias IPE='curl ipinfo.io'
+alias clearswap='sudo swapoff -a && sudo swapon -a'
+alias timestamp='date +%Y-%m-%dT%H-%M-%S'
 
 #MAJ Debian
 alias MAJ='sudo apt update -y && sudo apt upgrade -y'
@@ -71,3 +73,18 @@ alias Up='sudo pacman -Suy'
 alias rmb='pacman -Rns $(pacman -Qdtq)'
 alias paci='sudo pacman -S '
 alias pacr='sudo pacman -r '
+
+# Fun
+alias yep='sudo apt install $1'
+alias nop='sudo apt remove $1'
+alias whatsup='service --status-all'
+alias hello='sudo /etc/init.d/apache2 stop && cd workspace/project && ddev start && ddev launch'
+alias hi='sudo systemctl stop apache2'
+alias ports='nmap localhost'
+alias dens="sudo systemd-resolve --status | grep 'DNS Servers'"
+alias iad='systemctl is-active docker'
+alias bye='shutdown -r now'
+alias lt='ls --human-readable --size -1 -S --classify'
+alias lu='du -sh * | sort -h'
+alias lt='ls -t -1 -long'
+alias lc='find . -type f | wc -l'
