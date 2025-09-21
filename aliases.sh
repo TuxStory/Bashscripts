@@ -2,7 +2,7 @@
 # Exemples d'alias     #
 # Debian .bash_aliases #
 # Date :	2025   #
-# Version :	0.9.3  #
+# Version :	0.9.4  #
 ########################
 
 #### shortcuts & commands
@@ -70,7 +70,8 @@ alias dnfautoclean='sudo dnf autoremove'
 
 #### Arch Linux
 alias Up='sudo pacman -Suy'
-alias rmb='pacman -Rns $(pacman -Qdtq)'
+alias ListOrph='sudo pacman -Qdt'
+alias rmb='sudo pacman -Rns $(pacman -Qdtq)'
 alias paci='sudo pacman -S '
 alias pacr='sudo pacman -r '
 
