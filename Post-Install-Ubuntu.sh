@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 1.0.1 - 03/08/2025 #
+# 13/11/2023 - ver 1.0.2 - 27/09/2025 #
 # Author	:	Antoine Even  #
 #######################################
 
@@ -14,7 +14,7 @@
 #yes Y | apt install $(basename $i) ; echo
 #Plus necessaire avec apt install -y
 
-VER=0.9.9
+VER=1.0.2
 EACCES=13 # Permission denied
 
 # Couleurs ####################################################################
@@ -87,10 +87,10 @@ function Install()
 # Liste des programmes ###############################################################
 
 Programmes="audacious gparted inxi neofetch htop hardinfo hexchat vlc ffmpegthumbnailer
-	deja-dup bleachbit gnome-disk-utils gnome-software xterm rsync grsync timeshift tilix"
+	deja-dup bleachbit gnome-disk-utils gnome-software xterm rsync grsync timeshift tilix ptyxis"
 	# Old :chromium-browser chromium-browser-l10n
 
-Programmes_Console="bat dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf htop nmon nvtop tmux lm-sensors smartmontools wavemon"
+Programmes_Console="btop bat dfc ranger ansiweather irssi fbi mc cmus ethtool oping w3m w3m-img bmon ncdu slurm duf nmon nvtop tmux lm-sensors smartmontools wavemon"
 
 Programmes_Internet="filezilla tnftp transmission"
 

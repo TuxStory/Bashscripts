@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Manjaro Post-Installation  #
-# 05/09/2025 ver 0.1.2              #
+# 27/09/2025 ver 0.1.3              #
 # Antoine Even                      #
 #####################################
 
@@ -33,7 +33,7 @@ sudo pamac update --no-confirm
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo pamac install --no-confirm bat btop borgbackup dfc duf dysk exfat-utils fastfetch fuse3 nano tmux timeshift tldr inxi screen htop ncdu nload nethogs \
-	nmon nvtop ranger smartmontools ethtool vnstat
+	nmon nvtop ptyxis ranger smartmontools ethtool vnstat
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
