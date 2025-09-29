@@ -35,7 +35,7 @@ zypper patch -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-zypper install -y btop bleachbit borgbackup dfc fastfetch nano tmux inxi screen htop nload nethogs ncdu nmon ptyxis ranger rsync \
+zypper install -y btop bleachbit borgbackup dfc duf fastfetch nano tmux inxi screen htop nload nethogs ncdu nmon ptyxis ranger rsync \
 	smartmontools ethtool vnstat tilix wavemon
 
 ############### Install Internet
