@@ -19,9 +19,9 @@ Link=$(wget -qO- www.debian.org/download | grep -Eo $REGEX  2>/dev/null )
 Link2=${Link%?}
 Link3="https://cdimage.debian.org/cdimage/weekly-builds/amd64/iso-cd/debian-testing-amd64-netinst.iso"
 
-echo ">>> Debian iso Downloader"
-echo "1. Debian Stable netinstall amd64"
-echo "2. Debian Testing netinstall amd64"
+echo -e $b">>>"$w" Debian iso Downloader"
+echo -e $g"1"$w". Debian Stable netinstall amd64"
+echo -e $g"2"$w". Debian Testing netinstall amd64"
 read -p "Votre choix ? : " choix
 
 if [ $choix == '1' ]
@@ -33,6 +33,7 @@ fi
 
 echo -e $b">>>"$w" Téléchargement de la dernière version de Debian."
 wget $Download -P ~/
+echo -e $b">>>"$w" Téléchargement éffectué."
 
 #wget -qO- www.debian.org |
 #grep -Eoi '<a [^>]+>' |
