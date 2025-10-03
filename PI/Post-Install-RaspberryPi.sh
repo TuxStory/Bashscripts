@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 1.6 - 03/10/2025      #
+# 16/02/2023 - ver 1.7 - 04/10/2025      #
 # Antoine Even                           #
 ##########################################
 
@@ -31,7 +31,7 @@ sudo apt update -y && sudo apt upgrade -y
 
 ################ Install Administration
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
-sudo apt install -y  btop dfc duf ethstatus fastfetch fonts-powerline htop inxi lnav mc nano ncdu nethogs nload \
+sudo apt install -y  bat btop dfc duf dysk ethstatus fastfetch fonts-powerline htop inxi lnav mc nano ncdu nethogs nload \
                      mmc-utils nmon ptyxis ranger screen tmux tty-clock vnstat wavemon zsh zsh-theme-powerlevel9k
 
 ############### Install Internet
