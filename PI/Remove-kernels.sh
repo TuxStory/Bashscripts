@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# This resource is provided as a convenience for Level users. We cannot 
-# guarantee it will work in all environments. Please test before deploying 
-# to your production environment. We welcome contributions to our community 
+# This resource is provided as a convenience for Level users. We cannot
+# guarantee it will work in all environments. Please test before deploying
+# to your production environment. We welcome contributions to our community
 # library
 
 # Level Library
