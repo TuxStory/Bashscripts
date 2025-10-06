@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit OpenSuse Post-Installation   #
-# Date		: 28/09/2025 ver 2.0  #
+# Date		: 07/10/2025 ver 2.1  #
 # Author	: Antoine Even        #
 #######################################
 
@@ -44,7 +44,7 @@ zypper install -y MozillaFirefox transmission-gtk filezilla neochat MozillaThund
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-zypper install -y cmus vlc eom audacious
+zypper install -y cmus vlc eom audacious mpv
 
 ################ Install Code
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
