@@ -1,8 +1,8 @@
 ##############################
 # Date : 	02/04/2023   #
-# Maj  :	02/10/2025   #
+# Maj  :	10/10/2025   #
 # Auteur:	Antoine Even #
-# Version :	1.6          #
+# Version :	1.7          #
 ##############################
 
 #!/bin/bash
@@ -32,7 +32,7 @@ sudo apt install -y audacious cava eom filezilla hexchat thunderbird \
 		transmission-gtk remmina vlc mpv
 
 echo ">>>> Utils :"
-sudo apt install -y bash-completion bleachbit btop curl dfc ethstatus ethtool fastfetch gparted gnome-console htop ncdu ranger \
+sudo apt install -y aspell-fr bash-completion bleachbit btop curl dfc ethstatus ethtool fastfetch gparted gnome-console htop ncdu ranger \
 		 inxi tmux nano nload nmon mediainfo ptyxis vnstat screen tilix wget tty-clock
 
 echo ">>>> Admin :"
