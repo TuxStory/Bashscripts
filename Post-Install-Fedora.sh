@@ -46,7 +46,7 @@ sudo dnf install -y firefox hexchat transmission-gtk filezilla
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc ffmpegthumbnailer gthumb
+sudo dnf install -y adwaita-icon-theme asunder audacious cava cmus mpg123 vlc mpv ffmpegthumbnailer gthumb
 
 ############### Install Codecs
 echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
