@@ -2,7 +2,7 @@
 
 ##########################################
 # Scrpit RaspberryPi Post-Installation   #
-# 16/02/2023 - ver 1.7 - 04/10/2025      #
+# 16/02/2023 - ver 1.8 - 20/10/2025      #
 # Antoine Even                           #
 ##########################################
 
@@ -40,7 +40,7 @@ sudo apt install -y hexchat filezilla transmission-gtk
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo apt install -y audacious cmus eom vlc
+sudo apt install -y audacious cmus eom mpv vlc
 
 ############### Install des Jeux
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Jeux."
