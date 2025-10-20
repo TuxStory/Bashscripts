@@ -2,7 +2,7 @@
 
 #######################################
 # Scrpit RedHat Post-Installation     #
-# 18/06/2025 ver 0.0.2                #
+# 21/10/2025 ver 0.0.3                #
 # Antoine Even                        #
 #######################################
 
@@ -56,7 +56,7 @@ sudo dnf install -y firefox hexchat transmission-gtk filezilla thunderbird evinc
 
 ############### Install Multimédia
 echo -e "\n${GREEN}>>> ${WHITE}Installation Multimédia."
-sudo dnf install -y audacious vlc
+sudo dnf install -y audacious vlc mpv
 
 ############### Install Codecs
 #echo -e "\n${GREEN}>>> ${WHITE}Installation des codecs."
