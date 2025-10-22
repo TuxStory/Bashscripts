@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 22/10/2025 ver 0.0.1              #
+# 22/10/2025 ver 0.0.2              #
 # Antoine Even                      #
 #####################################
 
@@ -61,6 +61,10 @@ sudo apt install -y gedit python3 #codium
 ############### Gnome
 echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
 sudo apt install -y gnome-extensions-app gnome-shell-extension-appindicator #gnome-shell-extension-dash-to-dock
+
+############### Snap
+echo -e "\n${GREEN}>>> ${WHITE}Mise à jour des snaps"
+sudo snap refresh
 
 ############### Nettoyage
 echo -e "\n${GREEN}>>> ${WHITE}Nettoyage des packets."
