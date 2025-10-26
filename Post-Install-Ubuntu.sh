@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 22/10/2025 ver 0.0.4              #
+# 26/10/2025 ver 0.0.5             #
 # Antoine Even                      #
 #####################################
 
@@ -40,7 +40,7 @@ sudo apt update && sudo apt upgrade -y
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo apt install -y ansiweather bash-completion bmon bat btop curl clamav ethtool ethstatus fastfetch dysk dfc duf nano tmux \
 			inxi screen htop ncdu nload nethogs nmon nvtop nvidia-detect ptyxis rsync ranger radeontop fbi fail2ban firewalld \
-			firewall-config smartmontools synaptic slurm scrot tilix tldr-py tty-clock gsmartcontrol vnstat wavemon
+			firewall-config smartmontools synaptic slurm scrot timeshift tilix tldr-py tty-clock gsmartcontrol vnstat wavemon
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
