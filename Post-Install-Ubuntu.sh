@@ -2,7 +2,7 @@
 
 #####################################
 # Scrpit Ubuntu Post-Installation   #
-# 27/10/2025 ver 0.0.6             #
+# 31/10/2025 ver 0.0.7              #
 # Antoine Even                      #
 #####################################
 
@@ -17,7 +17,7 @@ MAGENTA='\033[0;95m'
 
 ################ Root
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo -e "Accès refusé : vous devez être ${RED}root${WHITE}."
+  echo -e "Autorisation refusée : vous devez être ${RED}root${WHITE}."
 exit $EACCES
 fi
 
