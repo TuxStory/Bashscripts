@@ -1,5 +1,7 @@
 #!/bin/bash
 
+## NEED TO BE CHANGED ##
+
 ########################################
 # Scrpit Kali-Parrot Post-Installation #
 # 21/03/2024 - ver 0.1.9 25/09/2025    #
