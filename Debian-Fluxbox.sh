@@ -32,8 +32,8 @@ echo ">>> Multimedia :"
 sudo apt install -y audacious vlc mediainfo
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi xfce4-terminal arandr \
-	xcompmgr nitrogen thunar tilix pluma wbar wbar-config eom psmisc #idesk
+sudo apt install -y htop btop ncdu ranger fastfetch dfc dysk bleachbit inxi xfce4-terminal arandr \
+	xcompmgr nitrogen thunar tilix ptyxis pluma wbar wbar-config eom psmisc #idesk
 
 ####################################################################
 # This part of the script may be run at the first start of FluxBox #
