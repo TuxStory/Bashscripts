@@ -1,4 +1,4 @@
-µ#!/bin/bash
+#!/bin/bash
 
 #####################################
 # Scrpit Debian13 Post-Installation #
