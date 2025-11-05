@@ -13,6 +13,7 @@ This is a suite of projects, tests and personal scripts.
 ### Collaboration
 
 If you want to colaborate on something or correct a script.
+Suggestions are Welcome. 
 > Feel free to ask or summit your correction.    
 
 `git clone https://github.com/TuxStory`  
