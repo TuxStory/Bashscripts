@@ -5,7 +5,7 @@
 # Version :	0.9.4  #
 ########################
 
-#### shortcuts & commands
+#### shortcuts & commands ##########
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias grep='grep --color=auto'
@@ -26,12 +26,12 @@ alias IPE='curl ipinfo.io'
 alias clearswap='sudo swapoff -a && sudo swapon -a'
 alias timestamp='date +%Y-%m-%dT%H-%M-%S'
 
-#### MAJ Debian
+#### MAJ Debian ###########
 alias MAJ='sudo apt update -y && sudo apt upgrade -y'
 alias BigMAJ='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove'
 alias REM='sudo apt autoremove -y'
 
-#### from ohmybash
+#### from ohmybash ###########
 alias apup='sudo apt update'
 alias apug='sudo apt upgrade'
 alias apuu='sudo apt update && sudo apt upgrade'
@@ -55,11 +55,11 @@ alias aphst='cat /var/log/apt/history.log | less'
 
 alias drcf='sudo dpkg-reconfigure'
 
-#### Grub & initramfs
+#### Grub & initramfs ###########
 alias upgrb='sudo update-grub'
 alias uirfs='sudo update-initramfs -u'
 
-#### DNF Aliases
+#### DNF Aliases ###########
 alias dnfins='sudo dnf install'
 alias dnfrm='sudo dnf remove'
 alias dnfup='sudo dnf update -y' # update is an alias for upgrade in dnf
@@ -68,14 +68,14 @@ alias dnfgrplst='dnf group list'
 alias dnfgrpins='sudo dnf group install'
 alias dnfautoclean='sudo dnf autoremove'
 
-#### Arch Linux
+#### Arch Linux ###########
 alias Up='sudo pacman -Suy'
 alias ListOrph='sudo pacman -Qdt'
 alias rmb='sudo pacman -Rns $(pacman -Qdtq)'
 alias paci='sudo pacman -S '
 alias pacr='sudo pacman -r '
 
-#### Fun
+#### Fun ############
 alias yep='sudo apt install $1'
 alias nop='sudo apt remove $1'
 alias whatsup='service --status-all'
