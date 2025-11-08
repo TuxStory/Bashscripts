@@ -7,7 +7,7 @@ clear
 echo -e "🚀 \033[1mDEMO : Émojis utiles en Bash\033[0m"
 echo -e "----------------------------------------\n"
 
-# Fonction pour afficher une ligne du tableau
+#### Fonction pour afficher une ligne du tableau #########
 function print_line() {
   local emoji=$1
   local description=$2
@@ -15,11 +15,11 @@ function print_line() {
   printf "  %s  |  %-20s |  %s\n" "$emoji" "$description" "$example"
 }
 
-# En-tête
+#### En-tête ###########
 printf "\033[1m  Emoji | Description           | Exemple Bash\033[0m\n"
 echo "--------|------------------------|---------------------------"
 
-# Lignes du tableau
+#### Lignes du tableau ##########
 print_line "✅" "Succès / OK"         'echo -e "✅ Terminé"'
 print_line "❌" "Erreur / échec"      'echo -e "❌ Erreur"'
 print_line "⚠️" "Avertissement"        'echo -e "⚠️  Attention"'
