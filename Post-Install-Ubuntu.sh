@@ -40,7 +40,7 @@ sudo apt update && sudo apt upgrade -y
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares d'Administration."
 sudo apt install -y ansiweather bash-completion bmon bat btop curl clamav ethtool ethstatus dfc duf nano tmux \
 	inxi screen htop ncdu nload nethogs nmon nvtop rsync ranger radeontop fbi fail2ban firewalld \
-	firewall-config smartmontools synaptic slurm scrot timeshift tilix tldr-py tty-clock gsmartcontrol vnstat wavemon #ptyxis nvidia-detect fastfetch dysk 
+	firewall-config smartmontools synaptic slurm scrot timeshift tilix tldr-py tty-clock gsmartcontrol vnstat wavemon #ptyxis nvidia-detect fastfetch dysk
 
 ############### Install Internet
 echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares Internet."
