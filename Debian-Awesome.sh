@@ -1,8 +1,8 @@
 ##############################
 # Date : 	24/03/2023   #
-# Maj  :	14/03/2025   #
+# Maj  :	10/11/2025   #
 # Auteur:	Antoine Even #
-# Version :	0.6          #
+# Version :	0.7          #
 ##############################
 
 #!/bin/bash
@@ -32,7 +32,7 @@ sudo apt install -y audacious vlc eom hexchat irssi transmission-gtk pluma cmus 
 		firefox-esr-l10n-fr #midori
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi tmux tilix nano nload nmon
+sudo apt install -y htop ncdu ranger fastfetch dfc bleachbit inxi tmux ptyxis tilix nano nload nmon
 
 echo ">>>> Admin :"
 sudo apt install -y synaptic borgbackup openssh-server psmisc vnstat xfce4-terminal openssh-server
