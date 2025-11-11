@@ -4,8 +4,10 @@
 # Affiche une table d'émojis utiles dans les scripts Bash
 
 clear
+
+echo -e "================================\n"
 echo -e "🚀 \033[1mDEMO : Émojis utiles en Bash\033[0m"
-echo -e "----------------------------------------\n"
+echo -e "================================\n"
 
 #### Fonction pour afficher une ligne du tableau #########
 function print_line() {
