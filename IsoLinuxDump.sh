@@ -1,8 +1,8 @@
 #!/bin/bash
 
-####################
-# NEED TO BE FIXEX #
-####################
+#######################
+# NEED TO BE FIXEX :) #
+#######################
 
 echo "Exemple de site possible : "
 echo "www.debian.org"
