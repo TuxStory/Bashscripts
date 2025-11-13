@@ -26,7 +26,7 @@ alias IPE='curl ipinfo.io'
 alias clearswap='sudo swapoff -a && sudo swapon -a'
 alias timestamp='date +%Y-%m-%dT%H-%M-%S'
 
-#### MAJ Debian ###########
+#### MAJ Debian ############
 alias MAJ='sudo apt update -y && sudo apt upgrade -y'
 alias BigMAJ='sudo apt update -y && sudo apt upgrade -y && sudo apt autoremove'
 alias REM='sudo apt autoremove -y'
