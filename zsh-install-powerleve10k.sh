@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash #chatgpt test
 
 # Script pour installer Zsh et Powerlevel10k
 
