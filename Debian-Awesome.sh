@@ -32,7 +32,7 @@ sudo apt install -y audacious vlc eom hexchat irssi transmission-gtk pluma cmus 
 		firefox-esr-l10n-fr #midori
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger fastfetch dfc bleachbit inxi tmux ptyxis tilix nano nload nmon
+sudo apt install -y btop htop ncdu ranger fastfetch dfc bleachbit inxi tmux ptyxis tilix nano nload nmon
 
 echo ">>>> Admin :"
 sudo apt install -y synaptic borgbackup openssh-server psmisc vnstat xfce4-terminal openssh-server
