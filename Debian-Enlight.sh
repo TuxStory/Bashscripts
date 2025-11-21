@@ -1,8 +1,8 @@
 ##############################
 # Date : 	13/08/2022   #
-# Maj  :	19/09/2024   #
+# Maj  :	21/11/2024   #
 # Auteur:	Antoine Even #
-# Version :	0.8          #
+# Version :	0.9          #
 ##############################
 
 #!/bin/bash
@@ -24,7 +24,7 @@ echo ">>> Multimedia :"
 sudo apt install -y audacious vlc
 
 echo ">>>> Utils :"
-sudo apt install -y htop ncdu ranger neofetch dfc bleachbit inxi
+sudo apt install -y htop ncdu ranger fastfetch dfc bleachbit inxi
 
 echo ">>>> Internet :"
 sudo apt install -y firefox fillezilla hexchat transmission-gtk thunderbird
