@@ -2,12 +2,11 @@
 
 #######################################
 # Scrpit Ubuntu Post-Installation     #
-# 13/11/2023 - ver 1.0.4 - 12410/2025 #
+# 13/11/2023 - ver 1.0.4 - 12/10/2025 #
 # Author	:	Antoine Even  #
 #######################################
 
-# refaire une version plus simple
-
+# Obselete
 
 #The 'yes' command will echo 'y' (or whatever you ask it to) indefinitely.
 #Use it as:
