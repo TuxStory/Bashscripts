@@ -1,5 +1,5 @@
 #!/bin/bash
-#chatgpt
+#fais avec chatgpt - à corriger
 
 echo "==== Installation de Wifite2 pour Fedora 42 ===="
 
