@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## NEED TO BE CHANGED ##
+##### NEED TO BE CHANGED #####
 
 ########################################
 # Scrpit Kali-Parrot Post-Installation #
