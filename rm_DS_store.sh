@@ -13,3 +13,5 @@ if [ -z "$1" ]; then
 else
     delete_ds_store "$1"
 fi
+
+#Need to be corected
