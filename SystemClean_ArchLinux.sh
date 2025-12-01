@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 30/11/25	   #
-# Revision	: 30/11/25         #
+# Revision	: 01/12/25         #
 ####################################
 
-VERSION=0.0.1
+VERSION=0.0.2
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -19,7 +19,7 @@ BLUE='\033[1;94m'
 MAGENTA='\033[0;95m'
 
 if [ "$UID" -ne 0 ]; then # Vous êtes ROOT
-  echo -e "Permission denied : you must be ${RED}root${WHITE}."
+  echo -e "Accès refusé : Vous devez être ${RED}root${WHITE}."
   exit $EACCES
 fi
 
