@@ -6,7 +6,7 @@
 # Author	:	Antoine Even  #
 #######################################
 
-# Obselete
+#### Obselete
 
 #The 'yes' command will echo 'y' (or whatever you ask it to) indefinitely.
 #Use it as:
