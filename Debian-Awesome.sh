@@ -29,7 +29,7 @@ sudo apt install -y lightdm thunar nitrogen awesome awesome-extra lxappearance x
 
 echo ">>> Multimedia & Internet :"
 sudo apt install -y audacious vlc eom hexchat irssi transmission-gtk pluma cmus firefox-esr \
-		firefox-esr-l10n-fr #midori
+		firefox-esr-l10n-fr
 
 echo ">>>> Utils :"
 sudo apt install -y btop htop ncdu ranger fastfetch dfc bleachbit inxi tmux ptyxis tilix nano nload nmon
