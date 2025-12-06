@@ -2,7 +2,7 @@
 
 ##############################################
 # Scrpit AlmaRocky Server Post-Installation  #
-# Date : 06/07/2025    version : 0.0.9.7     #
+# Date : 06/12/2025    version : 0.0.9.8     #
 # Author : Antoine Even                      #
 ##############################################
 
@@ -38,7 +38,7 @@ echo -e "${GREEN}>>> ${WHITE}Installation de EPEL."
 sudo dnf install epel-release -y
 
 ############### Install RPM Fusion
-# From Almalinux Doc
+# From Almalinux Doc >> + Voir pour les dépôts tainted.
 echo -e "\n${GREEN}>>> ${WHITE}Distribution-gpg-keys."
 sudo dnf install distribution-gpg-keys -y
 echo -e "\n${GREEN}>>> ${WHITE}GPG Keys rpmfusion."
