@@ -1,4 +1,5 @@
 #!/bin/bash
+
 #########################
 # Nom      VerifSum     #
 # Auteur   Antoine Even #
