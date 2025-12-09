@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# A refaire #
+
 carte=wlp3s0
 session="RaspberryPi"
 tmux new-session -d -s $session
