@@ -1,5 +1,6 @@
 #! /bin/bash
-# Script Adrien LinuxTricks
+
+#### Script Adrien LinuxTricks ####
 
 # Chemin du dictionnaire
 #DICT="/usr/share/hunspell/fr-moderne.dic" #Pas dispo chez moi
