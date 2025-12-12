@@ -3,7 +3,7 @@
 ########################
 # scrpit de backup !   #
 # 2007 - 2020 ver 0.7  #
-# Antoine Even         #
+# Auth - Antoine Even  #
 ########################
 
 # Déclarations de quelques variables.
