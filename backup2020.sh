@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ########################
-# scrpit de backup !   #
+# scrpit de backup !!! #
 # 2007 - 2020 ver 0.7  #
 # Auth - Antoine Even  #
 ########################
