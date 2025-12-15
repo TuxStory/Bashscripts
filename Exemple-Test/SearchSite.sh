@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#version 0.1
+
 # Vérifiez que l'utilisateur a fourni les arguments nécessaires
 if [ "$#" -ne 2 ]; then
     echo "Usage: $0 'site:example.com' 'text to search'"
