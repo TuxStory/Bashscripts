@@ -1,5 +1,6 @@
 #!/bin/bash
 
+echo ">>> Test List"
 Linux=(Debian Fedora Ubuntu LinuxMint RedHat ArchLinux Manjaro)
 
 LIST=(1 2 3)
