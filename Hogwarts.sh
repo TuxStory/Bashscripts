@@ -12,7 +12,6 @@ RED='\033[0;91m'
 BLUE='\033[0;94m'
 MAGENTA='\033[0;95m'
 
-
 echo -e "${BLUE}>>> ${WHITE} Hogwarts tmp file cleaner."
 
 ls /var/lib/systemd/coredump/
