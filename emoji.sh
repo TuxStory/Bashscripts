@@ -2,6 +2,7 @@
 
 # Script : emoji_demo.sh
 # Affiche une table d'émojis utiles dans les scripts Bash
+# Fait avec ChatGPT
 
 clear
 
