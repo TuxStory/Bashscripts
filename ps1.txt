@@ -1,8 +1,8 @@
 #!/bin/bash
 
-#################################
-#   Personal Customized PS1     #
-#################################
+###############################
+#   Personal Customized PS1   #
+###############################
 
 ## Raspberry Pi
 [Raspberry Pi Zero] [Time Blue + Standard]
