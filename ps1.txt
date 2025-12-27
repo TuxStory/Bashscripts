@@ -18,7 +18,8 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;30m\][\t] \033[01;32m\u@\h\[\03
 #       Debian PS1 COLORS       #
 #################################
 
-#Couleur	Texte	Arrière-Plan
+Couleur		Texte	Arrière-Plan
+------------------------------------
 noir		30	40
 rouge		31	41
 vert		32	42
