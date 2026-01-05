@@ -53,10 +53,10 @@ PS1='${debian_chroot:+($debian_chroot)}\[\033[01;37m\][\t] \033[01;32m\u@\h\[\03
 #         Fedora - Alma - Rocky - RedHat        #
 #################################################
 
-[Default] red hat / Rocky / Alma
+#Default red hat / Rocky / Alma
 [\0u@\h \W]\$
+#Time
 [\t][\u@\h \W]\$
-
 [\t][\u@\h \W]$
 [00:18:27][tuxstory@localhost ~]$
 
