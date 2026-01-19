@@ -54,3 +54,4 @@ zypper install -y gedit python3 git #codium
 # sudo zypper install -t pattern gnome
 # sudo zypper install -t pattern xfce
 # sudo zypper in patterns-xfce-xfce
+#######################################
