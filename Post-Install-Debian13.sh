@@ -67,8 +67,8 @@ echo -e "\n${GREEN}>>> ${WHITE}Installation des Softwares de Programmation."
 sudo apt install -y gedit python3 #codium
 
 ############### Gnome
-echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
-sudo apt install -y gnome-extensions-app gnome-shell-extension-appindicator #gnome-shell-extension-dash-to-dock
+#echo -e "\n${GREEN}>>> ${WHITE}Installation des extensions de Gnome"
+#sudo apt install -y gnome-extensions-app gnome-shell-extension-appindicator #gnome-shell-extension-dash-to-dock
 
 ############### Done
 echo -e "\n${GREEN}>>> ${WHITE}Installation Terminée."
