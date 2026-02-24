@@ -4,10 +4,10 @@
 # Nom		: SystemCleaner.sh #
 # Auteur 	: Antoine Even	   #
 # Date 		: 10/06/22	   #
-# Revision	: 13/08/25         #
+# Revision	: 24/02/26         #
 ####################################
 
-VERSION=0.3.6
+VERSION=0.3.7
 EACCES=13 # Permission denied
 ESPACE=0
 
@@ -66,7 +66,7 @@ echo -e "\n${GREEN}>>> [ Apt Obseletes] ${WHITE}Nettoyage des porgrammes obselè
 sudo apt purge '~o' -y
 
 echo -e "\n${GREEN}>>> [ Apt Autoremove ] ${WHITE}Nettoyage des porgrammes."
-sudo apt autoremove -y
+sudo apt autoremove --purge -y
 
 echo -e "\n${GREEN}>>> [ Résidus ] ${WHITE}Recherche de résidus ... "
 [[ $(dpkg -l | grep ^rc) ]] && sudo dpkg -P $(dpkg -l | awk '/^rc/{print $2}') || echo "Aucun résidu trouvé."
